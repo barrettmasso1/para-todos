@@ -1,0 +1,1364 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PARA TODOS — Nuestra Región, Nuestro Futuro</title>
+  <meta name="description" content="Una conversación comunitaria sobre cómo se toman las decisiones que afectan al Pacífico Sur de BCS. Sesión: jueves 28 de mayo, 5pm, Plaza Todos Santos." />
+  <link rel="icon" type="image/png" href="./assets/brand/favicon-32.png" />
+  <link rel="apple-touch-icon" href="./assets/brand/apple-touch-icon-180.png" />
+  <meta property="og:title" content="Nuestra Región, Nuestro Futuro — PARA TODOS" />
+  <meta property="og:description" content="Una conversación sobre cómo se toman las decisiones que afectan nuestras comunidades del Pacífico Sur." />
+  <meta property="og:image" content="https://paratodosbcs.mx/assets/brand/og-image.png" />
+  <meta property="og:url" content="https://paratodosbcs.mx" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:image" content="https://paratodosbcs.mx/assets/brand/og-image.png" />
+  <meta property="og:locale" content="es_MX" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..600&family=Inter:wght@400;500;600;700&family=Caveat:wght@400;600&display=swap" />
+
+  <style>
+    :root {
+      --sand:        #f4ecd9;
+      --sand-light:  #faf4e3;
+      --sand-dark:   #e0d4b3;
+      --terracotta:  #b85042;
+      --terracotta-dark: #9b3f33;
+      --sunset:      #d97a4a;
+      --cactus:      #6d8a6e;
+      --cactus-pale: #a8baa7;
+      --sky:         #7ba6b8;
+      --sky-dark:    #4f7a8f;
+      --espresso:    #3a2e26;
+      --off-white:   #fbf6e9;
+      --ink:         #1f1813;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--espresso);
+      /* Near-solid warm cream with a soft radial highlight up-top.
+         Adds subtle depth without grain — keeps text crisp. */
+      background-color: var(--sand-light);
+      background-image:
+        radial-gradient(ellipse 90% 60% at 50% -10%, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 60%),
+        radial-gradient(ellipse 80% 50% at 100% 100%, rgba(184, 80, 66, 0.04) 0%, rgba(184, 80, 66, 0) 70%);
+      background-attachment: fixed;
+      -webkit-font-smoothing: antialiased;
+      letter-spacing: 0.01em;
+    }
+
+    /* Bilingual: toggle which lang renders */
+    body.lang-es .en { display: none; }
+    body.lang-en .es { display: none; }
+    body.lang-en { font-family: 'Inter', sans-serif; }
+
+    a { color: var(--terracotta); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+    a:hover { color: var(--terracotta-dark); }
+
+    .container { max-width: 64rem; margin: 0 auto; padding: 0 1.5rem; }
+    .container-wide { max-width: 80rem; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* HEADER */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(244, 236, 217, 0.92);
+      backdrop-filter: saturate(140%) blur(8px);
+      -webkit-backdrop-filter: saturate(140%) blur(8px);
+      border-bottom: 1px solid var(--sand-dark);
+    }
+    .site-header .inner {
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 80rem; margin: 0 auto; padding: 0.85rem 1.5rem;
+    }
+    .brand-mark { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+    .brand-mark img { width: 44px; height: 44px; }
+    .brand-mark .text { display: flex; flex-direction: column; line-height: 1.05; }
+    .brand-mark .name {
+      font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.25rem;
+      color: var(--espresso); letter-spacing: 0.005em;
+    }
+    .brand-mark .sub { font-size: 0.7rem; color: var(--sky-dark); letter-spacing: 0.16em; text-transform: uppercase; margin-top: 2px; }
+
+    .lang-toggle {
+      display: flex; align-items: center; gap: 0;
+      background: transparent; border: 1px solid var(--espresso); border-radius: 999px;
+      padding: 3px;
+    }
+    .lang-toggle button {
+      background: transparent; border: 0; padding: 0.25rem 0.85rem;
+      font-family: inherit; font-size: 0.78rem; font-weight: 600;
+      color: var(--espresso); letter-spacing: 0.08em;
+      border-radius: 999px; cursor: pointer;
+    }
+    .lang-toggle button.active { background: var(--espresso); color: var(--sand); }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      padding: 4rem 0 5rem;
+      overflow: hidden;
+    }
+    .hero .container { position: relative; z-index: 1; }
+    .hero-decor {
+      position: absolute; right: -6rem; top: -2rem;
+      width: 32rem; height: 32rem; pointer-events: none; opacity: 0.55;
+    }
+    .hero-decor img { width: 100%; height: 100%; }
+
+    .kicker {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin: 0 0 1.25rem;
+    }
+    h1.hero-title {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: clamp(2.75rem, 7vw, 5.5rem);
+      line-height: 1.02;
+      letter-spacing: -0.01em;
+      color: var(--espresso);
+      margin: 0;
+    }
+    h1.hero-title em { font-style: italic; color: var(--terracotta); }
+    .hero-sub {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+      line-height: 1.45;
+      color: var(--sky-dark);
+      max-width: 38rem;
+      margin: 1.5rem 0 0;
+    }
+    .pull-quote {
+      font-family: 'Caveat', cursive;
+      font-size: 1.7rem;
+      color: var(--cactus);
+      line-height: 1.3;
+      max-width: 30rem;
+      margin: 2.2rem 0 0;
+    }
+    .cta-row { display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 0.95rem 1.6rem;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: transform 0.15s ease, background 0.15s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+    .btn-primary { background: var(--terracotta); color: var(--off-white); }
+    .btn-primary:hover { background: var(--terracotta-dark); color: var(--off-white); transform: translateY(-1px); }
+    .btn-outline { background: transparent; color: var(--espresso); border-color: var(--espresso); }
+    .btn-outline:hover { background: var(--espresso); color: var(--sand); transform: translateY(-1px); }
+
+    /* SECTIONS */
+    section { padding: 6rem 0; position: relative; }
+    section.dark { background: var(--espresso); color: var(--off-white); }
+    section.dark h2 { color: var(--off-white); }
+    section.dark .kicker { color: var(--sunset); }
+    section.dark a { color: var(--sunset); }
+
+    .section-num {
+      font-family: 'Fraunces', serif;
+      font-weight: 800;
+      font-size: clamp(5rem, 12vw, 9rem);
+      color: var(--terracotta);
+      opacity: 0.12;
+      line-height: 1;
+      position: absolute;
+      left: 1.5rem;
+      top: 3rem;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: clamp(2rem, 4.5vw, 3.25rem);
+      line-height: 1.1;
+      color: var(--espresso);
+      letter-spacing: -0.005em;
+      margin: 0 0 1.5rem;
+    }
+    h3 {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: var(--espresso);
+      margin: 0 0 0.75rem;
+    }
+    p { margin: 0 0 1rem; }
+    p.lead {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.15rem, 2vw, 1.5rem);
+      line-height: 1.5;
+      color: var(--espresso);
+      max-width: 48rem;
+      font-weight: 400;
+    }
+    p.lead strong { color: var(--terracotta); font-weight: 600; }
+
+    /* Hand-drawn squiggle divider */
+    .squiggle {
+      display: block;
+      width: 120px;
+      height: 14px;
+      margin: 2rem 0;
+      opacity: 0.7;
+    }
+    .squiggle path { fill: none; stroke: var(--cactus); stroke-width: 1.8; stroke-linecap: round; }
+    section.dark .squiggle path { stroke: var(--sunset); }
+
+    /* CARDS */
+    .card {
+      background: var(--off-white);
+      border: 1px solid var(--sand-dark);
+      border-radius: 6px;
+      padding: 2rem;
+    }
+    .card.dark { background: var(--espresso); color: var(--off-white); border-color: var(--ink); }
+
+    /* GRID */
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    @media (max-width: 768px) {
+      .grid-3, .grid-2 { grid-template-columns: 1fr; }
+      section { padding: 4rem 0; }
+      .hero { padding: 3rem 0 4rem; }
+      .hero-decor { display: none; }
+    }
+
+    /* LEGAL GATES */
+    .gates { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 2.5rem 0; }
+    @media (max-width: 768px) { .gates { grid-template-columns: 1fr; } }
+    .gate {
+      background: var(--off-white);
+      border: 1px solid var(--sand-dark);
+      border-radius: 6px;
+      padding: 2rem;
+      position: relative;
+    }
+    .gate-num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 3rem; height: 3rem;
+      border: 1.5px solid var(--terracotta);
+      border-radius: 50%;
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--terracotta);
+      margin-bottom: 1rem;
+    }
+    .gate h3 { margin: 0.5rem 0 0.75rem; }
+    .gate .cite {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-style: italic;
+      color: var(--cactus);
+      margin-top: 1rem;
+      display: block;
+      letter-spacing: 0.02em;
+    }
+
+    /* STAGES */
+    .stage {
+      background: var(--off-white);
+      border: 1px solid var(--sand-dark);
+      border-radius: 6px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .stage-head { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem; }
+    .stage-badge {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 2.4rem; height: 2.4rem; border: 1.5px solid var(--terracotta);
+      border-radius: 50%; font-family: 'Fraunces', serif; font-weight: 700;
+      color: var(--terracotta); font-size: 1rem; flex-shrink: 0;
+    }
+    .stage h3 { margin: 0; font-size: 1.25rem; }
+    .stage ul { margin: 0.5rem 0 1.5rem; padding-left: 1.2rem; list-style: none; }
+    .stage ul li {
+      position: relative;
+      padding-left: 0.25rem;
+      margin-bottom: 0.6rem;
+      line-height: 1.5;
+    }
+    .stage ul li::before {
+      content: "•"; color: var(--terracotta); font-weight: 700;
+      position: absolute; left: -1rem; top: 0;
+    }
+    .stage .meta {
+      margin-top: auto;
+      padding-top: 1rem;
+      border-top: 1px solid var(--sand-dark);
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      color: var(--terracotta);
+      font-size: 1.05rem;
+    }
+
+    /* COMMITMENTS */
+    .commitments { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    @media (max-width: 768px) { .commitments { grid-template-columns: 1fr; } }
+    .commitment {
+      background: var(--espresso); color: var(--off-white);
+      padding: 2rem; border-radius: 6px;
+      border-left: 4px solid var(--terracotta);
+    }
+    .commitment h4 {
+      font-family: 'Fraunces', serif; font-weight: 600;
+      font-size: 1.15rem; margin: 0 0 0.5rem; color: var(--off-white);
+    }
+    .commitment p { color: var(--sand); margin: 0; font-size: 0.95rem; line-height: 1.55; }
+
+    /* PARTICIPATE */
+    .participate { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    @media (max-width: 768px) { .participate { grid-template-columns: 1fr; } }
+    .pcard {
+      background: var(--off-white);
+      border: 1px solid var(--sand-dark);
+      border-top: 4px solid var(--terracotta);
+      border-radius: 4px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+    .pcard.featured { background: #fbeee2; }
+    .pcard .pbadge {
+      width: 3.5rem; height: 3.5rem;
+      background: var(--terracotta); color: var(--off-white);
+      border-radius: 4px;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.6rem;
+      margin: 0 auto 1.25rem;
+    }
+    .pcard h3 { margin: 0 0 0.75rem; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--espresso); }
+    .pcard p { color: var(--espresso); font-size: 0.95rem; line-height: 1.55; flex: 1; }
+    .pcard .btn { margin-top: 1.25rem; align-self: center; }
+
+    /* DONATION TIERS */
+    .tiers {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.75rem;
+      margin: 2rem 0 1.5rem;
+    }
+    @media (max-width: 768px) { .tiers { grid-template-columns: repeat(2, 1fr); } }
+    .tier {
+      background: var(--off-white);
+      border: 1px solid var(--sand-dark);
+      border-radius: 4px;
+      padding: 1rem 0.75rem;
+      text-align: center;
+    }
+    .tier .amt { font-family: 'Fraunces', serif; font-weight: 700; color: var(--terracotta); font-size: 1.1rem; }
+    .tier .lbl { font-size: 0.78rem; color: var(--espresso); margin-top: 0.25rem; line-height: 1.3; }
+    .path-buttons { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; }
+
+    /* Payment method cards */
+    .pay-method {
+      background: var(--off-white);
+      border: 1px solid var(--sand-dark);
+      border-radius: 8px;
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .pay-method-head {
+      display: flex; align-items: center; gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .pay-icon { font-size: 1.5rem; }
+    .pay-method h4 {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: var(--espresso);
+      margin: 0;
+    }
+    .pay-method > p {
+      font-size: 0.92rem;
+      color: var(--espresso);
+      line-height: 1.5;
+      margin: 0 0 1.25rem;
+      flex: 1;
+    }
+    .pay-method .btn { align-self: flex-start; }
+    .pay-note {
+      font-size: 0.7rem !important;
+      color: var(--cactus) !important;
+      font-style: italic;
+      margin: 0.75rem 0 0 !important;
+      flex: 0 !important;
+    }
+    .bank-block {
+      background: var(--sand-light);
+      border: 1px solid var(--sand-dark);
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+    }
+    .bank-block > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid rgba(217, 207, 180, 0.5);
+    }
+    .bank-block > div:last-child { border-bottom: 0; }
+    .bk-lbl {
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--cactus);
+      font-weight: 600;
+    }
+    .bk-val { color: var(--espresso); font-weight: 500; }
+
+    /* COMMITTEE */
+    .committee { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 2rem 0; }
+    @media (max-width: 768px) { .committee { grid-template-columns: 1fr; } }
+    .member {
+      display: flex; align-items: center; gap: 1rem;
+      background: var(--off-white);
+      border: 1px solid var(--sand-dark);
+      border-radius: 6px;
+      padding: 1.25rem;
+    }
+    .avatar {
+      width: 3.5rem; height: 3.5rem; flex-shrink: 0;
+      border-radius: 50%; background: var(--espresso); color: var(--off-white);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.1rem;
+    }
+    .member .name { font-family: 'Fraunces', serif; font-weight: 600; color: var(--espresso); font-size: 1.1rem; line-height: 1.1; }
+    .member .role { font-style: italic; color: var(--cactus); font-size: 0.88rem; margin-top: 0.25rem; }
+
+    .origin-story {
+      background: var(--off-white);
+      border-left: 4px solid var(--terracotta);
+      padding: 2rem 2.5rem;
+      margin-top: 2.5rem;
+      border-radius: 0 6px 6px 0;
+    }
+    .origin-story p {
+      font-family: 'Fraunces', serif;
+      font-size: 1.15rem;
+      font-style: italic;
+      line-height: 1.6;
+      color: var(--espresso);
+    }
+    .origin-story .signature {
+      font-family: 'Caveat', cursive;
+      font-style: normal;
+      color: var(--terracotta);
+      font-size: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    /* NEXT SESSION */
+    .session-block {
+      background: var(--espresso);
+      color: var(--off-white);
+      border-radius: 8px;
+      padding: 3rem 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+    @media (max-width: 768px) { .session-block { grid-template-columns: 1fr; padding: 2rem 1.5rem; } }
+    .signup-form { background: var(--off-white); }
+    .session-block h3 { color: var(--sunset); font-family: 'Fraunces', serif; font-size: 1.8rem; margin: 0 0 1rem; }
+    .session-detail { display: flex; gap: 0.75rem; margin-bottom: 0.6rem; align-items: baseline; }
+    .session-detail .lbl { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sand); min-width: 5rem; opacity: 0.85; }
+    .session-detail .val { color: var(--off-white); font-size: 1.05rem; }
+    /* Sign-up form */
+    .signup-form {
+      background: var(--off-white);
+      color: var(--espresso);
+      border-radius: 8px;
+      padding: 2rem 2rem 1.75rem;
+      box-shadow: 0 0 0 1px var(--sand-dark);
+    }
+    .signup-form h4 {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 1.25rem;
+      color: var(--espresso);
+      margin: 0 0 0.35rem;
+    }
+    .signup-form .form-sub {
+      font-size: 0.88rem;
+      color: var(--cactus);
+      font-style: italic;
+      margin: 0 0 1.5rem;
+      line-height: 1.4;
+    }
+    .form-field { margin-bottom: 1rem; }
+    .form-field label {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--espresso);
+      margin-bottom: 0.4rem;
+    }
+    .form-field label .req { color: var(--terracotta); }
+    .form-field input[type="text"],
+    .form-field input[type="email"],
+    .form-field input[type="tel"],
+    .form-field select {
+      width: 100%;
+      padding: 0.65rem 0.85rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      color: var(--espresso);
+      background: var(--sand-light);
+      border: 1px solid var(--sand-dark);
+      border-radius: 4px;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .form-field input:focus,
+    .form-field select:focus {
+      outline: none;
+      border-color: var(--terracotta);
+      background: var(--off-white);
+    }
+    .radio-row { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .radio-row label {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.45rem 0.85rem;
+      background: var(--sand-light);
+      border: 1px solid var(--sand-dark);
+      border-radius: 999px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--espresso);
+      cursor: pointer;
+      margin: 0;
+      transition: all 0.15s;
+    }
+    .radio-row label:has(input:checked) {
+      background: var(--espresso);
+      color: var(--off-white);
+      border-color: var(--espresso);
+    }
+    .radio-row input[type="radio"] { display: none; }
+    .checkbox-row {
+      display: flex; gap: 0.6rem; align-items: flex-start;
+      font-size: 0.88rem; line-height: 1.45;
+      margin-top: 0.5rem;
+    }
+    .checkbox-row input { margin-top: 0.25rem; flex-shrink: 0; accent-color: var(--terracotta); }
+    .checkbox-row label {
+      font-size: 0.88rem;
+      text-transform: none;
+      letter-spacing: 0;
+      font-weight: 400;
+      color: var(--espresso);
+      margin: 0;
+    }
+    .signup-form .btn { width: 100%; justify-content: center; margin-top: 0.5rem; }
+    .signup-form .fine-print {
+      font-size: 0.7rem;
+      color: var(--cactus);
+      margin-top: 0.85rem;
+      text-align: center;
+      letter-spacing: 0.02em;
+    }
+    /* GHL form iframe wrapper — accommodate auto-resize from form_embed.js */
+    .ghl-embed-wrapper {
+      position: relative;
+      width: 100%;
+      min-height: 720px;
+      background: var(--sand-light);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .ghl-embed-wrapper iframe {
+      width: 100%;
+      min-height: 720px;
+      display: block;
+    }
+
+    .form-success {
+      background: var(--off-white);
+      border: 1px solid var(--cactus);
+      border-left: 4px solid var(--cactus);
+      border-radius: 6px;
+      padding: 2rem;
+      text-align: center;
+    }
+    .form-success .check {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 3rem; height: 3rem;
+      border: 2px solid var(--cactus);
+      border-radius: 50%;
+      color: var(--cactus);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .form-success h4 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.4rem;
+      color: var(--espresso);
+      margin: 0 0 0.5rem;
+    }
+    .form-success p {
+      font-size: 0.95rem;
+      color: var(--espresso);
+      line-height: 1.5;
+      max-width: 24rem;
+      margin: 0 auto;
+    }
+
+    /* FAQ */
+    .faq-item {
+      border-bottom: 1px solid var(--sand-dark);
+      padding: 1.25rem 0;
+    }
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex; align-items: baseline; justify-content: space-between;
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 1.15rem;
+      color: var(--espresso);
+      padding-right: 1.5rem;
+      position: relative;
+    }
+    .faq-item summary::after {
+      content: "+";
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 1.5rem;
+      color: var(--terracotta);
+      position: absolute;
+      right: 0;
+      top: -2px;
+      transition: transform 0.2s;
+    }
+    .faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-answer { padding: 1rem 0 0.5rem; max-width: 48rem; color: var(--espresso); line-height: 1.6; }
+
+    /* DOCUMENTS */
+    .docs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
+    @media (max-width: 768px) { .docs { grid-template-columns: 1fr; } }
+    .doc {
+      background: var(--off-white);
+      border: 1px solid var(--sand-dark);
+      border-radius: 6px;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      color: var(--espresso);
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .doc:hover { border-color: var(--terracotta); background: #faf0e0; }
+    .doc.disabled { opacity: 0.45; pointer-events: none; }
+    .doc .icon {
+      flex-shrink: 0; width: 2.5rem; height: 2.5rem;
+      background: var(--sand); border: 1px solid var(--sand-dark);
+      border-radius: 4px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Fraunces', serif; font-weight: 700; color: var(--terracotta);
+    }
+    .doc .meta { font-size: 0.78rem; color: var(--cactus); margin-top: 0.15rem; }
+    .doc .name { font-family: 'Fraunces', serif; font-weight: 600; font-size: 0.95rem; line-height: 1.25; }
+
+    /* FOOTER */
+    footer {
+      background: var(--espresso);
+      color: var(--sand);
+      padding: 4rem 0 2rem;
+      margin-top: 0;
+    }
+    footer .container-wide { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2.5rem; }
+    @media (max-width: 768px) { footer .container-wide { grid-template-columns: 1fr; } }
+    footer h4 { font-family: 'Inter', sans-serif; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sunset); margin: 0 0 1rem; }
+    footer a { color: var(--sand); text-decoration: none; }
+    footer a:hover { color: var(--off-white); text-decoration: underline; }
+    footer p { color: var(--sand); font-size: 0.95rem; line-height: 1.55; }
+    footer .brand-mark .name { color: var(--off-white); }
+    footer .brand-mark .sub { color: var(--cactus-pale); }
+    footer .legal { grid-column: 1 / -1; border-top: 1px solid #5a4a3e; padding-top: 1.5rem; margin-top: 1rem; font-size: 0.8rem; color: var(--sand); opacity: 0.7; }
+
+    /* Hand-drawn dividers between sections */
+    .section-divider { display: flex; justify-content: center; padding: 0 0 2rem; }
+
+    /* Preview banner */
+    .preview-banner {
+      background: var(--terracotta);
+      color: var(--off-white);
+      text-align: center;
+      padding: 0.5rem 1rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      font-weight: 500;
+    }
+    .preview-banner strong { letter-spacing: 0.12em; text-transform: uppercase; margin-right: 0.5rem; }
+  </style>
+</head>
+<body class="lang-es">
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="inner">
+    <a href="#" class="brand-mark">
+      <img src="./assets/brand/logo-seal-256.png" alt="Para Todos seal" />
+      <span class="text">
+        <span class="name">Para Todos</span>
+        <span class="sub">Pacífico Sur · BCS</span>
+      </span>
+    </a>
+    <div class="lang-toggle">
+      <button id="btn-es" class="active" onclick="setLang('es')">ES</button>
+      <button id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-decor"><img src="./assets/brand/logo-seal-1024.png" alt="" aria-hidden="true" /></div>
+  <div class="container">
+    <p class="kicker">
+      <span class="es">Una conversación comunitaria</span>
+      <span class="en">A community conversation</span>
+    </p>
+    <h1 class="hero-title">
+      <span class="es">Nuestra Región,<br/><em>Nuestro Futuro.</em></span>
+      <span class="en">Our Region,<br/><em>Our Future.</em></span>
+    </h1>
+    <p class="hero-sub">
+      <span class="es">Una conversación sobre cómo se toman las decisiones que afectan nuestras comunidades del Pacífico Sur.</span>
+      <span class="en">A conversation about how decisions get made in the Pacific South of BCS.</span>
+    </p>
+    <p class="pull-quote">
+      <span class="es">"Esto es una exploración, no una propuesta. Estamos aquí para escuchar y aprender juntos."</span>
+      <span class="en">"This is an exploration, not a proposal. We're here to listen and learn together."</span>
+    </p>
+    <div class="cta-row">
+      <a href="#proxima-sesion" class="btn btn-primary">
+        <span class="es">Únete a la conversación</span>
+        <span class="en">Join the conversation</span>
+      </a>
+      <a href="#participar" class="btn btn-outline">
+        <span class="es">Apoya esta exploración</span>
+        <span class="en">Support this exploration</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2 — 60 SECONDS -->
+<section id="que-es">
+  <div class="container">
+    <span class="section-num">01</span>
+    <p class="kicker"><span class="es">¿De qué se trata?</span><span class="en">What is this?</span></p>
+    <h2>
+      <span class="es">La pregunta, en sesenta segundos.</span>
+      <span class="en">The question, in sixty seconds.</span>
+    </h2>
+    <svg class="squiggle" viewBox="0 0 120 14"><path d="M2 7 Q 12 1, 22 7 T 42 7 T 62 7 T 82 7 T 102 7 T 118 7" /></svg>
+
+    <div class="es">
+      <p class="lead">La región sur del municipio de La Paz — desde Todos Santos hasta Pescadero, Cerritos, y comunidades del Pacífico Sur — está creciendo rápidamente. Con ese crecimiento vienen presiones reales sobre el agua, la energía, y la planeación del desarrollo.</p>
+      <p class="lead">Las decisiones que afectan nuestra región se toman a una hora de distancia, en La Paz. Eso no es una crítica — es una observación estructural: ningún sistema puede priorizar a una comunidad de 11,000 personas cuando 300,000+ viven a una hora.</p>
+      <p class="lead">La ley mexicana permite, bajo procesos específicos, que las comunidades creen sus propios municipios. Los Cabos lo hizo en 1992.</p>
+      <p class="lead"><strong>¿Es ese el camino correcto para nosotros?</strong> No lo sabemos todavía. Por eso estamos abriendo esta conversación — con sesiones públicas, encuestas, estudios técnicos, y total transparencia.</p>
+    </div>
+    <div class="en">
+      <p class="lead">The southern region of La Paz municipality — from Todos Santos through Pescadero, Cerritos, and the Pacific South communities — is growing rapidly. With that growth come real pressures on water, power, and development planning.</p>
+      <p class="lead">Decisions affecting our region are made an hour away, in La Paz. That's not a criticism — it's a structural observation: no system can prioritize an 11,000-person community when 300,000+ live an hour away.</p>
+      <p class="lead">Mexican law allows, through specific legal processes, for communities to create their own municipalities. Los Cabos did this in 1992.</p>
+      <p class="lead"><strong>Is that the right path for us?</strong> We don't know yet. That's why we're opening this conversation — with public sessions, surveys, technical studies, and full transparency.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3 — LEGAL GATES -->
+<section id="marco-legal">
+  <div class="container">
+    <span class="section-num">02</span>
+    <p class="kicker"><span class="es">El marco legal</span><span class="en">The legal framework</span></p>
+    <h2><span class="es">Tres puertas legales — altas a propósito.</span><span class="en">Three legal gates — intentionally high.</span></h2>
+    <svg class="squiggle" viewBox="0 0 120 14"><path d="M2 7 Q 12 1, 22 7 T 42 7 T 62 7 T 82 7 T 102 7 T 118 7" /></svg>
+
+    <p class="lead">
+      <span class="es">Crear un nuevo municipio en BCS requiere pasar tres puertas legales. Si no podemos pasarlas, no debemos crearlo. Estas existen para garantizar que solo se cree con apoyo comunitario genuino y demostrado.</span>
+      <span class="en">Creating a new municipality in BCS requires passing three legal gates. If we can't pass them, we shouldn't create it. They exist to ensure no new municipality is created without genuine, demonstrated community support.</span>
+    </p>
+
+    <div class="gates">
+      <div class="gate">
+        <span class="gate-num">I</span>
+        <h3><span class="es">Petición ciudadana</span><span class="en">Citizen petition</span></h3>
+        <p>
+          <span class="es">Al menos <strong>33%</strong> de los ciudadanos registrados en el padrón electoral del territorio propuesto deben firmar la petición formal — <em>miles de firmas, estimación pendiente del estudio cartográfico de la Etapa I.</em></span>
+          <span class="en">At least <strong>33%</strong> of registered voters in the proposed territory must sign the formal petition — <em>thousands of signatures, estimate pending the Stage I cartographic study.</em></span>
+        </p>
+        <span class="cite">Constitución del Estado de BCS, Art. 122 · Ley de Participación Ciudadana, Art. 19</span>
+      </div>
+      <div class="gate">
+        <span class="gate-num">II</span>
+        <h3><span class="es">Plebiscito</span><span class="en">Plebiscite</span></h3>
+        <p>
+          <span class="es">Al menos <strong>2/3 de los ciudadanos</strong> que voten en el plebiscito deben votar SÍ.</span>
+          <span class="en">At least <strong>2/3 of citizens</strong> who vote in the plebiscite must vote YES.</span>
+        </p>
+        <span class="cite">Constitución del Estado de BCS, Art. 122.VIII</span>
+      </div>
+      <div class="gate">
+        <span class="gate-num">III</span>
+        <h3><span class="es">Congreso del Estado</span><span class="en">State Congress</span></h3>
+        <p>
+          <span class="es">Al menos <strong>2/3 de los Diputados</strong> del Congreso de BCS deben aprobar la reforma constitucional.</span>
+          <span class="en">At least <strong>2/3 of State Deputies</strong> of the BCS Congress must approve the constitutional reform.</span>
+        </p>
+        <span class="cite">Constitución del Estado de BCS, Art. 64.XXXV</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 — STAGES -->
+<section id="proceso" class="dark">
+  <div class="container">
+    <span class="section-num" style="color: var(--sunset); opacity: 0.14;">03</span>
+    <p class="kicker"><span class="es">El proceso por etapas</span><span class="en">The process, in stages</span></p>
+    <h2><span class="es">Tres etapas, veinte meses, libros abiertos.</span><span class="en">Three stages, twenty months, open books.</span></h2>
+    <svg class="squiggle" viewBox="0 0 120 14"><path d="M2 7 Q 12 1, 22 7 T 42 7 T 62 7 T 82 7 T 102 7 T 118 7" /></svg>
+
+    <div class="gates" style="margin-top: 3rem;">
+      <div class="stage" style="background: #4a3a30; border-color: #5a4a3e; color: var(--off-white);">
+        <div class="stage-head">
+          <span class="stage-badge" style="border-color: var(--sunset); color: var(--sunset);">I</span>
+          <h3 style="color: var(--off-white);"><span class="es">Fundación</span><span class="en">Foundation</span></h3>
+        </div>
+        <ul style="color: var(--sand);">
+          <li class="es">Formación del Comité Promotor</li><li class="en">Promoter Committee formation</li>
+          <li class="es">Encuesta de opinión (600 cuestionarios)</li><li class="en">Public opinion survey (600 questionnaires)</li>
+          <li class="es">Estudio cartográfico de delimitación</li><li class="en">Boundary cartographic study</li>
+          <li class="es">Sesiones comunitarias</li><li class="en">Community sessions</li>
+        </ul>
+        <div class="meta" style="border-color: #5a4a3e; color: var(--sunset);">
+          <span class="es">2 meses  ·  600,000 MXN</span>
+          <span class="en">2 months  ·  600,000 MXN</span>
+        </div>
+      </div>
+      <div class="stage" style="background: #4a3a30; border-color: #5a4a3e; color: var(--off-white);">
+        <div class="stage-head">
+          <span class="stage-badge" style="border-color: var(--sunset); color: var(--sunset);">II</span>
+          <h3 style="color: var(--off-white);"><span class="es">Plebiscito</span><span class="en">Plebiscite</span></h3>
+        </div>
+        <ul style="color: var(--sand);">
+          <li class="es">Campaña informativa pública</li><li class="en">Public information campaign</li>
+          <li class="es">Recolección de firmas</li><li class="en">Signature collection</li>
+          <li class="es">Solicitud formal ante autoridad electoral</li><li class="en">Formal filing with electoral authority</li>
+          <li class="es">Plebiscito comunitario</li><li class="en">Community plebiscite</li>
+        </ul>
+        <div class="meta" style="border-color: #5a4a3e; color: var(--sunset);">
+          <span class="es">6 meses  ·  5,000,000 MXN</span>
+          <span class="en">6 months  ·  5,000,000 MXN</span>
+        </div>
+      </div>
+      <div class="stage" style="background: #4a3a30; border-color: #5a4a3e; color: var(--off-white);">
+        <div class="stage-head">
+          <span class="stage-badge" style="border-color: var(--sunset); color: var(--sunset);">III</span>
+          <h3 style="color: var(--off-white);"><span class="es">Aprobación legislativa</span><span class="en">Legislative approval</span></h3>
+        </div>
+        <ul style="color: var(--sand);">
+          <li class="es">Cabildeo ante el Congreso del Estado</li><li class="en">State Congress lobbying</li>
+          <li class="es">Programa de transición municipal</li><li class="en">Municipal transition program</li>
+          <li class="es">Plan de Desarrollo Municipal</li><li class="en">Municipal Development Plan</li>
+        </ul>
+        <div class="meta" style="border-color: #5a4a3e; color: var(--sunset);">
+          <span class="es">12 meses  ·  2.7M + 1–3M cabildeo</span>
+          <span class="en">12 months  ·  2.7M + 1–3M lobbying</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="commitments">
+      <div class="commitment">
+        <h4><span class="es">Financiamiento por etapas</span><span class="en">Stage-gated funding</span></h4>
+        <p>
+          <span class="es">No levantamos fondos para la siguiente etapa hasta que los entregables de la actual sean públicos. Si la comunidad decide no continuar tras la Etapa I, paramos.</span>
+          <span class="en">We don't raise the next stage's funds until the current stage's deliverables are public. If the community decides not to continue after Stage I, we stop.</span>
+        </p>
+      </div>
+      <div class="commitment">
+        <h4><span class="es">Libros abiertos</span><span class="en">Open books</span></h4>
+        <p>
+          <span class="es">Cada peso recaudado y cada peso gastado se publica trimestralmente. Auditoría independiente al final de cada etapa.</span>
+          <span class="en">Every peso raised and every peso spent is published quarterly. Independent audit at the end of each stage.</span>
+        </p>
+      </div>
+      <div class="commitment">
+        <h4><span class="es">Veto comunitario</span><span class="en">Community veto</span></h4>
+        <p>
+          <span class="es">En cualquier punto, si el sentir comunitario cambia, el Comité Promotor pausa y consulta públicamente antes de proceder.</span>
+          <span class="en">At any point, if community sentiment shifts, the Founding Committee pauses and consults publicly before proceeding.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5 — THREE WAYS -->
+<section id="participar">
+  <div class="container">
+    <span class="section-num">04</span>
+    <p class="kicker"><span class="es">Tres maneras de participar</span><span class="en">Three ways to participate</span></p>
+    <h2><span class="es">Tu tiempo cuenta tanto como tu dinero.</span><span class="en">Your time counts as much as your money.</span></h2>
+    <svg class="squiggle" viewBox="0 0 120 14"><path d="M2 7 Q 12 1, 22 7 T 42 7 T 62 7 T 82 7 T 102 7 T 118 7" /></svg>
+
+    <div class="participate" style="margin-top: 2.5rem;">
+      <div class="pcard">
+        <span class="pbadge">E</span>
+        <h3><span class="es">Escuchar + Compartir</span><span class="en">Listen + Share</span></h3>
+        <p>
+          <span class="es">Atiende una sesión. Lee los materiales. Comparte con tus vecinos. Sin compromiso. Este es el paso más importante.</span>
+          <span class="en">Attend a session. Read the materials. Share with neighbors. No commitment required. This is the most important step.</span>
+        </p>
+        <a href="#proxima-sesion" class="btn btn-outline" style="margin-top: 1.25rem;">
+          <span class="es">Próxima sesión</span><span class="en">Next session</span>
+        </a>
+      </div>
+      <div class="pcard featured">
+        <span class="pbadge">V</span>
+        <h3><span class="es">Voluntario</span><span class="en">Volunteer</span></h3>
+        <p>
+          <span class="es">Anfitrión · Recolector de firmas · Traductor · Diseño, video, redes · Contabilidad o legal · Comité asesor · Outreach por sector.</span>
+          <span class="en">Host · Signature gatherer · Translator · Design, video, social · Accounting or legal · Advisory committee · Sector outreach.</span>
+        </p>
+        <a href="#voluntario-form" class="btn btn-primary" style="margin-top: 1.25rem;">
+          <span class="es">Inscríbete</span><span class="en">Sign up</span>
+        </a>
+      </div>
+      <div class="pcard">
+        <span class="pbadge">A</span>
+        <h3><span class="es">Aportar</span><span class="en">Contribute</span></h3>
+        <p>
+          <span class="es">Cualquier monto cuenta — 50 pesos a 500,000 pesos. Las donaciones financian solo el proceso por etapas. Reporte trimestral público.</span>
+          <span class="en">Any amount counts — 50 pesos to 500,000 pesos. Donations fund only the staged process. Public quarterly report.</span>
+        </p>
+        <a href="#aportar-detalle" class="btn btn-outline" style="margin-top: 1.25rem;">
+          <span class="es">Cómo aportar</span><span class="en">How to give</span>
+        </a>
+      </div>
+    </div>
+
+    <div id="aportar-detalle" style="margin-top: 4rem;">
+      <h3 style="font-size: 1.75rem; margin-bottom: 0.5rem; font-family: 'Fraunces', serif;"><span class="es">Cómo aportar</span><span class="en">How to give</span></h3>
+      <p style="color: var(--cactus); font-style: italic; margin-bottom: 1.5rem;">
+        <span class="es">Cualquier monto cuenta. Recibo de factura por correo después de que se procese la donación.</span>
+        <span class="en">Any amount counts. Tax-deductible receipt emailed after the donation clears.</span>
+      </p>
+
+      <div class="tiers">
+        <div class="tier"><div class="amt">$50</div><div class="lbl"><span class="es">Vecino del Pueblo</span><span class="en">Pueblo Supporter</span></div></div>
+        <div class="tier"><div class="amt">$500</div><div class="lbl"><span class="es">Vecino Activo</span><span class="en">Active Neighbor</span></div></div>
+        <div class="tier"><div class="amt">$5K</div><div class="lbl"><span class="es">Constructor Comunitario</span><span class="en">Community Builder</span></div></div>
+        <div class="tier"><div class="amt">$50K</div><div class="lbl"><span class="es">Patrón Etapa I</span><span class="en">Stage I Patron</span></div></div>
+        <div class="tier"><div class="amt">$500K+</div><div class="lbl"><span class="es">Fundador</span><span class="en">Founding Underwriter</span></div></div>
+      </div>
+
+      <div class="grid-2" style="margin-top: 2rem; gap: 1.5rem;">
+        <div class="pay-method">
+          <div class="pay-method-head">
+            <span class="pay-icon">💳</span>
+            <h4><span class="es">Tarjeta de crédito o débito</span><span class="en">Credit or debit card</span></h4>
+          </div>
+          <p>
+            <span class="es">Cualquier país. Procesado de forma segura. Cualquier monto desde 50 pesos.</span>
+            <span class="en">Any country. Securely processed. Any amount from 50 pesos.</span>
+          </p>
+          <a href="https://link.go.highlevel.com/donate-paratodos" target="_blank" class="btn btn-primary">
+            <span class="es">Donar con tarjeta</span><span class="en">Donate by card</span>
+          </a>
+          <p class="pay-note">
+            <span class="es">[En la versión publicada: enlace de GHL Payments en vivo]</span>
+            <span class="en">[Deployed version: live GHL Payments link]</span>
+          </p>
+        </div>
+
+        <div class="pay-method">
+          <div class="pay-method-head">
+            <span class="pay-icon">🏦</span>
+            <h4><span class="es">Transferencia SPEI</span><span class="en">SPEI bank transfer</span></h4>
+          </div>
+          <p>
+            <span class="es">Para donantes en México. Sin comisiones del banco. Mismo día hábil.</span>
+            <span class="en">For donors in Mexico. No bank fees. Same business day.</span>
+          </p>
+          <div class="bank-block">
+            <div><span class="bk-lbl"><span class="es">Beneficiario</span><span class="en">Recipient</span></span><span class="bk-val">TODOS PARA TODOS A.C.</span></div>
+            <div><span class="bk-lbl">CLABE</span><span class="bk-val">[18 dígitos — pendiente]</span></div>
+            <div><span class="bk-lbl">RFC</span><span class="bk-val">[<span class="es">pendiente registro SAT</span><span class="en">pending SAT</span>]</span></div>
+            <div><span class="bk-lbl"><span class="es">Concepto</span><span class="en">Memo</span></span><span class="bk-val"><span class="es">Tu nombre + email</span><span class="en">Your name + email</span></span></div>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin-top: 1.5rem; font-size: 0.88rem; color: var(--cactus); font-style: italic; text-align: center;">
+        <span class="es">¿Quieres donar más de 50,000 pesos o necesitas un canal específico? Escríbenos a <a href="mailto:hola@paratodosbcs.mx">hola@paratodosbcs.mx</a>.</span>
+        <span class="en">Giving more than 50,000 pesos or need a specific channel? Reach us at <a href="mailto:hola@paratodosbcs.mx">hola@paratodosbcs.mx</a>.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6 — WHO -->
+<section id="quien">
+  <div class="container">
+    <span class="section-num">05</span>
+    <p class="kicker"><span class="es">Quién está detrás</span><span class="en">Who's behind this</span></p>
+    <h2><span class="es">Esta conversación es convocada por tus vecinos.</span><span class="en">This conversation is convened by your neighbors.</span></h2>
+    <svg class="squiggle" viewBox="0 0 120 14"><path d="M2 7 Q 12 1, 22 7 T 42 7 T 62 7 T 82 7 T 102 7 T 118 7" /></svg>
+
+    <p class="lead" style="margin-bottom: 0.5rem;">
+      <span class="es">Esta conversación es convocada por <strong>TODOS PARA TODOS A.C.</strong>, una asociación civil mexicana dedicada a mejorar la calidad de vida en nuestras comunidades. La asociación está registrada, gobernada por un consejo comunitario, y rinde cuentas a su misión.</span>
+      <span class="en">This conversation is convened by <strong>TODOS PARA TODOS A.C.</strong>, a Mexican civil association dedicated to improving quality of life in our communities. The association is registered, governed by a community board, and accountable to its mission.</span>
+    </p>
+
+    <h3 style="margin-top: 2.5rem; font-size: 1.1rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--terracotta); font-family: 'Inter', sans-serif; font-weight: 600;">
+      <span class="es">Comité Promotor Inicial</span><span class="en">Initial Founding Committee</span>
+    </h3>
+    <div class="committee">
+      <div class="member">
+        <div class="avatar">ST</div>
+        <div>
+          <div class="name">Sarai Torres</div>
+          <div class="role"><span class="es">vecina y co-fundadora</span><span class="en">resident and co-founder</span></div>
+        </div>
+      </div>
+      <div class="member">
+        <div class="avatar">BM</div>
+        <div>
+          <div class="name">Barrett Masso</div>
+          <div class="role"><span class="es">vecino y co-fundador</span><span class="en">resident and co-founder</span></div>
+        </div>
+      </div>
+      <div class="member">
+        <div class="avatar">+</div>
+        <div>
+          <div class="name"><span class="es">Más miembros pronto</span><span class="en">More members soon</span></div>
+          <div class="role"><span class="es">conforme se construye el grupo</span><span class="en">as the group is built</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="origin-story">
+      <div class="es">
+        <p>"Hace dos años nos mudamos a Todos Santos desde Los Cabos. Nos enamoramos de este lugar — su gente, sus ritmos, su terquedad silenciosa por seguir siendo lo que es a pesar de que todo a su alrededor cambia."</p>
+        <p>"Mientras crecía ese cariño, notamos algo. Esta comunidad tiene vecinos increíbles — gente que se presenta por los demás, que se esfuerza, que cuida. Pero la estructura municipal no está acompañando esa energía. Las calles no se arreglan. La basura se acumula. El agua y la luz son más frágiles cada año. No es porque el dinero no exista — sí existe. Es porque las prioridades se deciden a una hora de distancia, en La Paz, por personas que no viven aquí."</p>
+        <p>"No le estamos pidiendo a nadie que vote sí o no. Estamos preguntando: ¿es momento de tener una conversación honesta sobre si esta región debería tomar más de sus propias decisiones?"</p>
+        <p class="signature">— Sarai &amp; Barrett</p>
+      </div>
+      <div class="en">
+        <p>"Two years ago we moved to Todos Santos from Los Cabos. We fell in love with this place — its people, its rhythms, its quiet stubbornness about staying itself even as everything around it changes."</p>
+        <p>"As that love grew, we noticed something. This community has incredible neighbors — people who show up for each other, who try, who care. But the municipal structure isn't matching that energy. The roads aren't fixed. The trash piles. Water and power get more fragile each year. It's not because the money doesn't exist — it does. It's because the priorities are set an hour away in La Paz, by people who don't live here."</p>
+        <p>"We're not asking anyone to vote yes or no. We're asking: is it time to have an honest conversation about whether this region should be making more of its own decisions?"</p>
+        <p class="signature">— Sarai &amp; Barrett</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7 — NEXT SESSION -->
+<section id="proxima-sesion">
+  <div class="container">
+    <span class="section-num">06</span>
+    <p class="kicker"><span class="es">Próxima sesión</span><span class="en">Next session</span></p>
+    <h2><span class="es">Únete a la conversación.</span><span class="en">Join the conversation.</span></h2>
+    <svg class="squiggle" viewBox="0 0 120 14"><path d="M2 7 Q 12 1, 22 7 T 42 7 T 62 7 T 82 7 T 102 7 T 118 7" /></svg>
+
+    <div class="session-block" style="margin-top: 2.5rem;">
+      <div>
+        <h3><span class="es">Primera sesión comunitaria</span><span class="en">First community session</span></h3>
+        <div class="session-detail"><span class="lbl"><span class="es">Día</span><span class="en">Day</span></span><span class="val"><span class="es">Jueves 28 de mayo, 2026</span><span class="en">Thursday May 28, 2026</span></span></div>
+        <div class="session-detail"><span class="lbl"><span class="es">Hora</span><span class="en">Time</span></span><span class="val">5:00 PM</span></div>
+        <div class="session-detail"><span class="lbl"><span class="es">Lugar</span><span class="en">Where</span></span><span class="val">Plaza Todos Santos</span></div>
+        <div class="session-detail"><span class="lbl"><span class="es">Idioma</span><span class="en">Language</span></span><span class="val"><span class="es">Bilingüe</span><span class="en">Bilingual</span></span></div>
+        <p style="color: var(--sand); margin-top: 1.5rem; font-style: italic; font-family: 'Fraunces', serif;">
+          <span class="es">Si no puedes asistir presencialmente, también ofrecemos sesión online, grupo de WhatsApp informativo, y resúmenes por email.</span>
+          <span class="en">If you can't attend in person, we also offer online sessions, a WhatsApp info group, and email recaps.</span>
+        </p>
+      </div>
+      <div class="signup-form" id="signup-form">
+        <h4>
+          <span class="es">Reserva tu lugar</span>
+          <span class="en">Reserve your spot</span>
+        </h4>
+        <p class="form-sub">
+          <span class="es">Sin compromiso. Te enviamos los detalles y un recordatorio el día anterior.</span>
+          <span class="en">No commitment. We'll send you details and a reminder the day before.</span>
+        </p>
+
+        <!-- Go High Level — Town Hall Signup form embed -->
+        <div class="ghl-embed-wrapper">
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/form/QdXCHN6WGB2BGZTaoFsD"
+            style="width:100%;height:100%;border:none;border-radius:6px;"
+            id="inline-QdXCHN6WGB2BGZTaoFsD"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Town Hall Signup — Pacífico Sur BCS"
+            data-height="965"
+            data-layout-iframe-id="inline-QdXCHN6WGB2BGZTaoFsD"
+            data-form-id="QdXCHN6WGB2BGZTaoFsD"
+            title="Town Hall Signup — Pacífico Sur BCS"
+          ></iframe>
+        </div>
+
+        <p class="fine-print" style="margin-top: 1rem;">
+          <span class="es">Tu información se mantiene privada. Procesada por Go High Level. Ver <a href="./content/PRIVACY-POLICY.md">aviso de privacidad</a>.</span>
+          <span class="en">Your information stays private. Processed by Go High Level. See our <a href="./content/PRIVACY-POLICY.md">privacy notice</a>.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 8 — FAQ -->
+<section id="preguntas">
+  <div class="container">
+    <span class="section-num">07</span>
+    <p class="kicker"><span class="es">Preguntas frecuentes</span><span class="en">Frequently asked</span></p>
+    <h2><span class="es">Las preguntas que hemos escuchado.</span><span class="en">The questions we've heard.</span></h2>
+    <svg class="squiggle" viewBox="0 0 120 14"><path d="M2 7 Q 12 1, 22 7 T 42 7 T 62 7 T 82 7 T 102 7 T 118 7" /></svg>
+
+    <details class="faq-item">
+      <summary><span class="es">¿Esto significa que mis impuestos van a subir?</span><span class="en">Will my taxes go up?</span></summary>
+      <div class="faq-answer">
+        <span class="es">No para impuestos federales o estatales — esos no cambian. Los impuestos municipales (predial, etc.) los decidiría un nuevo cabildo local, que podría establecerlos iguales, más bajos, o más altos según las prioridades acordadas por la comunidad y sus representantes electos.</span>
+        <span class="en">Not for federal or state taxes — those don't change. Municipal taxes (property tax, etc.) would be decided by a new local cabildo, which could set them the same, lower, or higher based on priorities agreed by the community and its elected representatives.</span>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span class="es">¿Voy a poder seguir siendo dueño y vender mi propiedad?</span><span class="en">Will I still be able to own and sell my property?</span></summary>
+      <div class="faq-answer">
+        <span class="es">Sí. Los derechos de propiedad no cambian. Esta es una iniciativa de gobernanza municipal, no de cambio de derechos de propiedad.</span>
+        <span class="en">Yes. Property rights don't change. This is a municipal governance initiative, not a change in property rights.</span>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span class="es">¿Esto es un intento de "land grab" de extranjeros?</span><span class="en">Is this an outsider land-grab?</span></summary>
+      <div class="faq-answer">
+        <span class="es">No. Es una iniciativa convocada por residentes locales bajo Para Todos con libros abiertos. El proceso requiere por ley la aprobación de 2/3 de los residentes que voten en el plebiscito — eso lo decide la comunidad, no individuos ni intereses particulares.</span>
+        <span class="en">No. It's an initiative convened by local residents under Para Todos with open books. The process legally requires 2/3 of voting residents' approval in a plebiscite — that's decided by the community, not by individuals or particular interests.</span>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span class="es">¿Qué pasa con mi FM3 o residencia?</span><span class="en">What about my FM3 or residency?</span></summary>
+      <div class="faq-answer">
+        <span class="es">Nada. Tu status migratorio federal no cambia con un cambio municipal.</span>
+        <span class="en">Nothing. Your federal immigration status doesn't change with a municipal change.</span>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span class="es">¿Qué pasa si esto fracasa a medio camino?</span><span class="en">What happens if this fails midway?</span></summary>
+      <div class="faq-answer">
+        <span class="es">El proceso es por etapas. Si la comunidad decide no continuar después de la Etapa I, paramos — y los fondos no usados se quedan en custodia de la asociación civil para usos relacionados con la mejora comunitaria, con transparencia total.</span>
+        <span class="en">The process is staged. If the community decides not to continue after Stage I, we stop — and unused funds remain in the civil association's custody for related community-improvement uses, with full transparency.</span>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span class="es">¿Quién decide los límites del nuevo municipio?</span><span class="en">Who decides the boundaries of the new municipality?</span></summary>
+      <div class="faq-answer">
+        <span class="es">La comunidad, con base en un estudio técnico cartográfico (parte de la Etapa I) que analiza varios escenarios. El resultado se presenta a la comunidad para discusión antes de cualquier decisión.</span>
+        <span class="en">The community, based on a technical cartographic study (part of Stage I) analyzing multiple scenarios. The result is presented to the community for discussion before any decision.</span>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span class="es">¿Quién maneja el aspecto técnico y legal?</span><span class="en">Who handles the technical and legal side?</span></summary>
+      <div class="faq-answer">
+        <span class="es">Hemos contratado asesoría legal mexicana especializada en derecho municipal para guiar el proceso técnico y legal. Su trabajo está supervisado por el Comité Promotor de Para Todos. Los términos del contrato y la propuesta detallada están disponibles para revisión por parte de la comunidad y donantes; escríbenos a <a href="mailto:hola@paratodosbcs.mx">hola@paratodosbcs.mx</a>.</span>
+        <span class="en">We've engaged Mexican legal counsel specialized in municipal law to guide the technical and legal process. Their work is overseen by the Para Todos Founding Committee. Contract terms and the detailed proposal are available for review by community members and donors; reach us at <a href="mailto:hola@paratodosbcs.mx">hola@paratodosbcs.mx</a>.</span>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span class="es">¿Cómo sé que los fondos se usan correctamente?</span><span class="en">How do I know funds are used correctly?</span></summary>
+      <div class="faq-answer">
+        <span class="es">Reportes financieros públicos trimestrales. Auditoría independiente al final de cada etapa. Libro mayor de gastos publicado en línea. Y el compromiso de stage-gating.</span>
+        <span class="en">Public quarterly financial reports. Independent audit at the end of each stage. Public expense ledger published online. Plus the stage-gating commitment.</span>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span class="es">¿Cuándo puedo ver el deck completo o asistir a una sesión?</span><span class="en">When can I see the full deck or attend a session?</span></summary>
+      <div class="faq-answer">
+        <span class="es">El primer foro comunitario es jueves 28 de mayo, 5pm en Plaza Todos Santos. Regístrate arriba para recibir actualizaciones. El deck completo está disponible para descarga abajo.</span>
+        <span class="en">The first community forum is Thursday May 28, 5pm at Plaza Todos Santos. Register above to receive updates. The full deck is available for download below.</span>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- SECTION 9 — DOCUMENTS -->
+<section id="documentos">
+  <div class="container">
+    <span class="section-num">08</span>
+    <p class="kicker"><span class="es">Documentos</span><span class="en">Documents</span></p>
+    <h2><span class="es">Lo que publicamos es lo que sabemos.</span><span class="en">What we publish is what we know.</span></h2>
+    <svg class="squiggle" viewBox="0 0 120 14"><path d="M2 7 Q 12 1, 22 7 T 42 7 T 62 7 T 82 7 T 102 7 T 118 7" /></svg>
+    <p class="lead" style="font-size: 1.1rem;">
+      <span class="es">Reporte trimestral público, auditoría independiente al cierre de cada etapa, y los documentos clave abajo.</span>
+      <span class="en">Public quarterly report, independent audit at the end of each stage, and key documents below.</span>
+    </p>
+
+    <div class="docs">
+      <a href="./assets/documents/deck-es.pdf" class="doc" target="_blank">
+        <span class="icon">ES</span>
+        <div>
+          <div class="name"><span class="es">Deck completo</span><span class="en">Full deck</span></div>
+          <div class="meta">PDF · Español</div>
+        </div>
+      </a>
+      <a href="./assets/documents/deck-en.pdf" class="doc" target="_blank">
+        <span class="icon">EN</span>
+        <div>
+          <div class="name"><span class="es">Deck completo</span><span class="en">Full deck</span></div>
+          <div class="meta">PDF · English</div>
+        </div>
+      </a>
+      <a class="doc disabled">
+        <span class="icon">📋</span>
+        <div>
+          <div class="name"><span class="es">Propuesta legal y técnica</span><span class="en">Legal & technical proposal</span></div>
+          <div class="meta"><span class="es">A solicitud · hola@paratodosbcs.mx</span><span class="en">On request · hola@paratodosbcs.mx</span></div>
+        </div>
+      </a>
+      <a class="doc disabled">
+        <span class="icon">A</span>
+        <div>
+          <div class="name"><span class="es">Estatutos Para Todos</span><span class="en">Para Todos bylaws</span></div>
+          <div class="meta"><span class="es">Próximamente</span><span class="en">Coming soon</span></div>
+        </div>
+      </a>
+      <a class="doc disabled">
+        <span class="icon">$</span>
+        <div>
+          <div class="name"><span class="es">Reporte trimestral</span><span class="en">Quarterly report</span></div>
+          <div class="meta"><span class="es">Próximamente</span><span class="en">Coming soon</span></div>
+        </div>
+      </a>
+      <a class="doc disabled">
+        <span class="icon">📋</span>
+        <div>
+          <div class="name"><span class="es">Reporte Etapa I</span><span class="en">Stage I report</span></div>
+          <div class="meta"><span class="es">Al cierre de Etapa I</span><span class="en">Upon Stage I close</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contacto">
+  <div class="container-wide">
+    <div>
+      <a href="#" class="brand-mark">
+        <img src="./assets/brand/logo-seal-256.png" alt="" style="width: 56px; height: 56px;" />
+        <span class="text">
+          <span class="name">Para Todos</span>
+          <span class="sub">Pacífico Sur · BCS</span>
+        </span>
+      </a>
+      <p style="margin-top: 1.5rem; max-width: 22rem;">
+        <span class="es">TODOS PARA TODOS A.C. — Una asociación civil mexicana convocando una conversación regional sobre el futuro del Pacífico Sur.</span>
+        <span class="en">TODOS PARA TODOS A.C. — A Mexican civil association convening a regional conversation about the future of the Pacific South.</span>
+      </p>
+    </div>
+    <div>
+      <h4><span class="es">Contacto</span><span class="en">Contact</span></h4>
+      <p>
+        <a href="mailto:hola@paratodosbcs.mx">hola@paratodosbcs.mx</a><br/>
+        <span class="es">WhatsApp por confirmar</span><span class="en">WhatsApp TBD</span><br/>
+        Pacífico Sur, BCS, México
+      </p>
+    </div>
+    <div>
+      <h4><span class="es">Enlaces</span><span class="en">Links</span></h4>
+      <p>
+        <a href="#proxima-sesion"><span class="es">Próxima sesión</span><span class="en">Next session</span></a><br/>
+        <a href="#participar"><span class="es">Participar</span><span class="en">Participate</span></a><br/>
+        <a href="#documentos"><span class="es">Documentos</span><span class="en">Documents</span></a><br/>
+        <a href="./content/PRIVACY-POLICY.md"><span class="es">Aviso de privacidad</span><span class="en">Privacy notice</span></a>
+      </p>
+    </div>
+    <div class="legal">
+      <span class="es">© 2026 TODOS PARA TODOS A.C. · Asociación civil mexicana en proceso de registro fiscal SAT.  ·  Última actualización: 25 mayo 2026</span>
+      <span class="en">© 2026 TODOS PARA TODOS A.C. · Mexican civil association completing SAT tax registration.  ·  Last updated: May 25, 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.body.classList.remove('lang-es', 'lang-en');
+    document.body.classList.add('lang-' + lang);
+    document.documentElement.setAttribute('lang', lang);
+    document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    try { localStorage.setItem('lang', lang); } catch (e) {}
+  }
+  (function() {
+    try {
+      var saved = localStorage.getItem('lang');
+      if (saved === 'en' || saved === 'es') setLang(saved);
+    } catch (e) {}
+  })();
+
+</script>
+
+<!-- Go High Level form embed auto-resize script -->
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
+
+</body>
+</html>

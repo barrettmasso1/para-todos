@@ -1,0 +1,13 @@
+# Files NOT to deploy to Vercel
+# (the published site only needs: index.html, en/, assets/, vercel.json)
+
+preview.html
+README.md
+BUILD-BRIEF-FOR-CLAUDE-CODE.md
+DESIGN-SYSTEM.md
+GHL-FORM-SPEC.md
+content/
+archive/
+.claude/
+.DS_Store
+.git/

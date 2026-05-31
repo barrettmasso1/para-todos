@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm --version)",
+      "Bash(pnpm create *)",
+      "Bash(pnpm approve-builds *)",
+      "Bash(pnpm install *)",
+      "Bash(cp \"/Users/Agent/Documents/Claude/Projects/Para Todos/assets/brand/favicon.svg\" \"/Users/Agent/Documents/Claude/Projects/paratodos-bcs/src/app/icon.svg\")",
+      "Bash(cp \"/Users/Agent/Documents/Claude/Projects/Para Todos/assets/brand/favicon-32.png\" \"/Users/Agent/Documents/Claude/Projects/paratodos-bcs/src/app/icon.png\")",
+      "Bash(cp \"/Users/Agent/Documents/Claude/Projects/Para Todos/assets/brand/apple-touch-icon-180.png\" \"/Users/Agent/Documents/Claude/Projects/paratodos-bcs/src/app/apple-icon.png\")",
+      "Bash(rm -f \"/Users/Agent/Documents/Claude/Projects/paratodos-bcs/src/app/favicon.ico\")",
+      "Bash(mkdir -p \"/Users/Agent/Documents/Claude/Projects/paratodos-bcs/src/app/[locale]/privacidad\")",
+      "Bash(mkdir -p \"/Users/Agent/Documents/Claude/Projects/paratodos-bcs/src/app/[locale]/privacy\")",
+      "Bash(pnpm build *)",
+      "Bash(cp \"/Users/Agent/Documents/Claude/Projects/paratodos-bcs/src/middleware.ts\" \"/Users/Agent/Documents/Claude/Projects/paratodos-bcs/src/proxy.ts\")",
+      "Bash(rm \"/Users/Agent/Documents/Claude/Projects/paratodos-bcs/src/middleware.ts\")",
+      "Bash(gh auth *)",
+      "Bash(vercel --version)",
+      "Bash(vercel whoami *)",
+      "Bash(vercel deploy *)",
+      "Bash(vercel domains *)"
+    ]
+  }
+}

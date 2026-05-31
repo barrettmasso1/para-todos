@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Background gradient: deep ocean to sand cream -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="55%" stop-color="#4a90b8"/>
+      <stop offset="78%" stop-color="#e07a5f"/>
+      <stop offset="92%" stop-color="#f5e6d3"/>
+      <stop offset="100%" stop-color="#fafaf7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#sky)"/>
+
+  <!-- Sun rising over horizon (decorative) -->
+  <circle cx="900" cy="420" r="120" fill="#fafaf7" opacity="0.18"/>
+  <circle cx="900" cy="420" r="80" fill="#fafaf7" opacity="0.28"/>
+
+  <!-- Horizon line -->
+  <rect x="0" y="478" width="1200" height="2" fill="#1e3a5f" opacity="0.25"/>
+  <rect x="0" y="490" width="1200" height="1" fill="#1e3a5f" opacity="0.15"/>
+  <rect x="0" y="500" width="1200" height="1" fill="#1e3a5f" opacity="0.10"/>
+
+  <!-- Brand icon top-left -->
+  <g transform="translate(80, 80)">
+    <circle cx="40" cy="40" r="38" fill="#fafaf7"/>
+    <path d="M 17 48 A 18 18 0 0 1 63 48 Z" fill="#e07a5f"/>
+    <rect x="15" y="47.4" width="50" height="2" fill="#1e3a5f" rx="1"/>
+    <rect x="23" y="55" width="34" height="1.4" fill="#1e3a5f" opacity="0.55" rx="0.7"/>
+  </g>
+  <text x="180" y="115" font-family="Inter, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#fafaf7" letter-spacing="3" opacity="0.92">PARA TODOS A.C.</text>
+  <text x="180" y="142" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#fafaf7" letter-spacing="2.4" opacity="0.7">PACÍFICO SUR · BCS</text>
+
+  <!-- Headline (Spanish primary) -->
+  <text x="80" y="290" font-family="Fraunces, 'Cardo', 'Times New Roman', serif" font-size="76" font-weight="600" fill="#fafaf7">Nuestra Región,</text>
+  <text x="80" y="372" font-family="Fraunces, 'Cardo', 'Times New Roman', serif" font-size="76" font-weight="600" fill="#fafaf7">Nuestro Futuro.</text>
+
+  <!-- Subhead -->
+  <text x="80" y="430" font-family="Inter, -apple-system, sans-serif" font-size="24" font-weight="500" fill="#fafaf7" opacity="0.92">Una conversación sobre cómo se toman las decisiones</text>
+  <text x="80" y="462" font-family="Inter, -apple-system, sans-serif" font-size="24" font-weight="500" fill="#fafaf7" opacity="0.92">que afectan nuestras comunidades del Pacífico Sur.</text>
+
+  <!-- Footer URL + date -->
+  <rect x="0" y="555" width="1200" height="75" fill="#1e3a5f"/>
+  <text x="80" y="600" font-family="Inter, -apple-system, sans-serif" font-size="22" font-weight="600" fill="#fafaf7" letter-spacing="0.5">paratodosbcs.mx</text>
+  <text x="1120" y="600" text-anchor="end" font-family="Inter, -apple-system, sans-serif" font-size="20" font-weight="500" fill="#fafaf7" opacity="0.75">Jueves 28 de Mayo · 5pm · Plaza Todos Santos</text>
+</svg>
