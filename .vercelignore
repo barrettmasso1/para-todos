@@ -11,3 +11,11 @@ archive/
 .claude/
 .DS_Store
 .git/
+
+# Editable deck sources and older versions — NOT for public download
+# (the site only links to deck-en.pdf and deck-es.pdf)
+assets/documents/*.pptx
+assets/documents/*.key
+assets/documents/deck-en-v2.pdf
+assets/documents/deck-es-v2.pdf
+assets/documents/.DS_Store
