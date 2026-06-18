@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Más que Firmas: El Camino Real para Crear un Municipio — PARA TODOS</title>
+  <meta name="description" content="Una explicación sencilla del proceso de municipalización, paso a paso." />
+  <link rel="icon" type="image/png" href="/assets/brand/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon-180.png" />
+  <meta property="og:title" content="Más que Firmas: El Camino Real para Crear un Municipio" />
+  <meta property="og:description" content="Una explicación sencilla del proceso de municipalización, paso a paso." />
+  <meta property="og:image" content="https://paratodosbcs.mx/assets/images/blog/mas-que-firmas-hero.png" />
+  <meta property="og:url" content="https://paratodosbcs.mx/blog/mas-que-firmas/" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..600&family=Inter:wght@400;500;600;700&family=Caveat:wght@400;600&display=swap" />
+  <style>
+    :root {
+      --sand:#f4ecd9;--sand-light:#faf4e3;--sand-dark:#e0d4b3;
+      --terracotta:#b85042;--terracotta-dark:#9b3f33;--sunset:#d97a4a;
+      --cactus:#6d8a6e;--cactus-pale:#a8baa7;--sky:#7ba6b8;--sky-dark:#4f7a8f;
+      --espresso:#3a2e26;--off-white:#fbf6e9;--ink:#1f1813;
+    }
+    *,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}
+    body{margin:0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.6;color:var(--espresso);background-color:var(--sand-light);background-image:radial-gradient(ellipse 90% 60% at 50% -10%,rgba(255,255,255,.45) 0%,rgba(255,255,255,0) 60%),radial-gradient(ellipse 80% 50% at 100% 100%,rgba(184,80,66,.04) 0%,rgba(184,80,66,0) 70%);background-attachment:fixed;-webkit-font-smoothing:antialiased;letter-spacing:.01em}
+    a{color:var(--terracotta);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}a:hover{color:var(--terracotta-dark)}
+    .container{max-width:64rem;margin:0 auto;padding:0 1.5rem}.container-wide{max-width:80rem;margin:0 auto;padding:0 1.5rem}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;font-family:'Inter',sans-serif;font-weight:600;font-size:.9rem;letter-spacing:.03em;border-radius:999px;padding:.65rem 1.5rem;text-decoration:none;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+    .btn-primary{background:var(--terracotta);color:#fff;border:2px solid var(--terracotta)}.btn-primary:hover{background:var(--terracotta-dark);border-color:var(--terracotta-dark);color:#fff}
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(244,236,217,.92);backdrop-filter:saturate(140%) blur(8px);-webkit-backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--sand-dark)}
+    .site-header .inner{display:flex;align-items:center;justify-content:space-between;max-width:80rem;margin:0 auto;padding:.85rem 1.5rem}
+    .brand-mark{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+    .brand-mark img{width:44px;height:44px}
+    .brand-mark .text{display:flex;flex-direction:column;line-height:1.05}
+    .brand-mark .name{font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;color:var(--espresso);letter-spacing:.005em}
+    .brand-mark .sub{font-size:.7rem;color:var(--sky-dark);letter-spacing:.16em;text-transform:uppercase;margin-top:2px}
+    .lang-toggle{display:flex;align-items:center;gap:0;background:transparent;border:1px solid var(--espresso);border-radius:999px;padding:3px}
+    .lang-toggle button{background:transparent;border:0;padding:.25rem .85rem;font-family:inherit;font-size:.78rem;font-weight:600;color:var(--espresso);letter-spacing:.08em;border-radius:999px;cursor:pointer}
+    .lang-toggle button.active{background:var(--espresso);color:var(--sand)}
+    footer{background:var(--espresso);color:var(--off-white);padding:4rem 0 2rem;margin-top:0}
+    footer .container-wide{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem}
+    @media(max-width:768px){footer .container-wide{grid-template-columns:1fr;gap:2rem}}
+    footer h4{font-family:'Fraunces',serif;font-weight:600;font-size:1rem;color:var(--off-white);margin:0 0 .75rem}
+    footer p{font-size:.9rem;color:var(--sand);line-height:1.6;margin:0}
+    footer a{color:var(--sunset);text-decoration:underline;text-underline-offset:3px}footer a:hover{color:var(--off-white)}
+    footer .brand-mark .name{color:var(--off-white)}footer .brand-mark .sub{color:var(--cactus-pale)}
+    footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.1);padding-top:1.5rem;margin-top:1rem;font-size:.78rem;color:var(--sand);opacity:.55}
+    .post-hero{width:100%;max-height:480px;overflow:hidden;background:var(--espresso)}
+    .post-hero-img{width:100%;height:480px;object-fit:cover;display:block}
+    @media(max-width:768px){.post-hero-img{height:260px}}
+    .post-article{padding:4rem 0 5rem}.post-container{max-width:42rem}
+    .post-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-bottom:1.5rem}
+    .post-meta .cat,.post-meta .series-label{font-family:'Inter',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--sky-dark);text-decoration:none}
+    .post-meta .dot{color:var(--sand-dark)}
+    .post-meta time{font-family:'Inter',sans-serif;font-size:.72rem;color:var(--espresso);opacity:.5}
+    .post-title{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.75rem,4vw,2.75rem);line-height:1.1;color:var(--espresso);margin:0 0 1.25rem;letter-spacing:-.01em}
+    .post-subtitle{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.1rem,2vw,1.35rem);color:var(--sky-dark);line-height:1.5;margin:0 0 2.5rem;border-left:3px solid var(--sky-dark);padding-left:1.25rem}
+    .post-body{font-size:17px;line-height:1.7;color:var(--espresso)}
+    .post-body p{margin:0 0 1.25rem}
+    .post-body h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;color:var(--espresso);margin:2.5rem 0 .75rem}
+    .post-body h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:var(--terracotta);margin:1.75rem 0 .5rem}
+    .post-body ul{margin:0 0 1.25rem;padding-left:1.5rem}
+    .post-body ul li{margin-bottom:.5rem}
+    .post-body blockquote{margin:2rem 0;padding:1.25rem 1.5rem;border-left:3px solid var(--terracotta);background:var(--sand);border-radius:0 4px 4px 0;font-family:'Fraunces',serif;font-style:italic;font-size:1.05rem;color:var(--espresso)}
+    .post-body blockquote p{margin:0}
+    .post-download{margin:3rem 0 2.5rem}
+    .related-reading{background:var(--sand);border:1px solid var(--sand-dark);border-radius:6px;padding:1.5rem 2rem;margin:2.5rem 0}
+    .related-reading p{margin:0;font-size:.95rem}
+    .post-cta-box{background:var(--sand);border:1px solid var(--sand-dark);border-radius:6px;padding:1.75rem 2rem;margin:0 0 2rem;text-align:center}
+    .post-cta-box p{margin:0 0 .4rem;font-size:.95rem}.post-cta-box p:last-child{margin:0}
+    .share-row{display:flex;align-items:center;flex-wrap:wrap;gap:.75rem;margin:1.5rem 0 2.5rem}
+    .share-label{font-family:'Inter',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--espresso);opacity:.45}
+    .share-btn{display:inline-flex;align-items:center;gap:.35rem;font-family:'Inter',sans-serif;font-size:.82rem;font-weight:600;color:var(--espresso);background:transparent;border:1px solid var(--sand-dark);border-radius:999px;padding:.3rem .9rem;text-decoration:none;cursor:pointer;transition:border-color .15s,background .15s}
+    .share-btn:hover{border-color:var(--terracotta);color:var(--terracotta);background:transparent}
+    .post-nav{display:grid;grid-template-columns:1fr 1fr;gap:1rem;border-top:1px solid var(--sand-dark);padding-top:2rem;margin-top:1rem}
+    @media(max-width:580px){.post-nav{grid-template-columns:1fr}}
+    .nav-card{display:block;background:var(--off-white);border:1px solid var(--sand-dark);border-radius:6px;padding:1.25rem 1.5rem;text-decoration:none;color:inherit;transition:border-color .15s}
+    .nav-card:hover{border-color:var(--terracotta);color:inherit}
+    .nav-card .nav-dir{font-family:'Inter',sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--espresso);opacity:.4;margin-bottom:.35rem}
+    .nav-card .nav-title{font-family:'Fraunces',serif;font-weight:600;font-size:.95rem;color:var(--espresso);line-height:1.3}
+    .nav-empty{}
+  </style>
+</head>
+<body class="lang-es" data-es-url="/blog/mas-que-firmas/" data-en-url="/en/blog/more-than-signatures/">
+
+<header class="site-header">
+  <div class="inner">
+    <a href="/" class="brand-mark">
+      <img src="/assets/brand/logo-seal-256.png" alt="Para Todos" />
+      <span class="text"><span class="name">Para Todos</span><span class="sub">Pacífico Sur · BCS</span></span>
+    </a>
+    <div class="lang-toggle">
+      <button id="btn-es" class="active" onclick="setLang('es')">ES</button>
+      <button id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<div class="post-hero">
+  <img src="/assets/images/blog/mas-que-firmas-hero.png" alt="Ilustración isométrica de un pueblo costero de Baja California Sur con una reunión cívica ciudadana en una plaza" class="post-hero-img" />
+</div>
+
+<article class="post-article">
+  <div class="container post-container">
+
+    <div class="post-meta">
+      <span class="cat">Educación Cívica</span>
+      <span class="dot">·</span>
+      <time datetime="2026-06-18">18 de junio de 2026</time>
+    </div>
+
+    <h1 class="post-title">Más que Firmas: El Camino Real para Crear un Municipio</h1>
+    <p class="post-subtitle">Una explicación sencilla del proceso de municipalización, paso a paso.</p>
+
+    <div class="post-body">
+
+      <p>Cuando hablamos de la independencia municipal del Pacífico Sur de Baja California Sur, mucha gente piensa: <em>"Solo hay que juntar firmas, ¿no?"</em></p>
+
+      <p><strong>Ojalá fuera así de simple.</strong></p>
+
+      <p>Crear un nuevo municipio no es una petición. Es una <strong>campaña</strong> — con tres fases, requisitos legales estrictos, y un tiempo mínimo de unos <strong>20 meses</strong>, <em>cuando todo sale bien</em>. Aquí va el proceso real, en términos sencillos, para que todos en la comunidad sepamos lo que estamos pidiendo y lo que se requiere para lograrlo.</p>
+
+      <h2>Fase 1: Construir la base (≈ 2 meses)</h2>
+
+      <p>Antes de pedirle al Congreso del Estado que reconozca un nuevo municipio, la ley nos exige demostrar tres cosas:</p>
+
+      <p><strong>Que existe voluntad ciudadana real.</strong> No basta con decirlo — hay que demostrarlo con un estudio de opinión pública serio, con cientos de entrevistas en las comunidades.</p>
+
+      <p><strong>Que el territorio es viable.</strong> Esto requiere un estudio cartográfico técnico: límites, población, carreteras, hidrología, economía, vocación productiva, secciones electorales. El <strong>Artículo 122 de la Constitución del Estado</strong> exige superficie suficiente, mínimo 5,000 habitantes en el territorio, una cabecera de al menos 3,000, y servicios públicos adecuados.</p>
+
+      <p><strong>Que existe una instancia ciudadana organizada.</strong> Esto es el <em>Comité Promotor</em>, con asesoría jurídica desde el primer día.</p>
+
+      <p>Sin esta base, nada del resto procede.</p>
+
+      <h2>Fase 2: La solicitud ciudadana y el plebiscito (≈ 6 meses)</h2>
+
+      <p>Aquí es donde entran las firmas — pero no como muchos imaginan.</p>
+
+      <p>La ley exige el <strong>33% del padrón electoral</strong> del territorio que se quiera convertir en municipio. No el 33% de los habitantes. El 33% de los electores inscritos. En nuestro caso, eso son varios miles de firmas, no unos cientos.</p>
+
+      <p>Y cada firma debe incluir:</p>
+
+      <ul>
+        <li>Nombre completo</li>
+        <li>Firma</li>
+        <li>Clave de elector (la que aparece en la credencial del INE)</li>
+      </ul>
+
+      <p>Cada firma se verifica contra el padrón electoral. Si una persona no aparece, o los datos no coinciden, esa firma se descarta. Los opositores políticos <strong>van a impugnar</strong> — es parte normal del proceso. Por eso una recolección informal, sin protocolos legales claros, suele perder un 20-30% de las firmas en la verificación. <em>Si llegamos justos al 33%, perdemos.</em></p>
+
+      <p>Una vez entregadas y validadas, la autoridad electoral convoca un <strong>plebiscito</strong>. Para que pase, <strong>al menos dos tercios</strong> de los votos emitidos tienen que ser por el "sí" (Artículo 122, fracción VIII). Eso requiere una campaña de información seria, presencia en medios, materiales bilingües, y una estructura para movilizar a la gente el día de la votación.</p>
+
+      <h2>Fase 3: Aprobación legislativa y transición (≈ 12 meses)</h2>
+
+      <p>Si el plebiscito sale a favor, la propuesta pasa al Congreso del Estado, donde se requiere el voto de <strong>las dos terceras partes de los diputados</strong> (Artículo 64, fracción XXXV).</p>
+
+      <p>Pero antes de eso hay que:</p>
+
+      <ul>
+        <li><strong>Negociar con el municipio del que nos separamos</strong> (en nuestro caso, La Paz): qué bienes, infraestructura y personal pasan al nuevo municipio.</li>
+        <li><strong>Entregar un Plan de Desarrollo Municipal</strong> y un Plan de Desarrollo Urbano que demuestren que el nuevo municipio puede gobernarse y crecer de forma sostenible.</li>
+        <li><strong>Hacer cabildeo legislativo serio</strong> con los diputados, sus equipos, y otros actores políticos relevantes.</li>
+      </ul>
+
+      <p>San Felipe, en Baja California, logró este proceso en solo <strong>13 meses</strong> una vez que las condiciones políticas se alinearon. Esa rapidez no fue casualidad — fue el resultado de tener gente que sabía exactamente qué hacer, cuándo, y con quién hablar.</p>
+
+      <blockquote><p>Lee el caso de estudio completo de San Felipe para ver cómo una comunidad con 30 años de organización pasó de delegación a municipio en poco más de un año una vez que llegó el momento político. <a href="/blog/san-felipe-el-municipio-mas-nuevo-de-baja-california/"><strong>Lee el caso de San Felipe →</strong></a></p></blockquote>
+
+      <h2>¿Por qué un equipo profesional Y la comunidad?</h2>
+
+      <p>Esto es lo importante: <strong>ningún equipo profesional puede reemplazar la energía de la comunidad. Y ninguna cantidad de entusiasmo voluntario puede reemplazar la precisión legal que exige la ley.</strong></p>
+
+      <p><strong>El equipo profesional se encarga de:</strong></p>
+
+      <ul>
+        <li>La estrategia legal y la documentación que sobrevive impugnaciones.</li>
+        <li>La coordinación con la autoridad electoral, el Congreso, y el municipio actual.</li>
+        <li>El cabildeo y la lectura del momento político.</li>
+        <li>Los estudios técnicos exigidos por la Constitución.</li>
+      </ul>
+
+      <p><strong>La comunidad se encarga de:</strong></p>
+
+      <ul>
+        <li>Difundir la propuesta casa por casa, en plazas, en negocios.</li>
+        <li>Identificar quién apoyaría firmar y quién no.</li>
+        <li>Organizar eventos, asambleas, conversaciones.</li>
+        <li>Movilizar el voto el día del plebiscito.</li>
+      </ul>
+
+      <p>Cuando estos dos lados trabajan juntos, <strong>el costo baja, la velocidad sube, y la propuesta se vuelve imparable</strong>. Cuando uno solo lo intenta, generalmente fracasa.</p>
+
+      <h2>Lo que sigue</h2>
+
+      <p>A partir de la próxima semana, la comunidad tendrá la oportunidad de conocer directamente al primer equipo de profesionales que estamos considerando para acompañar y ejecutar este proceso. Pueden seguir otros en las próximas semanas. Esto forma parte de una evaluación amplia — una oportunidad para que todos conozcamos a cada equipo, hagamos las preguntas necesarias, y juntos decidamos quién está mejor preparado para llevar este esfuerzo adelante.</p>
+
+      <p>La invitación está abierta para quienes quieran escuchar, preguntar, y participar.</p>
+
+      <p><strong>No estamos firmando un papel. Estamos construyendo un municipio.</strong> Y eso requiere que todos entendamos lo que estamos haciendo.</p>
+
+    </div>
+
+    <div class="post-download">
+      <a href="/assets/documents/ParaTodos_MasQueFirmas_ES.pdf" download class="btn btn-primary">📄 Descargar esta entrada en PDF</a>
+    </div>
+
+    <div class="related-reading">
+      <p><strong>Lectura relacionada:</strong> <a href="/blog/san-felipe-el-municipio-mas-nuevo-de-baja-california/">San Felipe — un camino de 30 años hacia la independencia municipal →</a></p>
+    </div>
+
+    <div class="post-cta-box">
+      <p>¿Tienes preguntas? ¿Quieres ser parte de la conversación?</p>
+      <p>Contáctanos en <a href="https://paratodosbcs.mx/">paratodosbcs.mx</a> o únete a nuestro grupo de <a href="https://chat.whatsapp.com/Ehb6yKHqFZe2Ayt30uN23S?mode=gi_t" target="_blank" rel="noopener">WhatsApp</a>.</p>
+    </div>
+
+    <div class="share-row">
+      <span class="share-label">Compartir:</span>
+      <a class="share-btn" href="https://wa.me/?text=M%C3%A1s%20que%20Firmas%3A%20El%20Camino%20Real%20para%20Crear%20un%20Municipio%20%E2%80%94%20https%3A%2F%2Fparatodosbcs.mx%2Fblog%2Fmas-que-firmas%2F" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparatodosbcs.mx%2Fblog%2Fmas-que-firmas%2F" target="_blank" rel="noopener">Facebook</a>
+      <button class="share-btn" onclick="copyLink(this)">Copiar enlace</button>
+    </div>
+
+    <nav class="post-nav">
+      <a class="nav-card" href="/blog/san-felipe-el-municipio-mas-nuevo-de-baja-california/">
+        <div class="nav-dir">Caso relacionado</div>
+        <div class="nav-title">San Felipe — El Municipio Más Nuevo de Baja California</div>
+      </a>
+      <a class="nav-card" href="/blog/">
+        <div class="nav-dir">Más</div>
+        <div class="nav-title">Todas las entradas en el índice del blog →</div>
+      </a>
+    </nav>
+
+  </div>
+</article>
+
+<footer>
+  <div class="container-wide">
+    <div>
+      <a href="/" class="brand-mark">
+        <img src="/assets/brand/logo-seal-256.png" alt="" style="width:56px;height:56px" />
+        <span class="text"><span class="name">Para Todos</span><span class="sub">Pacífico Sur · BCS</span></span>
+      </a>
+      <p style="margin-top:1.5rem;max-width:22rem">Vecinos y comunidades del Pacífico Sur uniéndonos para construir un mejor futuro para nuestra región.</p>
+    </div>
+    <div><h4>Contacto</h4><p><a href="mailto:hola@paratodosbcs.mx">hola@paratodosbcs.mx</a><br/>Pacífico Sur, BCS, México</p></div>
+    <div>
+      <h4>Enlaces</h4>
+      <p><a href="/">Inicio</a><br/><a href="/blog/">Blog</a><br/><a href="mailto:hola@paratodosbcs.mx">Contáctanos</a></p>
+    </div>
+    <div class="legal">© 2026 Para Todos · Pacífico Sur, BCS</div>
+  </div>
+</footer>
+
+<script>
+  function setLang(lang) {
+    var esUrl=document.body.getAttribute('data-es-url'),enUrl=document.body.getAttribute('data-en-url');
+    if(esUrl&&enUrl){try{localStorage.setItem('lang',lang)}catch(e){} window.location.href=lang==='en'?enUrl:esUrl;}
+  }
+  function copyLink(btn) {
+    var orig=btn.textContent;
+    navigator.clipboard.writeText(window.location.href).then(function(){btn.textContent='✓ Copiado!';setTimeout(function(){btn.textContent=orig},2000);});
+  }
+  (function(){
+    try{
+      var saved=localStorage.getItem('lang'),isEn=document.documentElement.lang==='en';
+      if(saved&&((saved==='en')!==isEn)){
+        var esUrl=document.body.getAttribute('data-es-url'),enUrl=document.body.getAttribute('data-en-url');
+        if(saved==='en'&&enUrl){window.location.replace(enUrl);return}
+        if(saved==='es'&&esUrl){window.location.replace(esUrl);return}
+      }
+    }catch(e){}
+  })();
+</script>
+</body>
+</html>

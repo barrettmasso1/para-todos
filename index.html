@@ -705,6 +705,30 @@
     .doc .meta { font-size: 0.78rem; color: var(--cactus); margin-top: 0.15rem; }
     .doc .name { font-family: 'Fraunces', serif; font-weight: 600; font-size: 0.95rem; line-height: 1.25; }
 
+    /* BLOG CARDS */
+    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
+    @media (max-width: 768px) { .blog-grid { grid-template-columns: 1fr; } }
+    .blog-card {
+      background: var(--off-white);
+      border: 1px solid var(--sand-dark);
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .blog-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(58,46,38,0.1); color: inherit; }
+    .blog-card-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+    .blog-card-body { padding: 1.4rem 1.5rem 1.6rem; display: flex; flex-direction: column; flex: 1; }
+    .blog-card-meta { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--terracotta); font-weight: 600; margin-bottom: 0.65rem; }
+    .blog-card h3 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.1rem; line-height: 1.3; color: var(--espresso); margin: 0 0 0.6rem; }
+    .blog-card p { font-size: 0.9rem; color: var(--sky-dark); line-height: 1.5; margin: 0; flex: 1; }
+    .blog-all-link { margin-top: 2rem; text-align: right; }
+    .blog-all-link a { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.88rem; letter-spacing: 0.06em; color: var(--terracotta); text-decoration: none; }
+    .blog-all-link a:hover { color: var(--terracotta-dark); text-decoration: underline; }
+
     /* FOOTER */
     footer {
       background: var(--espresso);
@@ -1093,21 +1117,26 @@
   </div>
 </section>
 
-<!-- SECTION 7 — STAY INFORMED -->
+<!-- SECTION 7 — EVENT REGISTRATION -->
 <section id="proxima-sesion">
   <div class="container">
     <span class="section-num">05</span>
-    <p class="kicker"><span class="es">Únete a la conversación</span><span class="en">Join the conversation</span></p>
-    <h2><span class="es">Sé parte del proceso.</span><span class="en">Be part of the process.</span></h2>
+    <p class="kicker"><span class="es">Próximo evento</span><span class="en">Upcoming event</span></p>
+    <h2><span class="es">El Camino a la Municipalización</span><span class="en">The Road to Municipalization</span></h2>
     <svg class="squiggle" viewBox="0 0 120 14"><path d="M2 7 Q 12 1, 22 7 T 42 7 T 62 7 T 82 7 T 102 7 T 118 7" /></svg>
+
+    <p class="lead" style="margin-top: 1.5rem;">
+      <span class="es"><strong>Miércoles 24 de junio · 5:30 PM · Teatro Márquez de León, Todos Santos</strong></span>
+      <span class="en"><strong>Wednesday, June 24 · 5:30 PM · Teatro Márquez de León, Todos Santos</strong></span>
+    </p>
 
     <div class="session-block" style="margin-top: 2.5rem;">
       <div>
-        <h3><span class="es">Mantente informado</span><span class="en">Stay informed</span></h3>
+        <h3><span class="es">Regístrate para el evento</span><span class="en">Register for the event</span></h3>
 
         <p style="color: var(--sand); opacity: 0.85; font-size: 1rem; line-height: 1.6; margin: 0 0 1.5rem;">
-          <span class="es">Esta conversación apenas comienza. Déjanos tu información y te avisaremos sobre próximas sesiones, avances del proceso, y cómo puedes participar — cuando y como puedas.</span>
-          <span class="en">This conversation is just getting started. Leave your info and we'll keep you posted on upcoming sessions, process updates, and ways to get involved — on your own terms.</span>
+          <span class="es">Acompáñanos en una sesión comunitaria abierta sobre el camino hacia la municipalización del Pacífico Sur. Regístrate aquí para apartar tu lugar y recibir los detalles. La invitación está abierta para todos.</span>
+          <span class="en">Join us for an open community session about the road to municipalization of the Southern Pacific. Register here to save your spot and receive the details. Everyone is welcome.</span>
         </p>
 
         <!-- WhatsApp group CTA -->
@@ -1287,6 +1316,50 @@
   </div>
 </section>
 
+<!-- SECTION 08 — BLOG -->
+<section id="blog">
+  <div class="container">
+    <span class="section-num">08</span>
+    <p class="kicker"><span class="es">Blog</span><span class="en">Blog</span></p>
+    <h2><span class="es">Lo que estamos <em>aprendiendo</em></span><span class="en">What we're <em>learning</em></span></h2>
+    <svg class="squiggle" viewBox="0 0 120 14" aria-hidden="true"><path d="M2 7 C12 2, 22 12, 32 7 S52 2, 62 7 S82 12, 92 7 S112 2, 118 7"/></svg>
+    <p class="lead"><span class="es">Casos de estudio, análisis, actualizaciones y recursos sobre el camino hacia la autonomía municipal en nuestra región.</span><span class="en">Case studies, analysis, updates, and resources on the path toward municipal autonomy in our region.</span></p>
+    <div class="blog-grid">
+
+      <a class="blog-card" href="/blog/cuando-las-comunidades-toman-el-control-los-cabos-loreto/">
+        <img class="blog-card-img" src="./assets/images/blog/post-09.png" alt="" />
+        <div class="blog-card-body">
+          <div class="blog-card-meta"><span class="es">10 jun 2026</span><span class="en">Jun 10, 2026</span></div>
+          <h3><span class="es">Cuando las Comunidades Toman el Control: Los Cabos y Loreto</span><span class="en">When Communities Take Control: Los Cabos &amp; Loreto</span></h3>
+          <p><span class="es">Dos regiones turísticas de BCS que pasaron de la dependencia municipal a la autonomía — y lo que su proceso revela sobre el nuestro.</span><span class="en">Two BCS tourist regions that went from municipal dependence to autonomy — and what their process reveals about ours.</span></p>
+        </div>
+      </a>
+
+      <a class="blog-card" href="/blog/tres-mas-playa-del-carmen-tulum-bacalar/">
+        <img class="blog-card-img" src="./assets/images/blog/post-07.png" alt="" />
+        <div class="blog-card-body">
+          <div class="blog-card-meta"><span class="es">13 jun 2026</span><span class="en">Jun 13, 2026</span></div>
+          <h3><span class="es">Tres Más que lo Lograron: Playa del Carmen, Tulum y Bacalar</span><span class="en">Three More Towns That Did It: Playa del Carmen, Tulum &amp; Bacalar</span></h3>
+          <p><span class="es">Del Caribe al Pacífico — comunidades que construyeron nuevos municipios desde cero y convirtieron el turismo en desarrollo local.</span><span class="en">From the Caribbean to the Pacific — communities that built new municipalities from scratch and turned tourism into local development.</span></p>
+        </div>
+      </a>
+
+      <a class="blog-card" href="/blog/san-quintin-lo-logro-y-lo-que-significa-para-nuestra-region/">
+        <img class="blog-card-img" src="./assets/images/blog/post-10.png" alt="" />
+        <div class="blog-card-body">
+          <div class="blog-card-meta"><span class="es">16 jun 2026</span><span class="en">Jun 16, 2026</span></div>
+          <h3><span class="es">San Quintín lo Logró — y Lo que Significa para Nuestra Región</span><span class="en">San Quintín Did It — and What That Means for Our Region</span></h3>
+          <p><span class="es">El caso más reciente de municipalización en México. Seis lecciones que se aplican directamente a nuestra situación en el Pacífico Sur.</span><span class="en">The most recent municipalization case in Mexico. Six lessons that apply directly to our situation in the Pacific South.</span></p>
+        </div>
+      </a>
+
+    </div>
+    <div class="blog-all-link">
+      <a href="/blog/"><span class="es">Ver todas las entradas →</span><span class="en">Read all posts →</span></a>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer id="contacto">
   <div class="container-wide">
@@ -1314,9 +1387,10 @@
     <div>
       <h4><span class="es">Enlaces</span><span class="en">Links</span></h4>
       <p>
-        <a href="#proxima-sesion"><span class="es">Próxima sesión</span><span class="en">Next session</span></a><br/>
+        <a href="#proxima-sesion"><span class="es">Próximo evento</span><span class="en">Upcoming event</span></a><br/>
         <a href="#preguntas"><span class="es">Preguntas</span><span class="en">Questions</span></a><br/>
         <a href="#documentos"><span class="es">Documentos</span><span class="en">Documents</span></a><br/>
+        <a href="/blog/"><span class="es">Blog</span><span class="en">Blog</span></a><br/>
       </p>
     </div>
     <div class="legal">

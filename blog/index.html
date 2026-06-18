@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title class="es">Blog — PARA TODOS</title>
+  <meta name="description" content="Historias reales de comunidades que tomaron el control de su propio futuro." />
+  <link rel="icon" type="image/png" href="/assets/brand/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon-180.png" />
+  <meta property="og:title" content="Blog — PARA TODOS" />
+  <meta property="og:image" content="https://paratodosbcs.mx/assets/brand/og-image.png" />
+  <meta property="og:url" content="https://paratodosbcs.mx/blog" />
+  <meta property="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..600&family=Inter:wght@400;500;600;700&family=Caveat:wght@400;600&display=swap" />
+
+  <style>
+    :root {
+      --sand:        #f4ecd9;
+      --sand-light:  #faf4e3;
+      --sand-dark:   #e0d4b3;
+      --terracotta:  #b85042;
+      --terracotta-dark: #9b3f33;
+      --sunset:      #d97a4a;
+      --cactus:      #6d8a6e;
+      --cactus-pale: #a8baa7;
+      --sky:         #7ba6b8;
+      --sky-dark:    #4f7a8f;
+      --espresso:    #3a2e26;
+      --off-white:   #fbf6e9;
+      --ink:         #1f1813;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 17px; line-height: 1.6; color: var(--espresso);
+      background-color: var(--sand-light);
+      background-image:
+        radial-gradient(ellipse 90% 60% at 50% -10%, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0) 60%),
+        radial-gradient(ellipse 80% 50% at 100% 100%, rgba(184,80,66,0.04) 0%, rgba(184,80,66,0) 70%);
+      background-attachment: fixed;
+      -webkit-font-smoothing: antialiased;
+      letter-spacing: 0.01em;
+    }
+    body.lang-es .en { display: none; }
+    body.lang-en .es { display: none; }
+    a { color: var(--terracotta); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+    a:hover { color: var(--terracotta-dark); }
+    .container { max-width: 64rem; margin: 0 auto; padding: 0 1.5rem; }
+    .container-wide { max-width: 80rem; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* HEADER */
+    .site-header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(244,236,217,0.92);
+      backdrop-filter: saturate(140%) blur(8px);
+      -webkit-backdrop-filter: saturate(140%) blur(8px);
+      border-bottom: 1px solid var(--sand-dark);
+    }
+    .site-header .inner { display: flex; align-items: center; justify-content: space-between; max-width: 80rem; margin: 0 auto; padding: 0.85rem 1.5rem; }
+    .brand-mark { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+    .brand-mark img { width: 44px; height: 44px; }
+    .brand-mark .text { display: flex; flex-direction: column; line-height: 1.05; }
+    .brand-mark .name { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.25rem; color: var(--espresso); letter-spacing: 0.005em; }
+    .brand-mark .sub { font-size: 0.7rem; color: var(--sky-dark); letter-spacing: 0.16em; text-transform: uppercase; margin-top: 2px; }
+    .lang-toggle { display: flex; align-items: center; gap: 0; background: transparent; border: 1px solid var(--espresso); border-radius: 999px; padding: 3px; }
+    .lang-toggle button { background: transparent; border: 0; padding: 0.25rem 0.85rem; font-family: inherit; font-size: 0.78rem; font-weight: 600; color: var(--espresso); letter-spacing: 0.08em; border-radius: 999px; cursor: pointer; }
+    .lang-toggle button.active { background: var(--espresso); color: var(--sand); }
+
+    /* BLOG INDEX */
+    .blog-hero {
+      background: var(--espresso); color: var(--off-white);
+      padding: 4rem 0 3.5rem;
+      text-align: center;
+    }
+    .blog-hero .kicker { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sunset); margin: 0 0 1rem; }
+    .blog-hero h1 { font-family: 'Fraunces', serif; font-weight: 600; font-size: clamp(2.2rem, 5vw, 3.5rem); color: var(--off-white); margin: 0 0 1rem; line-height: 1.1; }
+    .blog-hero p { font-family: 'Fraunces', serif; font-style: italic; font-size: 1.2rem; color: var(--sand); max-width: 36rem; margin: 0 auto; line-height: 1.5; }
+
+    .blog-grid { padding: 4rem 0 5rem; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; margin-top: 0; }
+    @media (max-width: 900px) { .cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .cards { grid-template-columns: 1fr; } }
+
+    .post-card {
+      background: var(--off-white);
+      border: 1px solid var(--sand-dark);
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex; flex-direction: column;
+      text-decoration: none; color: inherit;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .post-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(58,46,38,0.08); color: inherit; }
+    .post-card .card-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: var(--sand); }
+    .post-card .card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+    .post-card .card-meta { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; }
+    .post-card .cat { font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sky-dark); text-decoration: none; }
+    .post-card .dot { color: var(--sand-dark); font-size: 0.8rem; }
+    .post-card .date { font-family: 'Inter', sans-serif; font-size: 0.72rem; color: var(--espresso); opacity: 0.5; }
+    .post-card h2 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.25rem; color: var(--espresso); margin: 0 0 0.6rem; line-height: 1.25; }
+    .post-card .subtitle { font-family: 'Fraunces', serif; font-style: italic; font-size: 0.95rem; color: var(--sky-dark); line-height: 1.45; margin: 0 0 1.25rem; flex: 1; }
+    .post-card .read-more { display: inline-flex; align-items: center; gap: 0.4rem; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--terracotta); text-decoration: none; letter-spacing: 0.02em; margin-top: auto; }
+    .post-card .read-more:hover { color: var(--terracotta-dark); }
+
+    .blog-footer-note { text-align: center; padding: 2rem 0 4rem; border-top: 1px solid var(--sand-dark); margin-top: 2rem; color: var(--espresso); opacity: 0.6; font-size: 0.9rem; }
+    .blog-footer-note a { color: var(--terracotta); }
+
+    /* SQUIGGLE */
+    .squiggle { display: block; width: 120px; height: 14px; margin: 2rem 0; opacity: 0.7; }
+    .squiggle path { fill: none; stroke: var(--cactus); stroke-width: 1.8; stroke-linecap: round; }
+
+    /* FOOTER */
+    footer { background: var(--espresso); color: var(--off-white); padding: 4rem 0 2rem; margin-top: 0; }
+    footer .container-wide { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+    @media (max-width: 768px) { footer .container-wide { grid-template-columns: 1fr; gap: 2rem; } }
+    footer h4 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1rem; color: var(--off-white); margin: 0 0 0.75rem; }
+    footer p { font-size: 0.9rem; color: var(--sand); line-height: 1.6; margin: 0; }
+    footer a { color: var(--sunset); text-decoration: underline; text-underline-offset: 3px; }
+    footer a:hover { color: var(--off-white); }
+    footer .brand-mark .name { color: var(--off-white); }
+    footer .brand-mark .sub { color: var(--cactus-pale); }
+    footer .legal { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; margin-top: 1rem; font-size: 0.78rem; color: var(--sand); opacity: 0.55; }
+  </style>
+</head>
+<body class="lang-es">
+
+<header class="site-header">
+  <div class="inner">
+    <a href="/" class="brand-mark">
+      <img src="/assets/brand/logo-seal-256.png" alt="Para Todos seal" />
+      <span class="text">
+        <span class="name">Para Todos</span>
+        <span class="sub">Pacífico Sur · BCS</span>
+      </span>
+    </a>
+    <div class="lang-toggle">
+      <button id="btn-es" class="active" onclick="setLang('es')">ES</button>
+      <button id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<!-- BLOG HERO -->
+<div class="blog-hero">
+  <div class="container">
+    <h1>Blog</h1>
+    <p>
+      <span class="es">Casos de estudio, actualizaciones y recursos para entender mejor el camino hacia la autonomía municipal.</span>
+      <span class="en">Case studies, updates, and resources to better understand the path toward municipal autonomy.</span>
+    </p>
+  </div>
+</div>
+
+<!-- BLOG CARDS -->
+<section class="blog-grid">
+  <div class="container">
+    <!-- ES cards -->
+    <div class="cards es">
+      <a class="post-card" href="/blog/mas-que-firmas/">
+        <img class="card-img" src="/assets/images/blog/mas-que-firmas-hero.png" alt="Reunión cívica ciudadana en una plaza — ilustración" />
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="cat">Educación Cívica</span>
+            <span class="dot">·</span>
+            <span class="date">18 jun 2026</span>
+          </div>
+          <h2>Más que Firmas: El Camino Real para Crear un Municipio</h2>
+          <p class="subtitle">Una explicación sencilla del proceso de municipalización, paso a paso.</p>
+          <span class="read-more">Leer más →</span>
+        </div>
+      </a>
+      <a class="post-card" href="/blog/cuando-las-comunidades-toman-el-control-los-cabos-loreto/">
+        <img class="card-img" src="/assets/images/blog/post-09.png" alt="Antes, durante y después — ilustración de campaña" />
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="cat">Educación Cívica</span>
+            <span class="dot">·</span>
+            <span class="date">9 jun 2026</span>
+          </div>
+          <h2>Cuando las Comunidades Toman el Control: Los Cabos y Loreto</h2>
+          <p class="subtitle">Los primeros dos casos documentados de municipios mexicanos que se independizaron — y lo que pasó después.</p>
+          <span class="read-more">Leer más →</span>
+        </div>
+      </a>
+      <a class="post-card" href="/blog/tres-mas-playa-del-carmen-tulum-bacalar/">
+        <img class="card-img" src="/assets/images/blog/post-07.png" alt="Monedas fluyendo hacia el pueblo próspero — ilustración de campaña" />
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="cat">Educación Cívica</span>
+            <span class="dot">·</span>
+            <span class="date">16 jun 2026</span>
+          </div>
+          <h2>Tres Más que lo Lograron — Playa del Carmen, Tulum y Bacalar</h2>
+          <p class="subtitle">Cómo comunidades caribeñas convirtieron la distancia y el abandono en independencia y crecimiento.</p>
+          <span class="read-more">Leer más →</span>
+        </div>
+      </a>
+      <a class="post-card" href="/blog/san-quintin-lo-logro-y-lo-que-significa-para-nuestra-region/">
+        <img class="card-img" src="/assets/images/blog/post-10.png" alt="Tres pueblos conectados con amanecer — ilustración de campaña" />
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="cat">Educación Cívica</span>
+            <span class="dot">·</span>
+            <span class="date">23 jun 2026</span>
+          </div>
+          <h2>San Quintín lo Logró — Y Lo Que Significa para Nuestra Región</h2>
+          <p class="subtitle">Uno de los casos más recientes, el más parecido a nosotros, y las lecciones que más importan.</p>
+          <span class="read-more">Leer más →</span>
+        </div>
+      </a>
+      <a class="post-card" href="/blog/san-felipe-el-municipio-mas-nuevo-de-baja-california/">
+        <img class="card-img" src="/assets/images/blog/san-felipe-blog-hero.png" alt="San Felipe — puerto pesquero costero, ilustración" />
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="cat">Educación Cívica</span>
+            <span class="dot">·</span>
+            <span class="date">16 jun 2026</span>
+          </div>
+          <h2>San Felipe — El Municipio Más Nuevo de Baja California</h2>
+          <p class="subtitle">Un análisis detallado del caso más reciente — cómo lo lograron, cuánto tardaron, qué salió bien, qué fue difícil, y lo que significa para nuestra región.</p>
+          <span class="read-more">Leer más →</span>
+        </div>
+      </a>
+    </div>
+    <!-- EN cards -->
+    <div class="cards en">
+      <a class="post-card" href="/en/blog/more-than-signatures/">
+        <img class="card-img" src="/assets/images/blog/mas-que-firmas-hero.png" alt="Citizen-led civic gathering in a plaza — illustration" />
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="cat">Civic Education</span>
+            <span class="dot">·</span>
+            <span class="date">Jun 18, 2026</span>
+          </div>
+          <h2>More Than Signatures: The Real Path to Creating a Municipality</h2>
+          <p class="subtitle">A plain-language explanation of the municipalization process, step by step.</p>
+          <span class="read-more">Read more →</span>
+        </div>
+      </a>
+      <a class="post-card" href="/en/blog/when-communities-take-control-los-cabos-loreto/">
+        <img class="card-img" src="/assets/images/blog/post-09.png" alt="Before, during, after — campaign illustration" />
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="cat">Civic Education</span>
+            <span class="dot">·</span>
+            <span class="date">Jun 9, 2026</span>
+          </div>
+          <h2>When Communities Take Control: Los Cabos and Loreto</h2>
+          <p class="subtitle">The first two case studies of Mexican municipalities that separated — and what happened next.</p>
+          <span class="read-more">Read more →</span>
+        </div>
+      </a>
+      <a class="post-card" href="/en/blog/three-more-towns-playa-del-carmen-tulum-bacalar/">
+        <img class="card-img" src="/assets/images/blog/post-07.png" alt="Coins flowing into a thriving village — campaign illustration" />
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="cat">Civic Education</span>
+            <span class="dot">·</span>
+            <span class="date">Jun 16, 2026</span>
+          </div>
+          <h2>Three More Towns That Did It — Playa del Carmen, Tulum, and Bacalar</h2>
+          <p class="subtitle">How Caribbean communities turned distance and neglect into independence and growth.</p>
+          <span class="read-more">Read more →</span>
+        </div>
+      </a>
+      <a class="post-card" href="/en/blog/san-quintin-and-what-it-means-for-our-region/">
+        <img class="card-img" src="/assets/images/blog/post-10.png" alt="Three villages connected at sunrise — campaign illustration" />
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="cat">Civic Education</span>
+            <span class="dot">·</span>
+            <span class="date">Jun 23, 2026</span>
+          </div>
+          <h2>San Quintín Did It — And What It Means for Our Region</h2>
+          <p class="subtitle">One of the more recent cases, the most relevant to us, and the lessons that matter most.</p>
+          <span class="read-more">Read more →</span>
+        </div>
+      </a>
+      <a class="post-card" href="/en/blog/san-felipe-baja-californias-newest-municipality/">
+        <img class="card-img" src="/assets/images/blog/san-felipe-blog-hero.png" alt="San Felipe coastal fishing village — illustration" />
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="cat">Civic Education</span>
+            <span class="dot">·</span>
+            <span class="date">Jun 16, 2026</span>
+          </div>
+          <h2>San Felipe — Baja California's Newest Municipality</h2>
+          <p class="subtitle">A detailed look at the most recent case — how they did it, how long it took, what went well, what was hard, and what it means for our region.</p>
+          <span class="read-more">Read more →</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="blog-footer-note">
+      <span class="es">Próximamente más contenido. <a href="https://chat.whatsapp.com/Ehb6yKHqFZe2Ayt30uN23S?mode=gi_t">Únete al grupo de WhatsApp</a> para mantenerte informado.</span>
+      <span class="en">More coming soon. <a href="https://paratodosbcs.mx/en#proxima-sesion">Join our WhatsApp group</a> to stay informed.</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container-wide">
+    <div>
+      <a href="/" class="brand-mark">
+        <img src="/assets/brand/logo-seal-256.png" alt="" style="width: 56px; height: 56px;" />
+        <span class="text">
+          <span class="name">Para Todos</span>
+          <span class="sub">Pacífico Sur · BCS</span>
+        </span>
+      </a>
+      <p style="margin-top: 1.5rem; max-width: 22rem;">
+        <span class="es">Para Todos — Vecinos y comunidades del Pacífico Sur uniéndose para construir un mejor futuro para nuestra región.</span>
+        <span class="en">Para Todos — Neighbors and communities of the Pacific South coming together to build a better future for our region.</span>
+      </p>
+    </div>
+    <div>
+      <h4><span class="es">Contacto</span><span class="en">Contact</span></h4>
+      <p>
+        <a href="mailto:hola@paratodosbcs.mx">hola@paratodosbcs.mx</a><br/>
+        Pacífico Sur, BCS, México
+      </p>
+    </div>
+    <div>
+      <h4><span class="es">Enlaces</span><span class="en">Links</span></h4>
+      <p>
+        <a href="/"><span class="es">Inicio</span><span class="en">Home</span></a><br/>
+        <a href="/blog/"><span class="es">Blog</span><span class="en">Blog</span></a><br/>
+        <a href="mailto:hola@paratodosbcs.mx"><span class="es">Contáctanos</span><span class="en">Contact us</span></a>
+      </p>
+    </div>
+    <div class="legal">
+      <span class="es">© 2026 Para Todos · Pacífico Sur, BCS</span>
+      <span class="en">© 2026 Para Todos · Pacific South, BCS</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function setLang(lang) {
+    var path = window.location.pathname;
+    var onEnRoute = /^\/en(\/|$)/.test(path);
+    var target = onEnRoute ? (lang === 'es' ? '/blog/' : null)
+                           : (lang === 'en' ? '/en/blog/' : null);
+    if (target) {
+      try { localStorage.setItem('lang', lang); } catch(e) {}
+      window.location.href = target;
+      return;
+    }
+    document.body.classList.remove('lang-es', 'lang-en');
+    document.body.classList.add('lang-' + lang);
+    document.documentElement.setAttribute('lang', lang);
+    document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    try { localStorage.setItem('lang', lang); } catch(e) {}
+  }
+  (function() {
+    try {
+      var saved = localStorage.getItem('lang');
+      if (saved === 'en') { setLang('en'); return; }
+    } catch(e) {}
+  })();
+</script>
+</body>
+</html>

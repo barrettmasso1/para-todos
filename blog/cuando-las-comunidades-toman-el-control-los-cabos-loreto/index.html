@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cuando las Comunidades Toman el Control: Los Cabos y Loreto — PARA TODOS</title>
+  <meta name="description" content="Los primeros dos casos documentados de municipios mexicanos que se independizaron — y lo que pasó después." />
+  <link rel="icon" type="image/png" href="/assets/brand/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon-180.png" />
+  <meta property="og:title" content="Cuando las Comunidades Toman el Control: Los Cabos y Loreto" />
+  <meta property="og:description" content="Los primeros dos casos documentados de municipios mexicanos que se independizaron — y lo que pasó después." />
+  <meta property="og:image" content="https://paratodosbcs.mx/assets/images/blog/post-09.png" />
+  <meta property="og:url" content="https://paratodosbcs.mx/blog/cuando-las-comunidades-toman-el-control-los-cabos-loreto/" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..600&family=Inter:wght@400;500;600;700&family=Caveat:wght@400;600&display=swap" />
+  <style>
+    :root {
+      --sand:        #f4ecd9;
+      --sand-light:  #faf4e3;
+      --sand-dark:   #e0d4b3;
+      --terracotta:  #b85042;
+      --terracotta-dark: #9b3f33;
+      --sunset:      #d97a4a;
+      --cactus:      #6d8a6e;
+      --cactus-pale: #a8baa7;
+      --sky:         #7ba6b8;
+      --sky-dark:    #4f7a8f;
+      --espresso:    #3a2e26;
+      --off-white:   #fbf6e9;
+      --ink:         #1f1813;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 17px; line-height: 1.6; color: var(--espresso);
+      background-color: var(--sand-light);
+      background-image:
+        radial-gradient(ellipse 90% 60% at 50% -10%, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0) 60%),
+        radial-gradient(ellipse 80% 50% at 100% 100%, rgba(184,80,66,0.04) 0%, rgba(184,80,66,0) 70%);
+      background-attachment: fixed;
+      -webkit-font-smoothing: antialiased;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--terracotta); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+    a:hover { color: var(--terracotta-dark); }
+    .container { max-width: 64rem; margin: 0 auto; padding: 0 1.5rem; }
+    .container-wide { max-width: 80rem; margin: 0 auto; padding: 0 1.5rem; }
+    .btn { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.9rem; letter-spacing: 0.03em; border-radius: 999px; padding: 0.65rem 1.5rem; text-decoration: none; cursor: pointer; transition: background 0.15s, color 0.15s, border-color 0.15s; }
+    .btn-primary { background: var(--terracotta); color: #fff; border: 2px solid var(--terracotta); }
+    .btn-primary:hover { background: var(--terracotta-dark); border-color: var(--terracotta-dark); color: #fff; }
+    .site-header { position: sticky; top: 0; z-index: 50; background: rgba(244,236,217,0.92); backdrop-filter: saturate(140%) blur(8px); -webkit-backdrop-filter: saturate(140%) blur(8px); border-bottom: 1px solid var(--sand-dark); }
+    .site-header .inner { display: flex; align-items: center; justify-content: space-between; max-width: 80rem; margin: 0 auto; padding: 0.85rem 1.5rem; }
+    .brand-mark { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+    .brand-mark img { width: 44px; height: 44px; }
+    .brand-mark .text { display: flex; flex-direction: column; line-height: 1.05; }
+    .brand-mark .name { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.25rem; color: var(--espresso); letter-spacing: 0.005em; }
+    .brand-mark .sub { font-size: 0.7rem; color: var(--sky-dark); letter-spacing: 0.16em; text-transform: uppercase; margin-top: 2px; }
+    .lang-toggle { display: flex; align-items: center; gap: 0; background: transparent; border: 1px solid var(--espresso); border-radius: 999px; padding: 3px; }
+    .lang-toggle button { background: transparent; border: 0; padding: 0.25rem 0.85rem; font-family: inherit; font-size: 0.78rem; font-weight: 600; color: var(--espresso); letter-spacing: 0.08em; border-radius: 999px; cursor: pointer; }
+    .lang-toggle button.active { background: var(--espresso); color: var(--sand); }
+    footer { background: var(--espresso); color: var(--off-white); padding: 4rem 0 2rem; margin-top: 0; }
+    footer .container-wide { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+    @media (max-width: 768px) { footer .container-wide { grid-template-columns: 1fr; gap: 2rem; } }
+    footer h4 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1rem; color: var(--off-white); margin: 0 0 0.75rem; }
+    footer p { font-size: 0.9rem; color: var(--sand); line-height: 1.6; margin: 0; }
+    footer a { color: var(--sunset); text-decoration: underline; text-underline-offset: 3px; }
+    footer a:hover { color: var(--off-white); }
+    footer .brand-mark .name { color: var(--off-white); }
+    footer .brand-mark .sub { color: var(--cactus-pale); }
+    footer .legal { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; margin-top: 1rem; font-size: 0.78rem; color: var(--sand); opacity: 0.55; }
+    .post-hero { width: 100%; max-height: 480px; overflow: hidden; background: var(--espresso); }
+    .post-hero-img { width: 100%; height: 480px; object-fit: cover; display: block; }
+    @media (max-width: 768px) { .post-hero-img { height: 260px; } }
+    .post-article { padding: 4rem 0 5rem; }
+    .post-container { max-width: 42rem; }
+    .post-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; }
+    .post-meta .cat { font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sky-dark); text-decoration: none; }
+    .post-meta .series-label { font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sky-dark); }
+    .post-meta .dot { color: var(--sand-dark); }
+    .post-meta time { font-family: 'Inter', sans-serif; font-size: 0.72rem; color: var(--espresso); opacity: 0.5; }
+    .post-title { font-family: 'Fraunces', serif; font-weight: 600; font-size: clamp(1.75rem, 4vw, 2.75rem); line-height: 1.1; color: var(--espresso); margin: 0 0 1.25rem; letter-spacing: -0.01em; }
+    .post-subtitle { font-family: 'Fraunces', serif; font-style: italic; font-size: clamp(1.1rem, 2vw, 1.35rem); color: var(--sky-dark); line-height: 1.5; margin: 0 0 2.5rem; border-left: 3px solid var(--sky-dark); padding-left: 1.25rem; }
+    .post-body { font-size: 17px; line-height: 1.7; color: var(--espresso); }
+    .post-body p { margin: 0 0 1.25rem; }
+    .post-body h2 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.5rem; color: var(--espresso); margin: 2.5rem 0 0.75rem; }
+    .post-body h3 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.15rem; color: var(--terracotta); margin: 1.75rem 0 0.5rem; }
+    .post-body .tease { font-family: 'Fraunces', serif; font-style: italic; color: var(--espresso); opacity: 0.5; font-size: 0.95rem; border-top: 1px solid var(--sand-dark); padding-top: 1.5rem; margin-top: 2rem; }
+    .post-divider { display: block; width: 120px; height: 14px; margin: 2rem 0; opacity: 0.7; }
+    .post-divider path { fill: none; stroke: var(--cactus); stroke-width: 1.8; stroke-linecap: round; }
+    .post-download { margin: 3rem 0 2.5rem; }
+    .post-cta-box { background: var(--sand); border: 1px solid var(--sand-dark); border-radius: 6px; padding: 1.75rem 2rem; margin: 0 0 2rem; text-align: center; }
+    .post-cta-box p { margin: 0 0 0.4rem; font-size: 0.95rem; }
+    .post-cta-box p:last-child { margin: 0; }
+    .share-row { display: flex; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin: 1.5rem 0 2.5rem; }
+    .share-label { font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--espresso); opacity: 0.45; }
+    .share-btn { display: inline-flex; align-items: center; gap: 0.35rem; font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 600; color: var(--espresso); background: transparent; border: 1px solid var(--sand-dark); border-radius: 999px; padding: 0.3rem 0.9rem; text-decoration: none; cursor: pointer; transition: border-color 0.15s, background 0.15s; }
+    .share-btn:hover { border-color: var(--terracotta); color: var(--terracotta); background: transparent; }
+    .post-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid var(--sand-dark); padding-top: 2rem; margin-top: 1rem; }
+    @media (max-width: 580px) { .post-nav { grid-template-columns: 1fr; } }
+    .nav-card { display: block; background: var(--off-white); border: 1px solid var(--sand-dark); border-radius: 6px; padding: 1.25rem 1.5rem; text-decoration: none; color: inherit; transition: border-color 0.15s; }
+    .nav-card:hover { border-color: var(--terracotta); color: inherit; }
+    .nav-card .nav-dir { font-family: 'Inter', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--espresso); opacity: 0.4; margin-bottom: 0.35rem; }
+    .nav-card .nav-title { font-family: 'Fraunces', serif; font-weight: 600; font-size: 0.95rem; color: var(--espresso); line-height: 1.3; }
+    .nav-card.nav-next { text-align: right; }
+    .nav-empty { }
+  </style>
+</head>
+<body class="lang-es" data-es-url="/blog/cuando-las-comunidades-toman-el-control-los-cabos-loreto/" data-en-url="/en/blog/when-communities-take-control-los-cabos-loreto/">
+
+<header class="site-header">
+  <div class="inner">
+    <a href="/" class="brand-mark">
+      <img src="/assets/brand/logo-seal-256.png" alt="Para Todos" />
+      <span class="text">
+        <span class="name">Para Todos</span>
+        <span class="sub">Pacífico Sur · BCS</span>
+      </span>
+    </a>
+    <div class="lang-toggle">
+      <button id="btn-es" class="active" onclick="setLang('es')">ES</button>
+      <button id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<div class="post-hero">
+  <img src="/assets/images/blog/post-09.png" alt="Antes, durante y después — ilustración de campaña" class="post-hero-img" />
+</div>
+
+<article class="post-article">
+  <div class="container post-container">
+
+    <div class="post-meta">
+      <span class="cat">Educación Cívica</span>
+      <span class="dot">·</span>
+      <span class="series-label">Serie de tres partes</span>
+      <span class="dot">·</span>
+      <time datetime="2026-06-10">10 de junio de 2026</time>
+    </div>
+
+    <h1 class="post-title">Cuando las Comunidades Toman el Control: Los Cabos y Loreto</h1>
+
+    <p class="post-subtitle">Los primeros dos casos documentados de municipios mexicanos que se independizaron — y lo que pasó después.</p>
+
+    <div class="post-body">
+
+      <p>Cuando la gente nos pregunta si es posible que las comunidades del Pacífico Sur de BCS tengan su propio municipio, nuestra respuesta es siempre la misma: no solo es posible — ya ha pasado, muchas veces, en comunidades muy parecidas a la nuestra.</p>
+
+      <p>En los últimos meses, investigamos seis casos reales de comunidades mexicanas que tomaron esa decisión en los últimos cuarenta años. Estudiamos sus razones, su proceso, y lo que pasó después. Lo que encontramos es consistente y claro: cuando una comunidad controla sus propios recursos y sus propias decisiones, los resultados mejoran. No eventualmente — de manera demostrable, medible, y en formas que los residentes sienten en su vida diaria.</p>
+
+      <p>Esta es la primera entrega de una serie de tres partes. Hoy compartimos las primeras dos historias — ambas aquí mismo en Baja California Sur, una que probablemente conoces bien, y otra que podría sorprenderte.</p>
+
+      <h2>Caso 1: Los Cabos, Baja California Sur — 1981</h2>
+
+      <p>La mayoría de las personas que visitan Los Cabos hoy no tienen idea de cómo lucía hace cincuenta años. Con excepción de algunos pescadores de California que descubrieron las aguas del cabo para la pesca deportiva después de la Segunda Guerra Mundial, la zona se mantuvo rural y sin desarrollo — una remota franja de costa desértica donde el Pacífico se encuentra con el Golfo, lejos de la atención de cualquier gobierno, cercano o lejano.</p>
+
+      <p>Eso comenzó a cambiar a principios de los años 70. El gobierno federal mexicano, a través de FONATUR, reconoció el extraordinario potencial natural de la región y comenzó a invertir en infraestructura — incluyendo la Carretera Transpeninsular, que por primera vez conectó el extremo sur de la península con el resto del país por tierra. El aeropuerto siguió, y con él llegó la primera ola de turismo internacional.</p>
+
+      <p>Pero había un problema estructural que ninguna inversión federal podía resolver por sí sola: toda la región seguía siendo gobernada desde La Paz, a más de 200 kilómetros de distancia. Cada permiso, cada solicitud de servicio, cada decisión municipal — todo fluía a través de una ciudad que casi nada tenía en común con la comunidad pesquera y turística que crecía en el extremo sur de la península. Las personas que tomaban decisiones sobre Los Cabos no vivían ahí. No pescaban ahí. No caminaban sus calles ni sentían sus dolores de crecimiento. La inversión llegaba, pero la capacidad administrativa para canalizarla efectivamente simplemente no existía localmente.</p>
+
+      <p>Para finales de los años 70, la tensión entre el crecimiento acelerado de la región y su administración distante se había vuelto imposible de ignorar. El turismo llegaba. La inversión llegaba. Las personas llegaban. Y La Paz, a 200 kilómetros, supuestamente tenía que administrar todo eso.</p>
+
+      <p>En 1981, el Congreso del Estado aprobó la creación del municipio de Los Cabos — el cuarto municipio de Baja California Sur. San José del Cabo fue designada cabecera municipal. Por primera vez en décadas, el extremo sur de la península tenía su propio gobierno local con autoridad real sobre sus propios asuntos.</p>
+
+      <h3>¿Qué pasó después?</h3>
+
+      <p>La transformación es difícil de exagerar. La población creció de aproximadamente 5,000 residentes en 1981 a más de 351,000 en 2024 — un aumento del 47% desde 2010 solo, impulsado por el empleo turístico y el desarrollo inmobiliario. Los Cabos ahora representa aproximadamente el 44% de todos los habitantes de Baja California Sur.</p>
+
+      <p>El turismo se convirtió en el motor económico dominante, atrayendo más de 2 millones de visitantes internacionales cada año. Hoy, Los Cabos se ubica junto a Cancún y Puerto Vallarta como uno de los tres destinos turísticos más reconocidos de México a nivel mundial, y su economía representa aproximadamente el 70% del PIB turístico de todo el estado de Baja California Sur.</p>
+
+      <p>Vale la pena ser honesto sobre lo que este crecimiento también trajo: el desarrollo acelerado tuvo costos reales — presión sobre los recursos hídricos, expansión urbana descontrolada, desigualdad entre la zona turística y las comunidades que la sirven. Estos son desafíos reales con los que Los Cabos sigue lidiando hoy. Pero aquí está el punto crucial: esos son desafíos que un gobierno local, elegido por y responsable ante la gente de Los Cabos, ahora gestiona. Para bien o para mal, esas decisiones pertenecen a la comunidad. Eso es lo que significa el gobierno propio.</p>
+
+      <p>Nada del crecimiento — y ninguna de la capacidad para responder a sus consecuencias — habría sido posible con un gobierno sentado en La Paz, a 200 kilómetros, administrando el extremo sur de la península como un asunto secundario y distante.</p>
+
+      <h2>Caso 2: Loreto, Baja California Sur — 1992</h2>
+
+      <p>La historia de Loreto es diferente a la de Los Cabos en casi todos los sentidos — y esa diferencia es precisamente el punto.</p>
+
+      <p>Loreto fue fundada el 25 de octubre de 1697 por el misionero jesuita Juan María de Salvatierra. Fue el primer asentamiento español permanente en la Península de Baja California y sirvió como capital colonial de las Californias — el centro administrativo de lo que eventualmente se convertiría en California, Nevada, Utah, Arizona y partes de varios otros estados de EE.UU. La iglesia misional que Salvatierra construyó sigue en pie en el centro del pueblo hoy, la más antigua de la península, un recordatorio físico de que Loreto fue una vez la ciudad más importante en un territorio más grande que la mayoría de los países.</p>
+
+      <p>Para finales del siglo XX, la importancia política había disminuido, pero la identidad cultural e histórica no. Los loretanos están profundamente conectados con el patrimonio de su pueblo — la misión, el Golfo, las islas, las tradiciones pesqueras, el ritmo tranquilo de una pequeña comunidad costera con una memoria muy larga. Esta identidad es lo que hace a Loreto, Loreto.</p>
+
+      <p>Sin embargo, durante décadas, las personas que tomaban decisiones sobre las calles de Loreto, el acceso costero, la preservación histórica y la estrategia turística estaban sentadas en Ciudad Insurgentes — la cabecera agrícola del municipio de Comondú, sin ninguna conexión particular con ninguna de esas cosas. Las prioridades de Comondú estaban orientadas hacia la agricultura y eran completamente ajenas al carácter costero, histórico y turístico de Loreto. FONATUR había identificado a Loreto como zona de desarrollo turístico prioritario desde los años 70, pero el gobierno municipal responsable de guiar ese desarrollo no tenía ni la proximidad ni el incentivo para hacerlo efectivamente.</p>
+
+      <p>En 1992, el Congreso de Baja California Sur aprobó la creación del municipio de Loreto. Alfredo García Green se convirtió en el primer presidente municipal, tomando posesión en abril de 1993.</p>
+
+      <h3>¿Qué pasó después?</h3>
+
+      <p>Aquí es donde la historia de Loreto diverge más claramente de la de Los Cabos — y por qué puede ser el caso más instructivo de los dos.</p>
+
+      <p>Loreto no se convirtió en un destino de turismo masivo. No construyó un corredor de hoteles internacionales de gran escala. No multiplicó su población diez veces en una generación. Y eso fue una decisión — una elección deliberada y local sobre qué tipo de comunidad quería ser Loreto.</p>
+
+      <p>Con su propio gobierno finalmente establecido, la comunidad desarrolló su propia identidad turística: ecoturismo, pesca deportiva, avistamiento de ballenas, kayak entre las islas, y el profundo carácter histórico del centro del pueblo. El Parque Nacional Bahía de Loreto fue establecido en 1996 con participación municipal activa — protegiendo el extraordinario ecosistema marino del Golfo de California del tipo de sobredesarrollo que un gobierno más distante y menos comprometido podría haber permitido. El aeropuerto internacional fue desarrollado con conexiones directas a California, atrayendo exactamente al tipo de visitante que Loreto había decidido atraer.</p>
+
+      <p>Loreto es hoy un Pueblo Mágico, un destino de pesca deportiva de reputación mundial, una zona de patrimonio adyacente a la UNESCO, y una comunidad que ha logrado crecer en sus propios términos — lentamente, intencionalmente, protegiendo las cosas que la hacen valer la pena visitar.</p>
+
+      <p>Esa última frase es la que importa: <em>en sus propios términos</em>.</p>
+
+      <h2>La lección que conecta ambas historias</h2>
+
+      <p>Los Cabos y Loreto tomaron decisiones muy diferentes sobre qué tipo de comunidades querían ser. Una eligió el desarrollo rápido y a gran escala. La otra eligió el crecimiento lento, intencional e impulsado por su identidad. Ambas decisiones fueron posibles gracias a lo mismo: un gobierno local con la autoridad real para tomarlas.</p>
+
+      <p>Eso es lo que el gobierno propio le da a una comunidad. No una garantía de resultados perfectos — sino la capacidad de mirar su propia tierra, su propia gente, sus propios recursos, y decidir por sí misma cómo se ve el futuro.</p>
+
+      <p class="tease">La próxima semana: Playa del Carmen, Tulum y Bacalar — tres comunidades caribeñas que escribieron sus propias historias.</p>
+
+    </div>
+
+    <div class="post-download">
+      <a href="/assets/documents/case-study-es.pdf" download class="btn btn-primary">📄 Descargar el Reporte Completo</a>
+    </div>
+
+    <div class="post-cta-box">
+      <p>¿Tienes preguntas? ¿Quieres ser parte de la conversación?</p>
+      <p>Contáctanos en <a href="https://paratodosbcs.mx">paratodosbcs.mx</a> o únete a nuestro grupo de <a href="https://chat.whatsapp.com/Ehb6yKHqFZe2Ayt30uN23S?mode=gi_t" target="_blank" rel="noopener">WhatsApp</a>.</p>
+    </div>
+
+    <div class="share-row">
+      <span class="share-label">Compartir:</span>
+      <a class="share-btn" href="https://wa.me/?text=Cuando%20las%20Comunidades%20Toman%20el%20Control%3A%20Los%20Cabos%20y%20Loreto%20%E2%80%94%20https%3A%2F%2Fparatodosbcs.mx%2Fblog%2Fcuando-las-comunidades-toman-el-control-los-cabos-loreto%2F" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparatodosbcs.mx%2Fblog%2Fcuando-las-comunidades-toman-el-control-los-cabos-loreto%2F" target="_blank" rel="noopener">Facebook</a>
+      <button class="share-btn" onclick="copyLink(this)">Copiar enlace</button>
+    </div>
+
+    <nav class="post-nav">
+      <div class="nav-empty"></div>
+      <a class="nav-card nav-next" href="/blog/tres-mas-playa-del-carmen-tulum-bacalar/">
+        <div class="nav-dir">Siguiente →</div>
+        <div class="nav-title">Tres Más que lo Lograron — Playa del Carmen, Tulum y Bacalar</div>
+      </a>
+    </nav>
+
+  </div>
+</article>
+
+<footer>
+  <div class="container-wide">
+    <div>
+      <a href="/" class="brand-mark">
+        <img src="/assets/brand/logo-seal-256.png" alt="" style="width: 56px; height: 56px;" />
+        <span class="text">
+          <span class="name">Para Todos</span>
+          <span class="sub">Pacífico Sur · BCS</span>
+        </span>
+      </a>
+      <p style="margin-top: 1.5rem; max-width: 22rem;">Vecinos y comunidades del Pacífico Sur uniéndose para construir un mejor futuro para nuestra región.</p>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <p>Pacífico Sur, BCS, México</p>
+    </div>
+    <div>
+      <h4>Enlaces</h4>
+      <p>
+        <a href="/">Inicio</a><br/>
+        <a href="/blog/">Blog</a><br/>
+        <a href="/privacy.html">Privacidad</a>
+      </p>
+    </div>
+    <div class="legal">© 2026 Para Todos · Pacífico Sur, BCS</div>
+  </div>
+</footer>
+
+<script>
+  function setLang(lang) {
+    var esUrl = document.body.getAttribute('data-es-url');
+    var enUrl = document.body.getAttribute('data-en-url');
+    if (esUrl && enUrl) {
+      try { localStorage.setItem('lang', lang); } catch(e) {}
+      window.location.href = lang === 'en' ? enUrl : esUrl;
+      return;
+    }
+  }
+  function copyLink(btn) {
+    var orig = btn.textContent;
+    navigator.clipboard.writeText(window.location.href).then(function() {
+      btn.textContent = '✓ ¡Copiado!';
+      setTimeout(function() { btn.textContent = orig; }, 2000);
+    });
+  }
+  (function() {
+    try {
+      var saved = localStorage.getItem('lang');
+      var isEnPage = document.documentElement.lang === 'en';
+      if (saved && ((saved === 'en') !== isEnPage)) {
+        var esUrl = document.body.getAttribute('data-es-url');
+        var enUrl = document.body.getAttribute('data-en-url');
+        if (saved === 'en' && enUrl) { window.location.replace(enUrl); return; }
+        if (saved === 'es' && esUrl) { window.location.replace(esUrl); return; }
+      }
+    } catch(e) {}
+  })();
+</script>
+</body>
+</html>

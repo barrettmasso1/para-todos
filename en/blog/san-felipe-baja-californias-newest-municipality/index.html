@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>San Felipe — Baja California's Newest Municipality — PARA TODOS</title>
+  <meta name="description" content="A detailed look at the most recent case — how they did it, how long it took, what went well, what was hard, and what it means for our region." />
+  <link rel="icon" type="image/png" href="/assets/brand/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon-180.png" />
+  <meta property="og:title" content="San Felipe — Baja California's Newest Municipality" />
+  <meta property="og:description" content="A detailed look at the most recent case — how they did it, how long it took, what went well, what was hard, and what it means for our region." />
+  <meta property="og:image" content="https://paratodosbcs.mx/assets/images/blog/san-felipe-blog-hero.png" />
+  <meta property="og:url" content="https://paratodosbcs.mx/en/blog/san-felipe-baja-californias-newest-municipality/" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..600&family=Inter:wght@400;500;600;700&family=Caveat:wght@400;600&display=swap" />
+  <style>
+    :root {
+      --sand:#f4ecd9;--sand-light:#faf4e3;--sand-dark:#e0d4b3;
+      --terracotta:#b85042;--terracotta-dark:#9b3f33;--sunset:#d97a4a;
+      --cactus:#6d8a6e;--cactus-pale:#a8baa7;--sky:#7ba6b8;--sky-dark:#4f7a8f;
+      --espresso:#3a2e26;--off-white:#fbf6e9;--ink:#1f1813;
+    }
+    *,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}
+    body{margin:0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.6;color:var(--espresso);background-color:var(--sand-light);background-image:radial-gradient(ellipse 90% 60% at 50% -10%,rgba(255,255,255,.45) 0%,rgba(255,255,255,0) 60%),radial-gradient(ellipse 80% 50% at 100% 100%,rgba(184,80,66,.04) 0%,rgba(184,80,66,0) 70%);background-attachment:fixed;-webkit-font-smoothing:antialiased;letter-spacing:.01em}
+    a{color:var(--terracotta);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}a:hover{color:var(--terracotta-dark)}
+    .container{max-width:64rem;margin:0 auto;padding:0 1.5rem}.container-wide{max-width:80rem;margin:0 auto;padding:0 1.5rem}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;font-family:'Inter',sans-serif;font-weight:600;font-size:.9rem;letter-spacing:.03em;border-radius:999px;padding:.65rem 1.5rem;text-decoration:none;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+    .btn-primary{background:var(--terracotta);color:#fff;border:2px solid var(--terracotta)}.btn-primary:hover{background:var(--terracotta-dark);border-color:var(--terracotta-dark);color:#fff}
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(244,236,217,.92);backdrop-filter:saturate(140%) blur(8px);-webkit-backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--sand-dark)}
+    .site-header .inner{display:flex;align-items:center;justify-content:space-between;max-width:80rem;margin:0 auto;padding:.85rem 1.5rem}
+    .brand-mark{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+    .brand-mark img{width:44px;height:44px}
+    .brand-mark .text{display:flex;flex-direction:column;line-height:1.05}
+    .brand-mark .name{font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;color:var(--espresso);letter-spacing:.005em}
+    .brand-mark .sub{font-size:.7rem;color:var(--sky-dark);letter-spacing:.16em;text-transform:uppercase;margin-top:2px}
+    .lang-toggle{display:flex;align-items:center;gap:0;background:transparent;border:1px solid var(--espresso);border-radius:999px;padding:3px}
+    .lang-toggle button{background:transparent;border:0;padding:.25rem .85rem;font-family:inherit;font-size:.78rem;font-weight:600;color:var(--espresso);letter-spacing:.08em;border-radius:999px;cursor:pointer}
+    .lang-toggle button.active{background:var(--espresso);color:var(--sand)}
+    footer{background:var(--espresso);color:var(--off-white);padding:4rem 0 2rem;margin-top:0}
+    footer .container-wide{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem}
+    @media(max-width:768px){footer .container-wide{grid-template-columns:1fr;gap:2rem}}
+    footer h4{font-family:'Fraunces',serif;font-weight:600;font-size:1rem;color:var(--off-white);margin:0 0 .75rem}
+    footer p{font-size:.9rem;color:var(--sand);line-height:1.6;margin:0}
+    footer a{color:var(--sunset);text-decoration:underline;text-underline-offset:3px}footer a:hover{color:var(--off-white)}
+    footer .brand-mark .name{color:var(--off-white)}footer .brand-mark .sub{color:var(--cactus-pale)}
+    footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.1);padding-top:1.5rem;margin-top:1rem;font-size:.78rem;color:var(--sand);opacity:.55}
+    .post-hero{width:100%;max-height:480px;overflow:hidden;background:var(--espresso)}
+    .post-hero-img{width:100%;height:480px;object-fit:cover;display:block}
+    @media(max-width:768px){.post-hero-img{height:260px}}
+    .post-article{padding:4rem 0 5rem}.post-container{max-width:42rem}
+    .post-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-bottom:1.5rem}
+    .post-meta .cat,.post-meta .series-label{font-family:'Inter',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--sky-dark);text-decoration:none}
+    .post-meta .dot{color:var(--sand-dark)}
+    .post-meta time{font-family:'Inter',sans-serif;font-size:.72rem;color:var(--espresso);opacity:.5}
+    .post-title{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.75rem,4vw,2.75rem);line-height:1.1;color:var(--espresso);margin:0 0 1.25rem;letter-spacing:-.01em}
+    .post-subtitle{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.1rem,2vw,1.35rem);color:var(--sky-dark);line-height:1.5;margin:0 0 2.5rem;border-left:3px solid var(--sky-dark);padding-left:1.25rem}
+    .post-body{font-size:17px;line-height:1.7;color:var(--espresso)}
+    .post-body p{margin:0 0 1.25rem}
+    .post-body h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;color:var(--espresso);margin:2.5rem 0 .75rem}
+    .post-body h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:var(--terracotta);margin:1.75rem 0 .5rem}
+    .post-body ul{margin:0 0 1.25rem;padding-left:1.5rem}
+    .post-body ul li{margin-bottom:.5rem}
+    .post-body blockquote{margin:2rem 0;padding:1.25rem 1.5rem;border-left:3px solid var(--terracotta);background:var(--sand);border-radius:0 4px 4px 0;font-family:'Fraunces',serif;font-style:italic;font-size:1.05rem;color:var(--espresso)}
+    .post-body blockquote p{margin:0}
+    .numbered-list{list-style:none;padding:0;margin:0 0 1.5rem;counter-reset:item}
+    .numbered-list li{counter-increment:item;display:flex;gap:1rem;margin-bottom:1.25rem;align-items:flex-start}
+    .numbered-list li::before{content:counter(item);display:flex;align-items:center;justify-content:center;width:2rem;height:2rem;min-width:2rem;background:var(--terracotta);color:#fff;border-radius:50%;font-family:'Inter',sans-serif;font-weight:700;font-size:.8rem;margin-top:.1rem}
+    .numbered-list li strong{display:block;margin-bottom:.25rem;color:var(--espresso)}
+    .timeline{margin:2rem 0;padding:0;list-style:none}
+    .timeline li{display:grid;grid-template-columns:7rem 1fr;gap:1rem;padding:.75rem 0;border-bottom:1px solid var(--sand-dark)}
+    .timeline li:last-child{border-bottom:0}
+    .timeline .tl-date{font-family:'Inter',sans-serif;font-size:.8rem;font-weight:700;color:var(--terracotta);padding-top:.15rem}
+    .timeline .tl-event{font-size:.95rem;color:var(--espresso);line-height:1.5}
+    .post-download{margin:3rem 0 2.5rem}
+    .related-reading{background:var(--sand);border:1px solid var(--sand-dark);border-radius:6px;padding:1.5rem 2rem;margin:2.5rem 0}
+    .related-reading p{margin:0;font-size:.95rem}
+    .post-cta-box{background:var(--sand);border:1px solid var(--sand-dark);border-radius:6px;padding:1.75rem 2rem;margin:0 0 2rem;text-align:center}
+    .post-cta-box p{margin:0 0 .4rem;font-size:.95rem}.post-cta-box p:last-child{margin:0}
+    .share-row{display:flex;align-items:center;flex-wrap:wrap;gap:.75rem;margin:1.5rem 0 2.5rem}
+    .share-label{font-family:'Inter',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--espresso);opacity:.45}
+    .share-btn{display:inline-flex;align-items:center;gap:.35rem;font-family:'Inter',sans-serif;font-size:.82rem;font-weight:600;color:var(--espresso);background:transparent;border:1px solid var(--sand-dark);border-radius:999px;padding:.3rem .9rem;text-decoration:none;cursor:pointer;transition:border-color .15s,background .15s}
+    .share-btn:hover{border-color:var(--terracotta);color:var(--terracotta);background:transparent}
+    .post-nav{display:grid;grid-template-columns:1fr 1fr;gap:1rem;border-top:1px solid var(--sand-dark);padding-top:2rem;margin-top:1rem}
+    @media(max-width:580px){.post-nav{grid-template-columns:1fr}}
+    .nav-card{display:block;background:var(--off-white);border:1px solid var(--sand-dark);border-radius:6px;padding:1.25rem 1.5rem;text-decoration:none;color:inherit;transition:border-color .15s}
+    .nav-card:hover{border-color:var(--terracotta);color:inherit}
+    .nav-card .nav-dir{font-family:'Inter',sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--espresso);opacity:.4;margin-bottom:.35rem}
+    .nav-card .nav-title{font-family:'Fraunces',serif;font-weight:600;font-size:.95rem;color:var(--espresso);line-height:1.3}
+    .nav-empty{}
+    .at-a-glance{background:var(--sand);border:1px solid var(--sand-dark);border-radius:6px;padding:1.5rem 2rem;margin:2rem 0}
+    .at-a-glance h3{font-family:'Fraunces',serif;font-weight:600;font-size:1rem;color:var(--espresso);margin:0 0 1rem;text-transform:uppercase;letter-spacing:.05em;font-style:normal}
+    .glance-grid{display:grid;grid-template-columns:1fr 1fr;gap:.5rem .75rem}
+    @media(max-width:500px){.glance-grid{grid-template-columns:1fr}}
+    .glance-row{display:flex;flex-direction:column;padding:.4rem 0;border-bottom:1px solid var(--sand-dark)}
+    .glance-row:nth-last-child(-n+2){border-bottom:0}
+    .glance-label{font-family:'Inter',sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--sky-dark);margin-bottom:.15rem}
+    .glance-val{font-size:.92rem;color:var(--espresso);line-height:1.4}
+  </style>
+</head>
+<body class="lang-en" data-es-url="/blog/san-felipe-el-municipio-mas-nuevo-de-baja-california/" data-en-url="/en/blog/san-felipe-baja-californias-newest-municipality/">
+
+<header class="site-header">
+  <div class="inner">
+    <a href="/en/" class="brand-mark">
+      <img src="/assets/brand/logo-seal-256.png" alt="Para Todos" />
+      <span class="text"><span class="name">Para Todos</span><span class="sub">Pacífico Sur · BCS</span></span>
+    </a>
+    <div class="lang-toggle">
+      <button id="btn-es" onclick="setLang('es')">ES</button>
+      <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<div class="post-hero">
+  <img src="/assets/images/blog/san-felipe-blog-hero.png" alt="San Felipe coastal fishing village — illustration" class="post-hero-img" />
+</div>
+
+<article class="post-article">
+  <div class="container post-container">
+
+    <div class="post-meta">
+      <span class="cat">Civic Education</span>
+      <span class="dot">·</span>
+      <span class="series-label">Case Study Series</span>
+      <span class="dot">·</span>
+      <time datetime="2026-06-16">June 16, 2026</time>
+    </div>
+
+    <h1 class="post-title">San Felipe — Baja California's Newest Municipality</h1>
+    <p class="post-subtitle">A detailed look at the most recent case — how they did it, how long it took, what went well, what was hard, and what it means for our region.</p>
+
+    <div class="post-body">
+
+      <div class="at-a-glance">
+        <h3>At a Glance</h3>
+        <div class="glance-grid">
+          <div class="glance-row"><span class="glance-label">Separated from</span><span class="glance-val">Mexicali (primary) + Ensenada (partial territory)</span></div>
+          <div class="glance-row"><span class="glance-label">Community organizing began</span><span class="glance-val">1990s — over 30 years of effort</span></div>
+          <div class="glance-row"><span class="glance-label">Citizen consultation</span><span class="glance-val">February 2021 — 2,117 of 2,152 voters approved</span></div>
+          <div class="glance-row"><span class="glance-label">Congress approval</span><span class="glance-val">May 19, 2021 — unanimous, 25 to 0</span></div>
+          <div class="glance-row"><span class="glance-label">Official inauguration</span><span class="glance-val">January 1, 2022</span></div>
+          <div class="glance-row"><span class="glance-label">First elected government</span><span class="glance-val">October 2024</span></div>
+          <div class="glance-row"><span class="glance-label">Population at separation</span><span class="glance-val">~18,000 inhabitants</span></div>
+          <div class="glance-row"><span class="glance-label">Primary economy</span><span class="glance-val">Fishing, shrimping, Gulf tourism</span></div>
+        </div>
+      </div>
+
+      <h2>The Context: A Coastal Community Cut Off From Its Government</h2>
+
+      <p>San Felipe sits on the eastern coast of the Baja California Peninsula, facing the Gulf of California. It is one of the most geographically isolated communities in all of Baja California — a fishing port surrounded by the Sonoran Desert, flanked by the Sea of Cortez, with a population that for decades lived over 200 kilometers from the seat of its own municipal government in Mexicali.</p>
+
+      <p>The distance was not just physical. It was institutional. For every permit, every public record, every service request, every legal matter — residents had to travel north to Mexicali. A city that, despite being the state capital, had almost no cultural, economic, or geographic connection to the fishing community it governed.</p>
+
+      <p>San Felipe's economy centered on fishing — grouper, lobster, octopus, shrimp — and a growing tourism industry drawing visitors from the United States and Canada. The community generated real economic value. But decisions about its roads, clinics, public spaces, and trash collection were all made in Mexicali, by people who rarely if ever visited.</p>
+
+      <h3>30 Years of Asking</h3>
+
+      <p>The demand for municipal independence was not a sudden movement. It was generational. Community members had been formally requesting separation since the 1990s. Multiple civic organizations formed over the decades, most notably the Comité Pro-Municipalización de San Felipe.</p>
+
+      <p>The argument was always the same: San Felipe is isolated, generates its own economic activity, and deserves governance that understands its specific needs. Mexicali was simply too far, too different, and too focused on its own urban priorities to govern a coastal fishing and tourism community effectively.</p>
+
+      <blockquote><p>The 30 years were not about the complexity of the process. They were about the absence of organized strategy, documented proposals, financial modeling, and the right political ally. Once those elements came together, the formal process took just 13 months.</p></blockquote>
+
+      <h2>The Process: From Plebiscite to Inauguration</h2>
+
+      <h3>February 2021 — The Citizen Consultation</h3>
+
+      <p>A citizen consultation was held in February 2021. Of the more than 13,000 voters registered, 2,152 participated. Of those, 2,117 — 98.4% — voted in favor. While the participation rate was low, the vote was valid under Baja California law, which requires results exceed 10% of the electoral roll. The threshold was met.</p>
+
+      <h3>May 19, 2021 — Unanimous Congress Approval</h3>
+
+      <p>The XXIII Legislature of Baja California voted unanimously — all 25 deputies — to approve the creation of the municipality of San Felipe. This came just 15 months after San Quintín was created, making it the second new Baja California municipality in two years.</p>
+
+      <p>The approval was not without controversy. The mayors of Mexicali and Ensenada raised concerns about financial viability and called the process rushed. The Ensenada ayuntamiento formally rejected the move, citing the loss of its Puertecitos delegation. Despite this, Congress voted unanimously in favor.</p>
+
+      <h3>July 2, 2021 — Official State Gazette</h3>
+
+      <p>The decree was published in the Official State Gazette, making the separation legally binding. All residents within the new territory automatically became residents of the municipality of San Felipe.</p>
+
+      <h3>August 2021 — Founding Council Appointed</h3>
+
+      <p>The State Congress appointed a seven-member Concejo Fundacional to govern San Felipe until its first elected ayuntamiento. José Luis Dagnino López was named president. The council received administrative offices, archives, and municipal assets transferred from Mexicali and Ensenada.</p>
+
+      <h3>January 1, 2022 — Official Inauguration</h3>
+
+      <p>In a formal ceremony organized by the State Congress, San Felipe was inaugurated as Baja California's seventh municipality. The mayor of Mexicali delivered the patrimony of the new municipality. "It is a historic moment," she declared, "because the will of the people of San Felipe is being recognized."</p>
+
+      <h3>October 2024 — First Elected Government</h3>
+
+      <p>San Felipe held its first municipal election. José Luis Dagnino López — who had led the Founding Council — was elected as the first official municipal president. The first elected ayuntamiento took office, marking the true beginning of full democratic self-governance.</p>
+
+      <h2>The Challenges: An Honest Account</h2>
+
+      <p>San Felipe's case is the most instructive of all the cases in this series precisely because it faced the most significant early challenges — and because those challenges were predictable, yet the community chose self-governance anyway.</p>
+
+      <ol class="numbered-list">
+        <li>
+          <div><strong>Financial viability concerns from the start</strong>
+          San Felipe had fewer than 18,000 inhabitants and would depend almost entirely on federal participation funds. Its first revenue law projected 180 million pesos from federal participations while still needing a financial support agreement with Mexicali to cover basic payroll. The community had no existing municipal tax infrastructure.</div>
+        </li>
+        <li>
+          <div><strong>Building administrative capacity from zero</strong>
+          San Felipe had to create its entire municipal apparatus from scratch — tax offices, civil registry, planning department, public services — while simultaneously governing a community with real daily needs.</div>
+        </li>
+        <li>
+          <div><strong>The "rushed process" criticism</strong>
+          Multiple legislators and municipal officials stated publicly that the municipalization was done too quickly, without comprehensive feasibility studies. The population data used in the congressional dictamen was from 2010, economic data from 2015. A cautionary lesson: the financial and legal case must be built on current, thorough research.</div>
+        </li>
+        <li>
+          <div><strong>Security and transition challenges</strong>
+          The early transition period brought governance challenges as the new municipality worked to establish authority and continuity of services. The Congreso del Estado later had to formally exhort Mexicali and Ensenada to complete the transfer of resources and assets — a reminder that the transition requires active management.</div>
+        </li>
+      </ol>
+
+      <h2>What the First Development Plan Reveals</h2>
+
+      <p>The first Municipal Development Plan (2024-2027), published November 2024, is a revealing document — showing both the challenges and the genuine priorities of a community governing itself for the first time. What is striking is how local and specific these priorities are. They could only have been identified by people who actually live in San Felipe.</p>
+
+      <ul>
+        <li><strong>Fishing and maritime infrastructure</strong> — improving port facilities, cold storage, and distribution networks, recognizing that climate change and red tides increasingly threaten the primary economic activity</li>
+        <li><strong>Tourism development</strong> — building on the international reputation with US and Canadian visitors, developing beach and adventure tourism while preserving the character of a small port community</li>
+        <li><strong>Health services</strong> — establishing local clinics and a mobile health unit, addressing the longstanding gap that previously required residents to travel to Mexicali for basic medical care</li>
+        <li><strong>Public cleanliness and urban maintenance</strong> — "San Felipe Limpio" programs, beach maintenance, improvement of the main tourist entrance and public parks</li>
+        <li><strong>Youth and community programs</strong> — sports leagues, cultural events, and community celebrations as tools for social cohesion in a newly independent municipality</li>
+      </ul>
+
+      <blockquote><p>A government in Mexicali, 200 km away, was never going to develop this level of specific, place-based understanding. These are the priorities of people who live the community every day.</p></blockquote>
+
+      <h2>Key Lessons for Our Region</h2>
+
+      <p>San Felipe's story is the most geographically and culturally similar to the Southern Pacific communities of BCS — a coastal fishing and tourism economy governed by a distant urban capital. Here is what it teaches us directly.</p>
+
+      <ol class="numbered-list">
+        <li>
+          <div><strong>The community's will was never the obstacle</strong>
+          Despite low plebiscite turnout, 98.4% of those who voted said yes. The desire for independence was not the problem — the absence of organized strategy and political timing was. Build community consensus first. Everything else follows.</div>
+        </li>
+        <li>
+          <div><strong>Unanimity in Congress is achievable</strong>
+          All 25 Baja California deputies voted in favor — for a municipality of fewer than 18,000 people. When the case is made clearly and the political context is right, unanimous approval is possible.</div>
+        </li>
+        <li>
+          <div><strong>The formal process is shorter than you think</strong>
+          From first citizen consultation to official inauguration: 13 months. The decades before that were not about process complexity — they were about the absence of organized effort and the right political moment.</div>
+        </li>
+        <li>
+          <div><strong>The founding period is the most vulnerable</strong>
+          The Concejo Fundacional years (2022-2024) were the most challenging. Plan for this period explicitly: negotiate clear financial support agreements, service continuity commitments, and asset transfer timelines before separation.</div>
+        </li>
+        <li>
+          <div><strong>Financial preparation is non-negotiable</strong>
+          San Felipe's biggest challenge was financial unpreparedness. Our region must establish in advance: projected federal participation funds, possible local tax revenue, services to fund, and what transition support can be negotiated. Do not enter the process without this case fully documented.</div>
+        </li>
+        <li>
+          <div><strong>Rushed processes create unnecessary fragility</strong>
+          San Felipe's critics were right that the process moved too fast without sufficient preparation. A well-documented, financially sound case for municipal independence is worth taking the time to build properly. Speed without preparation creates governance problems that take years to resolve.</div>
+        </li>
+      </ol>
+
+      <h2>Timeline</h2>
+
+      <ul class="timeline">
+        <li><span class="tl-date">1990s</span><span class="tl-event">Community begins formal organizing for municipal independence</span></li>
+        <li><span class="tl-date">2019</span><span class="tl-event">Deputy Juan Manuel Molina formally commits to San Felipe municipalization</span></li>
+        <li><span class="tl-date">Feb 2021</span><span class="tl-event">Citizen consultation — 2,117 of 2,152 voters approve (98.4%)</span></li>
+        <li><span class="tl-date">May 19, 2021</span><span class="tl-event">Baja California Congress approves unanimously — 25 to 0</span></li>
+        <li><span class="tl-date">Jul 2, 2021</span><span class="tl-event">Decree published in Official State Gazette</span></li>
+        <li><span class="tl-date">Aug 2021</span><span class="tl-event">Founding Council (Concejo Fundacional) appointed — 7 members</span></li>
+        <li><span class="tl-date">Jan 1, 2022</span><span class="tl-event">Official inauguration as Baja California's 7th municipality</span></li>
+        <li><span class="tl-date">Oct 2024</span><span class="tl-event">First municipal election held; first elected ayuntamiento takes office</span></li>
+        <li><span class="tl-date">Nov 2024</span><span class="tl-event">First Municipal Development Plan 2024-2027 published</span></li>
+      </ul>
+
+      <blockquote><p>"Mexico now has 2,469 municipalities. Baja California created two of them in less than two years — San Quintín in 2020, San Felipe in 2022. The process is not theoretical. It is recent, documented, and replicable."</p></blockquote>
+
+    </div>
+
+    <div class="post-download">
+      <a href="/assets/documents/ParaTodos_SanFelipe_CaseStudy_EN.pdf" download class="btn btn-primary">📄 Download the Full Case Study</a>
+    </div>
+
+    <div class="related-reading">
+      <p>This post is part of our ongoing case study series. Read the full six-case series: <a href="/en/blog/">view all posts on the blog index</a>.</p>
+    </div>
+
+    <div class="post-cta-box">
+      <p>Have questions? Want to be part of the conversation?</p>
+      <p>Contact us at <a href="https://paratodosbcs.mx/en/">paratodosbcs.mx</a> or join our <a href="https://chat.whatsapp.com/Ehb6yKHqFZe2Ayt30uN23S?mode=gi_t" target="_blank" rel="noopener">WhatsApp</a> group.</p>
+    </div>
+
+    <div class="share-row">
+      <span class="share-label">Share:</span>
+      <a class="share-btn" href="https://wa.me/?text=San%20Felipe%20%E2%80%94%20Baja%20California%E2%80%99s%20Newest%20Municipality%20%E2%80%94%20https%3A%2F%2Fparatodosbcs.mx%2Fen%2Fblog%2Fsan-felipe-baja-californias-newest-municipality%2F" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparatodosbcs.mx%2Fen%2Fblog%2Fsan-felipe-baja-californias-newest-municipality%2F" target="_blank" rel="noopener">Facebook</a>
+      <button class="share-btn" onclick="copyLink(this)">Copy link</button>
+    </div>
+
+    <nav class="post-nav">
+      <a class="nav-card" href="/en/blog/san-quintin-and-what-it-means-for-our-region/">
+        <div class="nav-dir">← Previous</div>
+        <div class="nav-title">San Quintín Did It — And What It Means for Our Region</div>
+      </a>
+      <div class="nav-empty"></div>
+    </nav>
+
+  </div>
+</article>
+
+<footer>
+  <div class="container-wide">
+    <div>
+      <a href="/en/" class="brand-mark">
+        <img src="/assets/brand/logo-seal-256.png" alt="" style="width:56px;height:56px" />
+        <span class="text"><span class="name">Para Todos</span><span class="sub">Pacífico Sur · BCS</span></span>
+      </a>
+      <p style="margin-top:1.5rem;max-width:22rem">Neighbors and communities of the Southern Pacific coming together to build a better future for our region.</p>
+    </div>
+    <div><h4>Contact</h4><p><a href="mailto:hola@paratodosbcs.mx">hola@paratodosbcs.mx</a><br/>Pacífico Sur, BCS, México</p></div>
+    <div>
+      <h4>Links</h4>
+      <p><a href="/en/">Home</a><br/><a href="/en/blog/">Blog</a><br/><a href="mailto:hola@paratodosbcs.mx">Contact us</a></p>
+    </div>
+    <div class="legal">© 2026 Para Todos · Pacífico Sur, BCS</div>
+  </div>
+</footer>
+
+<script>
+  function setLang(lang) {
+    var esUrl=document.body.getAttribute('data-es-url'),enUrl=document.body.getAttribute('data-en-url');
+    if(esUrl&&enUrl){try{localStorage.setItem('lang',lang)}catch(e){} window.location.href=lang==='en'?enUrl:esUrl;}
+  }
+  function copyLink(btn) {
+    var orig=btn.textContent;
+    navigator.clipboard.writeText(window.location.href).then(function(){btn.textContent='✓ Copied!';setTimeout(function(){btn.textContent=orig},2000);});
+  }
+  (function(){
+    try{
+      var saved=localStorage.getItem('lang'),isEn=document.documentElement.lang==='en';
+      if(saved&&((saved==='en')!==isEn)){
+        var esUrl=document.body.getAttribute('data-es-url'),enUrl=document.body.getAttribute('data-en-url');
+        if(saved==='en'&&enUrl){window.location.replace(enUrl);return}
+        if(saved==='es'&&esUrl){window.location.replace(esUrl);return}
+      }
+    }catch(e){}
+  })();
+</script>
+</body>
+</html>

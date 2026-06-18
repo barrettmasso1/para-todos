@@ -19,3 +19,19 @@ assets/documents/*.key
 assets/documents/deck-en-v2.pdf
 assets/documents/deck-es-v2.pdf
 assets/documents/.DS_Store
+
+# Internal docs, scripts, and drafts — NOT for public serving
+CLAUDE.md
+deploy.sh
+setup-github.sh
+ParaTodos_BlogPosts_AllSix_ForClaudeCode.md
+blog/ParaTodos_BlogPosts_AllSix_ForClaudeCode.md
+Para todos story images/
+
+# CONTAINS FOUNDER NAMES — must never be public (GHL email template)
+email-form1-welcome.html
+
+# Internal / unlinked documents — not for public download
+assets/documents/vita-insumos-proposal.pdf
+assets/documents/Para Todos Estudio de San Felipe.pdf
+assets/documents/Para Todos San Felipe Case Study.pdf

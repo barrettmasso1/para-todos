@@ -18,12 +18,14 @@ This repo is the bilingual (Spanish default / English) landing site, **paratodos
 ## How it's built & deployed
 
 - Pure static site: `index.html` (Spanish, `/`), `en/index.html` (English, `/en`), `privacy.html`, `assets/`, `vercel.json`. No build step.
-- Bilingual via `.es` / `.en` spans toggled by a small JS language switcher.
+- Bilingual: homepages use `.es` / `.en` spans toggled by a JS switcher. **Blog posts** are separate per-language files that redirect via `data-es-url` / `data-en-url`.
+- **Blog structure (do not change the convention):** each post is a folder with an `index.html` — `blog/<slug>/index.html` (Spanish) and `en/blog/<slug>/index.html` (English). Styles are **inline** in each file. Do NOT create flat `blog/<slug>.html` files or a shared `blog/style.css`. Indexes live at `blog/index.html` and `en/blog/index.html`, newest-first.
 - **Hosting:** Vercel (free tier). **Deploy:** `bash deploy.sh` (runs `vercel --prod` from this folder). Requires the Vercel CLI logged in on your machine.
+- **IMPORTANT — deploy vs git are separate.** The live site is published ONLY by `bash deploy.sh` from the local folder. Pushing to GitHub does NOT update the live site (no GitHub Actions / no auto-deploy). GitHub `master` is source control; treat it as the source of truth and keep it in sync, but remember a `git push` alone changes nothing live.
 - **Custom domain:** paratodosbcs.mx
 - **GitHub:** `github.com/barrettmasso1/para-todos` (remote `origin`, branch `master`). NOTE: repo history contains earlier personal content — keep the repo **private**.
 - **Vercel project:** `paratodos-site` (see `.vercel/project.json`). If a deploy doesn't update the domain, the domain may be on a different project — see notes in `deploy.sh`.
-- `.vercelignore` controls what is NOT served. Editable deck sources (`.pptx`, `.key`, `-v2` PDFs) are excluded so they aren't publicly downloadable. The site links only to `assets/documents/deck-en.pdf` and `deck-es.pdf` — keep those clean.
+- `.vercelignore` controls what is NOT served. Excludes editable deck sources (`.pptx`, `.key`, `-v2` PDFs), internal docs/scripts (`CLAUDE.md`, `deploy.sh`, handoff `.md` files), and — critically — `email-form1-welcome.html` (a GHL email template that **names the founders**; it must never be served). Do not un-ignore these.
 - Form/CRM: Go High Level (GHL) embedded forms. Analytics: Vercel Web Analytics.
 
 ## Where things live
@@ -36,9 +38,18 @@ This repo is the bilingual (Spanish default / English) landing site, **paratodos
 
 ## Current status (June 2026)
 
-Site is live. Most recent work removed all founder-identifying content from the served HTML and the two linked decks, renumbered the site sections to run 01–07, and excluded source decks from deployment. Next session: confirm a clean deploy is live and continue feature/content work as the municipality initiative evolves.
+Site is live with a full bilingual blog: case-study posts (Los Cabos/Loreto, Playa del Carmen/Tulum/Bacalar, San Quintín, San Felipe) plus the post **"Más que Firmas / More Than Signatures"** (`blog/mas-que-firmas/`, `en/blog/more-than-signatures/`, dated June 18 2026, with downloadable PDFs). Homepage section 05 is an **event-registration** block ("El Camino a la Municipalización / The Road to Municipalization") using the existing GHL form. `.vercelignore` was hardened to stop serving internal/founder-naming files.
+
+## The canonical workflow (keep everyone in sync)
+
+The local folder `~/Documents/Claude/Projects/Para Todos` is the working copy that deploys, and it is a git clone of `origin/master`. Both Claude Code and the Claude desktop (Cowork) assistant operate against this same repo. To avoid divergence:
+
+1. **Always `git pull origin master` before starting work.**
+2. Make changes, verify, then **`git add -A` → `git commit` → `git push origin master`** when done.
+3. To publish to the live site, **`bash deploy.sh`** from this folder (separate from pushing — see above).
+4. One source of truth = GitHub `master`. Do not create long-lived feature branches or alternate structures; commit to `master`.
 
 ## Workflow notes
 
-- Verify changes before deploying (open the HTML locally; run the anonymity grep).
-- Deploying and pushing to GitHub publish publicly — confirm with Barrett before either.
+- Verify changes before deploying (open the HTML locally; run the anonymity grep over served files).
+- Deploying (`deploy.sh`) and pushing to GitHub both publish — confirm with Barrett before either.
