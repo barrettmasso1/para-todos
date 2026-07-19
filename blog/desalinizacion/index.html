@@ -5,111 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Del Agua de Mar al Agua Dulce — PARA TODOS</title>
   <meta name="description" content="Lo que aprendimos al visitar la planta desalinizadora del Hotel San Cristóbal: cómo funciona, cuáles son los riesgos reales, y qué puede significar para nuestra comunidad." />
-  <link rel="canonical" href="https://paratodosbcs.mx/blog/desalinizacion" />
-  <link rel="alternate" hreflang="es" href="https://paratodosbcs.mx/blog/desalinizacion" />
-  <link rel="alternate" hreflang="en" href="https://paratodosbcs.mx/en/blog/desalination" />
+  <link rel="canonical" href="https://paratodosbcs.mx/blog/desalinizacion/" />
+  <link rel="alternate" hreflang="es" href="https://paratodosbcs.mx/blog/desalinizacion/" />
+  <link rel="alternate" hreflang="en" href="https://paratodosbcs.mx/en/blog/desalination/" />
   <link rel="icon" type="image/png" href="/assets/brand/favicon-32.png" />
   <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon-180.png" />
   <meta property="og:title" content="Del Agua de Mar al Agua Dulce" />
   <meta property="og:description" content="Lo que aprendimos al visitar la planta desalinizadora del Hotel San Cristóbal." />
   <meta property="og:image" content="https://paratodosbcs.mx/assets/images/blog/desal-hero.jpg" />
-  <meta property="og:url" content="https://paratodosbcs.mx/blog/desalinizacion" />
+  <meta property="og:url" content="https://paratodosbcs.mx/blog/desalinizacion/" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="es_MX" />
+  <meta property="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..600&family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..600&family=Inter:wght@400;500;600;700&family=Caveat:wght@400;600&display=swap" />
   <style>
-    :root{--sand:#faf4e3;--sand-mid:#f0e5c5;--terra:#b85042;--espresso:#3a2e26;--sky:#4f7a8f}
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Inter',sans-serif;background:var(--sand);color:var(--espresso);line-height:1.65}
-    body.lang-es .en{display:none}
-    body.lang-en .es{display:none}
-    a{color:inherit}
-    img{max-width:100%;display:block}
-
-    /* Header */
-    .site-header{border-bottom:1px solid rgba(58,46,38,.12);background:var(--sand);position:sticky;top:0;z-index:100}
-    .site-header .inner{display:flex;align-items:center;height:60px;padding:0 1.5rem;max-width:1100px;margin:0 auto;gap:1rem}
-    .brand-mark{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--espresso);flex-shrink:0}
-    .brand-mark img{width:34px;height:34px;border-radius:50%}
-    .brand-mark .text{display:flex;flex-direction:column;line-height:1.2}
-    .brand-mark .name{font-family:'Fraunces',serif;font-weight:700;font-size:.95rem}
-    .brand-mark .sub{font-size:.68rem;opacity:.6;letter-spacing:.04em}
-    .site-nav{display:flex;align-items:center;gap:1.5rem;flex:1;margin-left:.5rem}
-    .site-nav a{font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--espresso);text-decoration:none;opacity:.6}
-    .site-nav a.active,.site-nav a:hover{opacity:1}
-    .header-right{margin-left:auto}
-    .lang-toggle{display:flex;gap:3px}
-    .lang-toggle button{background:none;border:1px solid transparent;padding:3px 9px;font-size:.72rem;font-weight:600;letter-spacing:.06em;cursor:pointer;color:var(--espresso);opacity:.5;border-radius:4px;font-family:inherit}
-    .lang-toggle button.active{border-color:var(--terra);color:var(--terra);opacity:1}
-
-    /* Layout */
-    .container{max-width:780px;margin:0 auto;padding:0 1.5rem}
-    .container-wide{max-width:1100px;margin:0 auto;padding:0 1.5rem}
-
-    /* Breadcrumb */
-    .post-breadcrumb{padding:1.25rem 0 0;font-size:.82rem;opacity:.6;display:flex;align-items:center;gap:.5rem}
-    .post-breadcrumb a{color:inherit;text-decoration:none}
-    .post-breadcrumb a:hover{text-decoration:underline}
-    .sep{opacity:.5}
-
-    /* Hero */
-    .post-hero{padding:2rem 0 1.75rem}
-    .kicker{font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--terra);margin-bottom:.85rem}
-    .post-hero h1{font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3rem);line-height:1.1;margin-bottom:.9rem;font-weight:700}
-    .post-subtitle{font-size:1.12rem;opacity:.8;max-width:580px;margin-bottom:1.25rem;line-height:1.5}
-    .post-hero-meta{font-size:.82rem;opacity:.55;display:flex;gap:.6rem;align-items:center}
-
-    /* Featured image */
-    .post-featured-img{margin-bottom:2.5rem;border-radius:12px;overflow:hidden;aspect-ratio:16/9;background:var(--sand-mid)}
-    .post-featured-img img{width:100%;height:100%;object-fit:cover}
-
-    /* Body */
-    .post-layout{padding-bottom:4rem}
-    .post-body{max-width:660px;font-size:1.05rem;line-height:1.75}
-    .post-body p{margin-bottom:1.25rem}
-    .post-body .lead{font-size:1.18rem;line-height:1.65;margin-bottom:1.75rem}
-    .post-body h2{font-family:'Fraunces',serif;font-size:1.55rem;font-weight:700;margin:2.5rem 0 .75rem;line-height:1.2}
-    .post-body h3{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600;margin:2rem 0 .6rem;color:var(--sky)}
-    .post-body ul{margin:.25rem 0 1.25rem 1.5rem}
-    .post-body ul li{margin-bottom:.5rem}
-    .post-body blockquote{border-left:3px solid var(--terra);padding:1rem 1.25rem;margin:2rem 0;background:rgba(184,80,66,.06);border-radius:0 8px 8px 0}
-    .post-body blockquote p{margin:0}
-    .post-body hr{border:none;border-top:1px solid rgba(58,46,38,.15);margin:2.5rem 0}
-    .post-body strong{font-weight:600}
-    .post-body em{font-style:italic}
-
-    /* PDF download */
-    .pdf-download{margin:1.75rem 0;display:flex;flex-wrap:wrap;gap:.85rem}
-    .pdf-download a{display:inline-flex;align-items:center;gap:.4rem;background:var(--terra);color:#fff;padding:.7rem 1.4rem;border-radius:7px;text-decoration:none;font-weight:600;font-size:.88rem;transition:background .15s}
-    .pdf-download a:hover{background:#a0453a}
-    .pdf-download a::before{content:"↓";font-size:.9em}
-
-    /* Related */
-    .related-box{background:var(--sand-mid);border-radius:10px;padding:1.25rem 1.5rem;margin-top:2.5rem}
-    .related-label{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--terra);margin-bottom:.5rem}
-    .related-box a{font-weight:600;text-decoration:none;display:block;margin-bottom:.2rem}
-    .related-box a:hover{text-decoration:underline}
-    .related-box p{font-size:.88rem;opacity:.7;margin:0}
-
-    /* Footer */
-    footer{background:var(--espresso);color:rgba(250,244,227,.8);padding:3rem 0 2rem}
-    footer .container-wide{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:2rem;align-items:start}
-    footer h4{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(250,244,227,.45);margin-bottom:.6rem}
-    footer p,footer a{font-size:.9rem;color:rgba(250,244,227,.8);text-decoration:none}
-    footer a:hover{color:#fff}
-    footer .brand-mark .name{color:#faf4e3}
-    footer .brand-mark .sub{color:rgba(250,244,227,.55)}
-    footer .legal{font-size:.72rem;opacity:.4;grid-column:1/-1;padding-top:1.5rem;border-top:1px solid rgba(250,244,227,.1);margin-top:.5rem}
-
-    @media(max-width:640px){
-      .site-nav{display:none}
-      footer .container-wide{grid-template-columns:1fr}
+    :root {
+      --sand:#f4ecd9;--sand-light:#faf4e3;--sand-dark:#e0d4b3;
+      --terracotta:#b85042;--terracotta-dark:#9b3f33;--sunset:#d97a4a;
+      --cactus:#6d8a6e;--cactus-pale:#a8baa7;--sky:#7ba6b8;--sky-dark:#4f7a8f;
+      --espresso:#3a2e26;--off-white:#fbf6e9;--ink:#1f1813;
     }
+    *,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}
+    body{margin:0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.6;color:var(--espresso);background-color:var(--sand-light);background-image:radial-gradient(ellipse 90% 60% at 50% -10%,rgba(255,255,255,.45) 0%,rgba(255,255,255,0) 60%),radial-gradient(ellipse 80% 50% at 100% 100%,rgba(184,80,66,.04) 0%,rgba(184,80,66,0) 70%);background-attachment:fixed;-webkit-font-smoothing:antialiased;letter-spacing:.01em}
+    a{color:var(--terracotta);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}a:hover{color:var(--terracotta-dark)}
+    .container{max-width:64rem;margin:0 auto;padding:0 1.5rem}.container-wide{max-width:80rem;margin:0 auto;padding:0 1.5rem}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;font-family:'Inter',sans-serif;font-weight:600;font-size:.9rem;letter-spacing:.03em;border-radius:999px;padding:.65rem 1.5rem;text-decoration:none;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+    .btn-primary{background:var(--terracotta);color:#fff;border:2px solid var(--terracotta)}.btn-primary:hover{background:var(--terracotta-dark);border-color:var(--terracotta-dark);color:#fff}
+    .btn-outline{background:transparent;color:var(--terracotta);border:2px solid var(--terracotta)}.btn-outline:hover{background:var(--terracotta);color:#fff}
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(244,236,217,.92);backdrop-filter:saturate(140%) blur(8px);-webkit-backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--sand-dark)}
+    .site-header .inner{display:flex;align-items:center;justify-content:space-between;max-width:80rem;margin:0 auto;padding:.85rem 1.5rem}
+    .brand-mark{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+    .brand-mark img{width:44px;height:44px}
+    .brand-mark .text{display:flex;flex-direction:column;line-height:1.05}
+    .brand-mark .name{font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;color:var(--espresso);letter-spacing:.005em}
+    .brand-mark .sub{font-size:.7rem;color:var(--sky-dark);letter-spacing:.16em;text-transform:uppercase;margin-top:2px}
+    .lang-toggle{display:flex;align-items:center;gap:0;background:transparent;border:1px solid var(--espresso);border-radius:999px;padding:3px}
+    .lang-toggle button{background:transparent;border:0;padding:.25rem .85rem;font-family:inherit;font-size:.78rem;font-weight:600;color:var(--espresso);letter-spacing:.08em;border-radius:999px;cursor:pointer}
+    .lang-toggle button.active{background:var(--espresso);color:var(--sand)}
+    footer{background:var(--espresso);color:var(--off-white);padding:4rem 0 2rem;margin-top:0}
+    footer .container-wide{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem}
+    @media(max-width:768px){footer .container-wide{grid-template-columns:1fr;gap:2rem}}
+    footer h4{font-family:'Fraunces',serif;font-weight:600;font-size:1rem;color:var(--off-white);margin:0 0 .75rem}
+    footer p{font-size:.9rem;color:var(--sand);line-height:1.6;margin:0}
+    footer a{color:var(--sunset);text-decoration:underline;text-underline-offset:3px}footer a:hover{color:var(--off-white)}
+    footer .brand-mark .name{color:var(--off-white)}footer .brand-mark .sub{color:var(--cactus-pale)}
+    footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.1);padding-top:1.5rem;margin-top:1rem;font-size:.78rem;color:var(--sand);opacity:.55}
+    .post-hero{width:100%;max-height:480px;overflow:hidden;background:var(--espresso)}
+    .post-hero-img{width:100%;height:480px;object-fit:cover;display:block}
+    @media(max-width:768px){.post-hero-img{height:260px}}
+    .post-article{padding:4rem 0 5rem}.post-container{max-width:42rem}
+    .post-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-bottom:1.5rem}
+    .post-meta .cat{font-family:'Inter',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--sky-dark);text-decoration:none}
+    .post-meta .dot{color:var(--sand-dark)}
+    .post-meta time{font-family:'Inter',sans-serif;font-size:.72rem;color:var(--espresso);opacity:.5}
+    .post-title{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.75rem,4vw,2.75rem);line-height:1.1;color:var(--espresso);margin:0 0 1.25rem;letter-spacing:-.01em}
+    .post-subtitle{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.1rem,2vw,1.35rem);color:var(--sky-dark);line-height:1.5;margin:0 0 2.5rem;border-left:3px solid var(--sky-dark);padding-left:1.25rem}
+    .post-body{font-size:17px;line-height:1.7;color:var(--espresso)}
+    .post-body p{margin:0 0 1.25rem}
+    .post-body h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;color:var(--espresso);margin:2.5rem 0 .75rem}
+    .post-body h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:var(--terracotta);margin:1.75rem 0 .5rem}
+    .post-body ul{margin:0 0 1.25rem;padding-left:1.5rem}
+    .post-body ul li{margin-bottom:.5rem}
+    .post-body blockquote{margin:2rem 0;padding:1.25rem 1.5rem;border-left:3px solid var(--terracotta);background:var(--sand);border-radius:0 4px 4px 0;font-family:'Fraunces',serif;font-style:italic;font-size:1.05rem;color:var(--espresso)}
+    .post-body blockquote p{margin:0}
+    .post-body hr{border:none;border-top:1px solid var(--sand-dark);margin:2.5rem 0}
+    .post-download{margin:3rem 0 1.5rem;display:flex;flex-wrap:wrap;gap:1rem}
+    .related-reading{background:var(--sand);border:1px solid var(--sand-dark);border-radius:6px;padding:1.5rem 2rem;margin:2.5rem 0}
+    .related-reading p{margin:0;font-size:.95rem}
+    .share-row{display:flex;align-items:center;flex-wrap:wrap;gap:.75rem;margin:1.5rem 0 2.5rem}
+    .share-label{font-family:'Inter',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--espresso);opacity:.45}
+    .share-btn{display:inline-flex;align-items:center;gap:.35rem;font-family:'Inter',sans-serif;font-size:.82rem;font-weight:600;color:var(--espresso);background:transparent;border:1px solid var(--sand-dark);border-radius:999px;padding:.3rem .9rem;text-decoration:none;cursor:pointer;transition:border-color .15s,background .15s}
+    .share-btn:hover{border-color:var(--terracotta);color:var(--terracotta);background:transparent}
+    .post-nav{display:grid;grid-template-columns:1fr 1fr;gap:1rem;border-top:1px solid var(--sand-dark);padding-top:2rem;margin-top:1rem}
+    @media(max-width:580px){.post-nav{grid-template-columns:1fr}}
+    .nav-card{display:block;background:var(--off-white);border:1px solid var(--sand-dark);border-radius:6px;padding:1.25rem 1.5rem;text-decoration:none;color:inherit;transition:border-color .15s}
+    .nav-card:hover{border-color:var(--terracotta);color:inherit}
+    .nav-card .nav-dir{font-family:'Inter',sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--espresso);opacity:.4;margin-bottom:.35rem}
+    .nav-card .nav-title{font-family:'Fraunces',serif;font-weight:600;font-size:.95rem;color:var(--espresso);line-height:1.3}
   </style>
 </head>
-<body class="lang-es">
+<body class="lang-es" data-es-url="/blog/desalinizacion/" data-en-url="/en/blog/desalination/">
 
 <header class="site-header">
   <div class="inner">
@@ -117,372 +94,213 @@
       <img src="/assets/brand/logo-seal-256.png" alt="Para Todos" />
       <span class="text"><span class="name">Para Todos</span><span class="sub">Pacífico Sur · BCS</span></span>
     </a>
-    <nav class="site-nav">
-      <a href="/"><span class="es">Inicio</span><span class="en">Home</span></a>
-      <a href="/blog" class="active"><span class="es">Novedades</span><span class="en">Updates</span></a>
-    </nav>
-    <div class="header-right">
-      <div class="lang-toggle">
-        <button id="btn-es" class="active" onclick="setLang('es')">ES</button>
-        <button id="btn-en" onclick="setLang('en')">EN</button>
-      </div>
+    <div class="lang-toggle">
+      <button id="btn-es" class="active" onclick="setLang('es')">ES</button>
+      <button id="btn-en" onclick="setLang('en')">EN</button>
     </div>
   </div>
 </header>
 
-<div class="container">
-  <nav class="post-breadcrumb">
-    <a href="/blog"><span class="es">Novedades</span><span class="en">Updates</span></a>
-    <span class="sep">›</span>
-    <span class="es">Del Agua de Mar al Agua Dulce</span><span class="en">Seawater to Fresh Water</span>
-  </nav>
+<div class="post-hero">
+  <img src="/assets/images/blog/desal-hero.jpg" alt="Planta desalinizadora en la costa del Pacífico Sur" class="post-hero-img" />
+</div>
 
-  <div class="post-hero">
-    <p class="kicker"><span class="es">Agua · Todos Santos</span><span class="en">Water · Todos Santos</span></p>
-    <h1>
-      <span class="es">Del Agua de Mar al Agua Dulce</span>
-      <span class="en">Seawater to Fresh Water</span>
-    </h1>
-    <p class="post-subtitle">
-      <span class="es">Lo que aprendimos al visitar la planta desalinizadora del Hotel San Cristóbal.</span>
-      <span class="en">What we learned visiting Hotel San Cristóbal's desalination plant.</span>
-    </p>
-    <div class="post-hero-meta">
-      <span><span class="es">19 de julio, 2026</span><span class="en">July 19, 2026</span></span>
-      <span>·</span>
-      <span>Para Todos</span>
+<article class="post-article">
+  <div class="container post-container">
+
+    <div class="post-meta">
+      <span class="cat">Agua · Todos Santos</span>
+      <span class="dot">·</span>
+      <time datetime="2026-07-19">19 de julio, 2026</time>
     </div>
-  </div>
-</div>
 
-<div class="container">
-  <div class="post-featured-img">
-    <img src="/assets/images/blog/desal-hero.jpg" alt="Planta desalinizadora en la costa del Pacífico Sur con familias de la comunidad" />
-  </div>
-</div>
+    <h1 class="post-title">Del Agua de Mar al Agua Dulce</h1>
+    <p class="post-subtitle">Lo que aprendimos al visitar la planta desalinizadora del Hotel San Cristóbal.</p>
 
-<div class="container">
-  <div class="post-layout">
     <div class="post-body">
 
-      <!-- ESPAÑOL -->
-      <div class="es">
-        <p class="lead">El crecimiento de nuestra comunidad es inevitable. Viene más gente, vienen más proyectos, viene más demanda de todo — pero especialmente de agua. Nuestro trabajo como comunidad no es detener el crecimiento, sino asegurar que ocurra de forma consciente e intencional, protegiendo el entorno del que depende nuestro futuro.</p>
+      <p>El crecimiento de nuestra comunidad es inevitable. Viene más gente, vienen más proyectos, viene más demanda de todo — pero especialmente de agua. Nuestro trabajo como comunidad no es detener el crecimiento, sino asegurar que ocurra de forma consciente e intencional, protegiendo el entorno del que depende nuestro futuro.</p>
 
-        <p>Para eso, necesitamos entender cómo se manejan nuestros recursos. Y el recurso más urgente es el agua.</p>
+      <p>Para eso, necesitamos entender cómo se manejan nuestros recursos. Y el recurso más urgente es el agua.</p>
 
-        <p>El acuífero de Todos Santos — nuestra única fuente de agua dulce — se extrae hoy casi al doble de lo que la naturaleza puede reponer. Según datos de CONAGUA, en 2023 se extrajeron 6.6 millones de metros cúbicos contra una recarga de apenas 3.7 millones. La frontera natural entre el agua dulce subterránea y el agua salada del mar se ha desplazado tierra adentro hasta 1.6 kilómetros de la costa, según investigadores de la Universidad Estatal de Colorado — una señal clara de que el acuífero está perdiendo presión. Y 2024 fue el año más seco del siglo en Baja California Sur.</p>
+      <p>El acuífero de Todos Santos — nuestra única fuente de agua dulce — se extrae hoy casi al doble de lo que la naturaleza puede reponer. Según datos de CONAGUA, en 2023 se extrajeron 6.6 millones de metros cúbicos contra una recarga de apenas 3.7 millones. La frontera natural entre el agua dulce subterránea y el agua salada del mar se ha desplazado tierra adentro hasta 1.6 kilómetros de la costa, según investigadores de la Universidad Estatal de Colorado — una señal clara de que el acuífero está perdiendo presión. Y 2024 fue el año más seco del siglo en Baja California Sur.</p>
 
-        <h3>¿Por qué avanza el agua salada?</h3>
+      <h3>¿Por qué avanza el agua salada?</h3>
 
-        <p>Para entender la desalinización, primero hay que entender lo que está pasando debajo de nuestros pies.</p>
+      <p>Para entender la desalinización, primero hay que entender lo que está pasando debajo de nuestros pies.</p>
 
-        <p>Imaginen un tira y afloja subterráneo. Por un lado, el agua dulce del acuífero empuja hacia la costa. Por el otro, el agua del mar empuja tierra adentro. Cuando el acuífero está sano y lleno, el agua dulce gana — empuja la frontera hasta muy cerca de la costa e incluso descarga agua dulce hacia el mar a través del fondo marino.</p>
+      <p>Imaginen un tira y afloja subterráneo. Por un lado, el agua dulce del acuífero empuja hacia la costa. Por el otro, el agua del mar empuja tierra adentro. Cuando el acuífero está sano y lleno, el agua dulce gana — empuja la frontera hasta muy cerca de la costa e incluso descarga agua dulce hacia el mar a través del fondo marino.</p>
 
-        <p>Pero cuando se extrae más agua de la que se repone — como está pasando aquí — el agua dulce pierde presión. La frontera se desplaza tierra adentro. Eso es lo que midieron los investigadores de la CSU: el punto donde la concentración de sal en pozos supera el límite de agua potable se había movido a 1.6 kilómetros de la costa para 2017. No es un río de agua salada viajando kilómetro y medio bajo tierra. Es todo el equilibrio moviéndose porque estamos extrayendo más rápido de lo que la naturaleza repone.</p>
+      <p>Pero cuando se extrae más agua de la que se repone — como está pasando aquí — el agua dulce pierde presión. La frontera se desplaza tierra adentro. Eso es lo que midieron los investigadores de la CSU: el punto donde la concentración de sal en pozos supera el límite de agua potable se había movido a 1.6 kilómetros de la costa para 2017. No es un río de agua salada viajando kilómetro y medio bajo tierra. Es todo el equilibrio moviéndose porque estamos extrayendo más rápido de lo que la naturaleza repone.</p>
 
-        <p>La causa de ese desplazamiento no es algo que ocurre en la costa — son los pozos agrícolas y municipales kilómetros tierra adentro, extrayendo agua dulce y reduciendo la presión que mantiene al agua salada en su lugar. Esto es crucial para evaluar cualquier actividad costera, incluyendo la desalinización.</p>
+      <p>La causa de ese desplazamiento no es algo que ocurre en la costa — son los pozos agrícolas y municipales kilómetros tierra adentro, extrayendo agua dulce y reduciendo la presión que mantiene al agua salada en su lugar. Esto es crucial para evaluar cualquier actividad costera, incluyendo la desalinización.</p>
 
-        <hr />
+      <hr />
 
-        <p>Con eso como contexto, queríamos entender mejor la desalinización. Sabemos que es un tema que genera escepticismo en la comunidad — y ese escepticismo está bien fundado. Las primeras plantas desalinizadoras del mundo descargaban la salmuera directamente al mar, dañando la vida marina. En comunidades como la nuestra, las promesas de infraestructura de agua no siempre se han cumplido. Es natural desconfiar.</p>
+      <p>Con eso como contexto, queríamos entender mejor la desalinización. Sabemos que es un tema que genera escepticismo en la comunidad — y ese escepticismo está bien fundado. Las primeras plantas desalinizadoras del mundo descargaban la salmuera directamente al mar, dañando la vida marina. En comunidades como la nuestra, las promesas de infraestructura de agua no siempre se han cumplido. Es natural desconfiar.</p>
 
-        <p>Pero la tecnología evoluciona, y queríamos ver por nosotros mismos si la desalinización moderna es realmente diferente. ¿Es una opción viable para los desarrolladores futuros — o incluso para la comunidad? ¿Se puede hacer sin dañar el medio ambiente? ¿Cuáles son los riesgos reales?</p>
+      <p>Pero la tecnología evoluciona, y queríamos ver por nosotros mismos si la desalinización moderna es realmente diferente. ¿Es una opción viable para los desarrolladores futuros — o incluso para la comunidad? ¿Se puede hacer sin dañar el medio ambiente? ¿Cuáles son los riesgos reales?</p>
 
-        <p>Visitamos la planta de desalinización y tratamiento de agua del Hotel San Cristóbal para buscar respuestas. Les compartimos lo que aprendimos — y lo que verificamos por nuestra cuenta.</p>
+      <p>Visitamos la planta de desalinización y tratamiento de agua del Hotel San Cristóbal para buscar respuestas. Les compartimos lo que aprendimos — y lo que verificamos por nuestra cuenta.</p>
 
-        <h2>¿Cómo funciona?</h2>
+      <h2>¿Cómo funciona?</h2>
 
-        <p>El sistema utiliza <strong>ósmosis inversa</strong> — la tecnología más utilizada en el mundo para desalinizar agua.</p>
+      <p>El sistema utiliza <strong>ósmosis inversa</strong> — la tecnología más utilizada en el mundo para desalinizar agua.</p>
 
-        <p>Se extrae agua salobre (agua que contiene algo de sal — más que el agua dulce pero menos que el agua de mar) del subsuelo a través de un pozo costero, a unos 50 metros del mar, según mediciones por satélite. No se toma agua directamente del océano — el suelo actúa como filtro natural y se evita atrapar organismos marinos.</p>
+      <p>Se extrae agua salobre (agua que contiene algo de sal — más que el agua dulce pero menos que el agua de mar) del subsuelo a través de un pozo costero, a unos 50 metros del mar, según mediciones por satélite. No se toma agua directamente del océano — el suelo actúa como filtro natural y se evita atrapar organismos marinos.</p>
 
-        <p>Esa agua pasa por filtros de arena y carbón activado, y después bombas de alta presión la empujan a través de membranas semipermeables que dejan pasar el agua pero retienen la sal.</p>
+      <p>Esa agua pasa por filtros de arena y carbón activado, y después bombas de alta presión la empujan a través de membranas semipermeables que dejan pasar el agua pero retienen la sal.</p>
 
-        <p>De cada 100 litros que entran, 40 se convierten en agua potable con menos de 0.5 partes por mil de sólidos disueltos. Los otros 60 litros son la salmuera — el concentrado que queda. Ese rendimiento de 40% es el estándar de la industria para este tipo de sistemas.</p>
+      <p>De cada 100 litros que entran, 40 se convierten en agua potable con menos de 0.5 partes por mil de sólidos disueltos. Los otros 60 litros son la salmuera — el concentrado que queda. Ese rendimiento de 40% es el estándar de la industria para este tipo de sistemas.</p>
 
-        <p>El sistema opera bajo concesión de CONAGUA, con medidores ultrasónicos que reportan directamente al regulador y análisis de laboratorios certificados que van directo a CONAGUA sin pasar por el operador. Estas auditorías oficiales se realizan cada tres meses por un laboratorio externo, con auditorías internas adicionales cada mes. La concesión limita la extracción a 80,000 metros cúbicos anuales; actualmente usan aproximadamente el 60%.</p>
+      <p>El sistema opera bajo concesión de CONAGUA, con medidores ultrasónicos que reportan directamente al regulador y análisis de laboratorios certificados que van directo a CONAGUA sin pasar por el operador. Estas auditorías oficiales se realizan cada tres meses por un laboratorio externo, con auditorías internas adicionales cada mes. La concesión limita la extracción a 80,000 metros cúbicos anuales; actualmente usan aproximadamente el 60%.</p>
 
-        <h2>La pregunta clave: ¿qué pasa con la salmuera?</h2>
+      <h2>La pregunta clave: ¿qué pasa con la salmuera?</h2>
 
-        <p>Esta fue nuestra primera pregunta, y es la correcta. El mayor riesgo ambiental de la desalinización siempre ha estado en el manejo de la salmuera.</p>
+      <p>Esta fue nuestra primera pregunta, y es la correcta. El mayor riesgo ambiental de la desalinización siempre ha estado en el manejo de la salmuera.</p>
 
-        <p><strong>La salmuera no va al mar.</strong> Va a un pozo de reinyección de 70 metros de profundidad, ubicado también a unos 50 metros de la costa. Desde ahí se dispersa a través de las capas de arena del subsuelo.</p>
+      <p><strong>La salmuera no va al mar.</strong> Va a un pozo de reinyección de 70 metros de profundidad, ubicado también a unos 50 metros de la costa. Desde ahí se dispersa a través de las capas de arena del subsuelo.</p>
 
-        <h3>¿Puede esto afectar el acuífero de agua dulce?</h3>
+      <h3>¿Puede esto afectar el acuífero de agua dulce?</h3>
 
-        <p>Investigamos por nuestra cuenta, y la respuesta corta es: no en este caso — y la razón tiene que ver con ese tira y afloja subterráneo que explicamos arriba.</p>
+      <p>Investigamos por nuestra cuenta, y la respuesta corta es: no en este caso — y la razón tiene que ver con ese tira y afloja subterráneo que explicamos arriba.</p>
 
-        <p>Recordemos: la frontera entre agua dulce y agua salada está a 1.6 kilómetros de la costa. Los pozos del sistema — tanto el de extracción como el de inyección — están a unos 50 metros del mar. Eso los coloca más de kilómetro y medio del lado del mar de esa frontera, en una zona donde el agua subterránea ya es salada.</p>
+      <p>Recordemos: la frontera entre agua dulce y agua salada está a 1.6 kilómetros de la costa. Los pozos del sistema — tanto el de extracción como el de inyección — están a unos 50 metros del mar. Eso los coloca más de kilómetro y medio del lado del mar de esa frontera, en una zona donde el agua subterránea ya es salada.</p>
 
-        <p>La prueba más directa es el propio sistema: si no hubiera agua salada en el suelo a esa profundidad y esa distancia del mar, no podrían extraer agua salobre para desalinizar. La salmuera se reinyecta en terreno que ya es salino.</p>
+      <p>La prueba más directa es el propio sistema: si no hubiera agua salada en el suelo a esa profundidad y esa distancia del mar, no podrían extraer agua salobre para desalinizar. La salmuera se reinyecta en terreno que ya es salino.</p>
 
-        <p><strong>Una aclaración importante:</strong> esos 1.6 kilómetros provienen de un estudio realizado por la Universidad Estatal de Colorado (CSU), y representan una medición general del acuífero. Pero la frontera entre agua dulce y agua salada no es una línea recta a lo largo de toda la costa — varía según la zona. Cerca de los arroyos, donde el agua dulce fluye con más fuerza hacia el mar, el agua dulce puede llegar a estar a tan solo un par de cientos de metros de la costa. En zonas planas y arenosas sin un arroyo que alimente el flujo, el agua salada domina más lejos tierra adentro. Precisamente por eso, cualquier proyecto de desalinización debe incluir un estudio hidrogeológico específico de su ubicación — porque lo que es seguro en un punto de la costa puede no serlo en otro.</p>
+      <p><strong>Una aclaración importante:</strong> esos 1.6 kilómetros provienen de un estudio realizado por la Universidad Estatal de Colorado (CSU), y representan una medición general del acuífero. Pero la frontera entre agua dulce y agua salada no es una línea recta a lo largo de toda la costa — varía según la zona. Cerca de los arroyos, donde el agua dulce fluye con más fuerza hacia el mar, el agua dulce puede llegar a estar a tan solo un par de cientos de metros de la costa. En zonas planas y arenosas sin un arroyo que alimente el flujo, el agua salada domina más lejos tierra adentro. Precisamente por eso, cualquier proyecto de desalinización debe incluir un estudio hidrogeológico específico de su ubicación — porque lo que es seguro en un punto de la costa puede no serlo en otro.</p>
 
-        <p><strong>¿Pero no contribuye la salmuera a empujar esa frontera más tierra adentro?</strong></p>
+      <p><strong>¿Pero no contribuye la salmuera a empujar esa frontera más tierra adentro?</strong></p>
 
-        <p>A esta escala, no. Lo que empuja la frontera salada tierra adentro no es la salinidad adicional en la costa — es la pérdida de presión del acuífero de agua dulce kilómetros tierra adentro. Es la extracción de 6.6 millones de metros cúbicos anuales contra una recarga de 3.7 millones la que mueve ese equilibrio. Son los pozos agrícolas y municipales los que reducen la presión que mantiene al agua salada en su lugar.</p>
+      <p>A esta escala, no. Lo que empuja la frontera salada tierra adentro no es la salinidad adicional en la costa — es la pérdida de presión del acuífero de agua dulce kilómetros tierra adentro. Es la extracción de 6.6 millones de metros cúbicos anuales contra una recarga de 3.7 millones la que mueve ese equilibrio. Son los pozos agrícolas y municipales los que reducen la presión que mantiene al agua salada en su lugar.</p>
 
-        <p>A máxima capacidad, el sistema rechazaría 133 metros cúbicos diarios. Frente al volumen de agua oceánica que circula naturalmente a través de esa franja de arena entre la carretera y el mar — un volumen que se renueva completamente con cada ciclo de mareas y corrientes — esos 133 metros cúbicos no alteran el equilibrio de presiones que controla la posición de la frontera.</p>
+      <p>A máxima capacidad, el sistema rechazaría 133 metros cúbicos diarios. Frente al volumen de agua oceánica que circula naturalmente a través de esa franja de arena entre la carretera y el mar — un volumen que se renueva completamente con cada ciclo de mareas y corrientes — esos 133 metros cúbicos no alteran el equilibrio de presiones que controla la posición de la frontera.</p>
 
-        <p>Investigación publicada en <em>Hydrogeology Journal</em> (2026) respalda esta lógica: cuando se extrae agua salobre al mismo tiempo que se inyecta salmuera — exactamente lo que hace un sistema de dos pozos como este — la extracción contrarresta el efecto de la inyección, manteniendo estable la frontera. Los estudios que sí documentan impactos graves fueron modelados con volúmenes de inyección cien veces mayores que este sistema.</p>
+      <p>Investigación publicada en <em>Hydrogeology Journal</em> (2026) respalda esta lógica: cuando se extrae agua salobre al mismo tiempo que se inyecta salmuera — exactamente lo que hace un sistema de dos pozos como este — la extracción contrarresta el efecto de la inyección, manteniendo estable la frontera. Los estudios que sí documentan impactos graves fueron modelados con volúmenes de inyección cien veces mayores que este sistema.</p>
 
-        <p><strong>Un punto técnico que vale la pena entender:</strong> a 40% de recuperación, el proceso de ósmosis inversa concentra las sales aproximadamente 1.67 veces respecto al agua de entrada. Es decir, la salmuera sí es un concentrado salino — eso es inherente al proceso. Pero lo que determina el impacto ambiental no es qué tan salada es la salmuera, sino adónde va. Y en este caso, va a un punto que ya está saturado de agua salada, a más de kilómetro y medio del agua dulce más cercana, en un volumen insignificante frente al intercambio natural de agua entre el mar y el subsuelo costero.</p>
+      <p><strong>Un punto técnico que vale la pena entender:</strong> a 40% de recuperación, el proceso de ósmosis inversa concentra las sales aproximadamente 1.67 veces respecto al agua de entrada. Es decir, la salmuera sí es un concentrado salino — eso es inherente al proceso. Pero lo que determina el impacto ambiental no es qué tan salada es la salmuera, sino adónde va. Y en este caso, va a un punto que ya está saturado de agua salada, a más de kilómetro y medio del agua dulce más cercana, en un volumen insignificante frente al intercambio natural de agua entre el mar y el subsuelo costero.</p>
 
-        <h3>La precaución que sí importa</h3>
+      <h3>La precaución que sí importa</h3>
 
-        <p>La frontera entre agua dulce y agua salada no es fija — se ha estado moviendo tierra adentro a medida que el acuífero se sobreexplota. Lo que hoy es una zona segura para inyección podría dejar de serlo si la sobreextracción del acuífero continúa sin control y esa frontera sigue avanzando hacia la costa.</p>
+      <p>La frontera entre agua dulce y agua salada no es fija — se ha estado moviendo tierra adentro a medida que el acuífero se sobreexplota. Lo que hoy es una zona segura para inyección podría dejar de serlo si la sobreextracción del acuífero continúa sin control y esa frontera sigue avanzando hacia la costa.</p>
 
-        <p>Por eso el monitoreo continuo de la posición de esa frontera no es opcional — es el indicador más importante de si un sistema como este sigue operando de manera responsable. Y por eso el verdadero riesgo para nuestra agua no es una planta desalinizadora bien ubicada en la zona costera — es la extracción descontrolada del acuífero tierra adentro.</p>
+      <p>Por eso el monitoreo continuo de la posición de esa frontera no es opcional — es el indicador más importante de si un sistema como este sigue operando de manera responsable. Y por eso el verdadero riesgo para nuestra agua no es una planta desalinizadora bien ubicada en la zona costera — es la extracción descontrolada del acuífero tierra adentro.</p>
 
-        <h2>El tratamiento de agua residual</h2>
+      <h2>El tratamiento de agua residual</h2>
 
-        <p>La otra mitad del sistema que vimos merece atención propia.</p>
+      <p>La otra mitad del sistema que vimos merece atención propia.</p>
 
-        <p>El proceso funciona en varias fases biológicas: bacterias anaeróbicas descomponen la materia orgánica sin oxígeno; después, en tanques con aireadores que funcionan las 24 horas, bacterias aeróbicas convierten los compuestos restantes en dióxido de carbono y agua. El resultado pasa por tanques de clarificación y finalmente a almacenamiento. El agua tratada cumple con la norma mexicana NOM-003 para riego de áreas verdes, y el volumen reutilizado para riego equivale a unas 360 pipas de agua al año — agua que de otra forma tendría que salir del acuífero.</p>
+      <p>El proceso funciona en varias fases biológicas: bacterias anaeróbicas descomponen la materia orgánica sin oxígeno; después, en tanques con aireadores que funcionan las 24 horas, bacterias aeróbicas convierten los compuestos restantes en dióxido de carbono y agua. El resultado pasa por tanques de clarificación y finalmente a almacenamiento. El agua tratada cumple con la norma mexicana NOM-003 para riego de áreas verdes, y el volumen reutilizado para riego equivale a unas 360 pipas de agua al año — agua que de otra forma tendría que salir del acuífero.</p>
 
-        <p>Según lo que nos explicaron durante la visita, la planta de tratamiento municipal de Todos Santos trata agua residual, pero esa agua tratada prácticamente no se reutiliza. En toda la zona, casi nadie recicla agua tratada — todos riegan con agua potable, incluso para jardines. Si esto es cierto, es un desperdicio que como comunidad deberíamos estar discutiendo.</p>
+      <p>Según lo que nos explicaron durante la visita, la planta de tratamiento municipal de Todos Santos trata agua residual, pero esa agua tratada prácticamente no se reutiliza. En toda la zona, casi nadie recicla agua tratada — todos riegan con agua potable, incluso para jardines. Si esto es cierto, es un desperdicio que como comunidad deberíamos estar discutiendo.</p>
 
-        <h2>¿Cuánto cuesta?</h2>
+      <h2>¿Cuánto cuesta?</h2>
 
-        <p>De lo que pudimos aprender, un sistema a escala similar requiere una inversión inicial de aproximadamente 3 millones de pesos para el pozo y entre 6 y 8 millones de pesos para la planta desalinizadora. La operación mensual — energía eléctrica para ambas plantas — cuesta entre 70 y 80 mil pesos. Hoy esa energía viene de CFE; la instalación de paneles solares ya está en evaluación.</p>
+      <p>De lo que pudimos aprender, un sistema a escala similar requiere una inversión inicial de aproximadamente 3 millones de pesos para el pozo y entre 6 y 8 millones de pesos para la planta desalinizadora. La operación mensual — energía eléctrica para ambas plantas — cuesta entre 70 y 80 mil pesos. Hoy esa energía viene de CFE; la instalación de paneles solares ya está en evaluación.</p>
 
-        <p>Quisimos entender el costo real por metro cúbico de agua producida y compararlo con lo que pagamos hoy. Con los datos de la visita, hicimos las cuentas:</p>
+      <p>Quisimos entender el costo real por metro cúbico de agua producida y compararlo con lo que pagamos hoy. Con los datos de la visita, hicimos las cuentas:</p>
 
-        <p>El sistema que visitamos produce actualmente unos 16,800 metros cúbicos de agua potable al año. Considerando solo el costo de electricidad, eso equivale a unos <strong>54 pesos por metro cúbico</strong>. Incluyendo la amortización de toda la inversión inicial a lo largo de 15 años y los costos de mantenimiento, el costo sube a unos <strong>99 pesos por metro cúbico</strong> a la producción actual — y baja a unos <strong>73 pesos por metro cúbico</strong> si el sistema opera a su máxima capacidad autorizada.</p>
+      <p>El sistema que visitamos produce actualmente unos 16,800 metros cúbicos de agua potable al año. Considerando solo el costo de electricidad, eso equivale a unos <strong>54 pesos por metro cúbico</strong>. Incluyendo la amortización de toda la inversión inicial a lo largo de 15 años y los costos de mantenimiento, el costo sube a unos <strong>99 pesos por metro cúbico</strong> a la producción actual — y baja a unos <strong>73 pesos por metro cúbico</strong> si el sistema opera a su máxima capacidad autorizada.</p>
 
-        <p>Para contexto: el agua de pipa en Todos Santos cuesta alrededor de <strong>140 pesos por metro cúbico</strong>. Es decir, incluso contando el costo de construir la planta completa, el agua desalinizada sale entre un 30 y un 50 por ciento más barata que comprarla en pipa. Y en una región con sol prácticamente todo el año, la pregunta de cómo reducir ese costo energético tiene una respuesta obvia que exploraremos más adelante en esta serie.</p>
+      <p>Para contexto: el agua de pipa en Todos Santos cuesta alrededor de <strong>140 pesos por metro cúbico</strong>. Es decir, incluso contando el costo de construir la planta completa, el agua desalinizada sale entre un 30 y un 50 por ciento más barata que comprarla en pipa. Y en una región con sol prácticamente todo el año, la pregunta de cómo reducir ese costo energético tiene una respuesta obvia que exploraremos más adelante en esta serie.</p>
 
-        <h2>Lo que esto significa para nuestra comunidad</h2>
+      <h2>Lo que esto significa para nuestra comunidad</h2>
 
-        <p>No estamos proponiendo que la desalinización sea la solución única. El acuífero necesita protección activa: reducir la sobreextracción, mejorar la infraestructura de distribución, y promover el uso responsable.</p>
+      <p>No estamos proponiendo que la desalinización sea la solución única. El acuífero necesita protección activa: reducir la sobreextracción, mejorar la infraestructura de distribución, y promover el uso responsable.</p>
 
-        <p>Tampoco estamos respaldando a ningún proyecto en particular. Fuimos a aprender, hicimos preguntas, tomamos notas, y después investigamos por nuestra cuenta lo que nos dijeron. Le compartimos todo eso aquí.</p>
+      <p>Tampoco estamos respaldando a ningún proyecto en particular. Fuimos a aprender, hicimos preguntas, tomamos notas, y después investigamos por nuestra cuenta lo que nos dijeron. Le compartimos todo eso aquí.</p>
 
-        <p>Después de ver el sistema, investigar la ciencia y verificar los datos, esto es lo que concluimos:</p>
+      <p>Después de ver el sistema, investigar la ciencia y verificar los datos, esto es lo que concluimos:</p>
 
-        <p><strong>La desalinización, hecha de esta manera, funciona.</strong> Cuando los pozos están del lado del mar de la frontera de agua dulce, cuando la salmuera va al subsuelo y no al océano, cuando la extracción y la inyección operan juntas en la zona salina, y cuando todo está regulado por CONAGUA con monitoreo verificable — los riesgos ambientales que legítimamente preocupaban a la gente están controlados.</p>
+      <p><strong>La desalinización, hecha de esta manera, funciona.</strong> Cuando los pozos están del lado del mar de la frontera de agua dulce, cuando la salmuera va al subsuelo y no al océano, cuando la extracción y la inyección operan juntas en la zona salina, y cuando todo está regulado por CONAGUA con monitoreo verificable — los riesgos ambientales que legítimamente preocupaban a la gente están controlados.</p>
 
-        <p><strong>Eso no significa que cualquier desalinización sea segura.</strong> Una planta mal ubicada, sin monitoreo, con descarga directa al mar o cerca del acuífero de agua dulce, sí puede causar daño real. Los estudios que documentan impactos negativos son sobre ese tipo de operaciones. Entender la diferencia importa.</p>
+      <p><strong>Eso no significa que cualquier desalinización sea segura.</strong> Una planta mal ubicada, sin monitoreo, con descarga directa al mar o cerca del acuífero de agua dulce, sí puede causar daño real. Los estudios que documentan impactos negativos son sobre ese tipo de operaciones. Entender la diferencia importa.</p>
 
-        <p><strong>El mayor riesgo para nuestra agua no es la desalinización costera — es la sobreextracción del acuífero.</strong> Eso es lo que empuja la frontera salada tierra adentro, lo que contamina pozos, y lo que pone en riesgo nuestra fuente de agua dulce. Una planta desalinizadora bien ubicada en la franja costera no mueve esa frontera. Los 6.6 millones de metros cúbicos que sacamos del acuífero cada año, sí. La pregunta que deberíamos estar haciéndonos no es solo si los nuevos desarrollos pueden evitar dañar el acuífero — es si pueden ayudar a recuperarlo.</p>
+      <p><strong>El mayor riesgo para nuestra agua no es la desalinización costera — es la sobreextracción del acuífero.</strong> Eso es lo que empuja la frontera salada tierra adentro, lo que contamina pozos, y lo que pone en riesgo nuestra fuente de agua dulce. Una planta desalinizadora bien ubicada en la franja costera no mueve esa frontera. Los 6.6 millones de metros cúbicos que sacamos del acuífero cada año, sí. La pregunta que deberíamos estar haciéndonos no es solo si los nuevos desarrollos pueden evitar dañar el acuífero — es si pueden ayudar a recuperarlo.</p>
 
-        <p><strong>Como comunidad, ahora tenemos un marco para exigir.</strong> Cualquier planta desalinizadora en nuestra zona debería cumplir, como mínimo:</p>
-
-        <ul>
-          <li>Concesión formal de CONAGUA con monitoreo verificable</li>
-          <li>Pozos de inyección ubicados del lado del mar de la interfaz agua dulce-agua salada, confirmado por estudio hidrogeológico independiente</li>
-          <li>Monitoreo continuo de la posición de esa interfaz a lo largo del tiempo</li>
-          <li>Sistema de dos pozos en la zona salina (extracción e inyección simultánea)</li>
-          <li>Tratamiento y reutilización de aguas residuales</li>
-        </ul>
-
-        <p>El escepticismo de nuestra comunidad sobre promesas de agua está bien fundado. Por eso hicimos este ejercicio: para entender la tecnología lo suficiente como para distinguir entre un proyecto que cumple y uno que solo promete.</p>
-
-        <blockquote>
-          <p>El agua es nuestro recurso más valioso y nuestro problema más urgente. Entender lo que es posible nos permite exigir lo que es necesario.</p>
-        </blockquote>
-
-        <p><em>Este artículo es el primero de una serie sobre soluciones sustentables para nuestra comunidad. En el próximo, exploraremos qué medidas se pueden tomar para mejorar la situación de nuestros acuíferos.</em></p>
-
-        <div class="pdf-download">
-          <a href="/assets/documents/ParaTodos_Desal_ES.pdf" download>Descargar versión completa (ES)</a>
-          <a href="/assets/documents/ParaTodos_Desal_EN.pdf" download>Download full report (EN)</a>
-        </div>
-
-        <div class="related-box">
-          <p class="related-label">Próximamente en esta serie</p>
-          <p>En el próximo artículo, exploraremos qué medidas pueden tomarse para mejorar la situación de nuestros acuíferos — desde políticas de extracción hasta infraestructura de distribución.</p>
-        </div>
-      </div><!-- /es -->
-
-      <!-- ENGLISH -->
-      <div class="en">
-        <p class="lead">Our community's growth is inevitable. More people are coming, more projects, more demand for everything — but especially for water. Our job as a community isn't to stop that growth, but to make sure it happens consciously and intentionally, protecting the environment our future depends on.</p>
-
-        <p>To do that, we need to understand how our resources are managed. And the most urgent resource is water.</p>
-
-        <p>The Todos Santos aquifer — our only source of fresh water — is currently being extracted at nearly double the rate nature can replenish it. According to CONAGUA data, 6.6 million cubic meters were extracted in 2023 against a recharge of just 3.7 million. The natural boundary between fresh groundwater and ocean saltwater has shifted inland to 1.6 kilometers from the coast, according to Colorado State University researchers — a clear signal that the aquifer is losing pressure. And 2024 was the driest year of the century in Baja California Sur.</p>
-
-        <h3>Why is the saltwater advancing?</h3>
-
-        <p>To understand desalination, you first need to understand what's happening beneath our feet.</p>
-
-        <p>Imagine an underground tug of war. On one side, fresh water from the aquifer pushes toward the coast. On the other, ocean saltwater pushes inland. When the aquifer is healthy and full, the fresh water wins — it pushes the boundary close to the coast and even discharges fresh water into the ocean through the seafloor.</p>
-
-        <p>But when more water is extracted than is replenished — as is happening here — the fresh water loses pressure. The boundary shifts inland. That's what the CSU researchers measured: the point where salt concentrations in well samples exceeded the drinking water threshold had moved to 1.6 kilometers from the coast by 2017. It's not a river of saltwater traveling underground for a mile. It's the entire equilibrium shifting because we're extracting faster than nature recharges.</p>
-
-        <p>The cause of that shift isn't something happening at the coast — it's the agricultural and municipal wells extracting fresh water kilometers inland, reducing the pressure that keeps the saltwater in place. This is crucial for evaluating any coastal activity, including desalination.</p>
-
-        <hr />
-
-        <p>With that as context, we wanted to better understand desalination. We know it's a topic that generates skepticism in the community — and that skepticism is well-founded. Early desalination plants worldwide discharged brine directly into the sea, harming marine life. In communities like ours, water infrastructure promises haven't always been kept. It's natural to be cautious.</p>
-
-        <p>But technology evolves, and we wanted to see for ourselves whether modern desalination is genuinely different. Is it a viable option for future developers — or even for the community? Can it be done without harming the environment? What are the real risks?</p>
-
-        <p>We visited Hotel San Cristóbal's desalination and water treatment plant to look for answers. Here's what we learned — and what we verified on our own.</p>
-
-        <h2>How does it work?</h2>
-
-        <p>The system uses <strong>reverse osmosis</strong> — the most widely used desalination technology in the world.</p>
-
-        <p>Brackish water (water that contains some salt — more than fresh water but less than seawater) is extracted from the subsoil through a coastal well about 50 meters from the ocean, based on satellite measurement. No water is taken directly from the sea — the soil acts as a natural filter and avoids trapping marine organisms.</p>
-
-        <p>That water passes through sand and activated carbon filters, then high-pressure pumps push it through semi-permeable membranes that let water through but hold back salt.</p>
-
-        <p>For every 100 liters that enter, 40 become drinking water with less than 0.5 parts per thousand total dissolved solids. The other 60 liters are the brine — the concentrate that remains. That 40% yield is the industry standard for this type of system.</p>
-
-        <p>The system operates under a CONAGUA concession, with ultrasonic meters reporting directly to the regulator and certified laboratory analyses going straight to CONAGUA without passing through the operator. These official audits are conducted every three months by a third-party laboratory, with additional internal audits monthly. The concession limits extraction to 80,000 cubic meters annually; they currently use approximately 60%.</p>
-
-        <h2>The key question: what happens to the brine?</h2>
-
-        <p>This was our first question, and it's the right one. The greatest environmental risk from desalination has always been in how the brine is managed.</p>
-
-        <p><strong>The brine doesn't go into the sea.</strong> It goes into a 70-meter-deep reinjection well, also located about 50 meters from the coast. From there it disperses through the subsoil sand layers.</p>
-
-        <h3>Can this affect the freshwater aquifer?</h3>
-
-        <p>We researched independently, and the short answer is: not in this case — and the reason connects directly to that underground tug of war we explained above.</p>
-
-        <p>Remember: the boundary between fresh and salty water sits 1.6 kilometers from the coast. The system's wells — both extraction and injection — are about 50 meters from the ocean. That places them more than a kilometer and a half on the seaward side of that boundary, in a zone where the groundwater is already salty.</p>
-
-        <p>The most direct proof is the system itself: if there weren't saltwater in the soil at that depth and distance from the ocean, they couldn't extract brackish water to desalinate. The brine is reinjected into ground that is already saline.</p>
-
-        <p><strong>An important clarification:</strong> that 1.6 kilometers comes from a study conducted by Colorado State University (CSU), and represents a general measurement across the aquifer. But the boundary between fresh and salty water isn't a straight line along the entire coast — it varies by location. Near arroyos, where freshwater flows more forcefully toward the sea, fresh water can be as close as a couple hundred meters from the ocean. In flat, sandy areas without an arroyo feeding the flow, saltwater dominates further inland. This is precisely why any desalination project must include a site-specific hydrogeological study — because what is safe at one point along the coast may not be at another.</p>
-
-        <p><strong>But doesn't the brine push that boundary further inland?</strong></p>
-
-        <p>At this scale, no. What pushes the saltwater boundary inland isn't additional salinity at the coast — it's the loss of pressure in the freshwater aquifer kilometers inland. It's the extraction of 6.6 million cubic meters annually against a recharge of 3.7 million that shifts that equilibrium. It's the agricultural and municipal wells that reduce the pressure holding the saltwater back.</p>
-
-        <p>At maximum capacity, the system rejects 133 cubic meters daily. Against the volume of ocean water naturally cycling through that strip of sand between the highway and the surf — a volume that renews completely with every tidal cycle and current — those 133 cubic meters don't alter the pressure equilibrium that controls the boundary's position.</p>
-
-        <p>Research published in <em>Hydrogeology Journal</em> (2026) supports this logic: when brackish water is pumped at the same time brine is injected — exactly what a two-well system like this one does — the extraction counteracts the injection's effect, keeping the boundary stable. The studies that do document serious impacts were modeled at injection volumes a hundred times larger than this system.</p>
-
-        <p><strong>A technical point worth understanding:</strong> at 40% recovery, the reverse osmosis process concentrates salts approximately 1.67 times relative to the input water. In other words, the brine is a saline concentrate — that's inherent to the process. But what determines the environmental impact isn't how salty the brine is, but where it goes. In this case, it goes to a point already saturated with saltwater, more than a kilometer and a half from the nearest fresh water, in a volume that's negligible against the natural ocean-groundwater exchange in that coastal zone.</p>
-
-        <h3>The caution that does matter</h3>
-
-        <p>The boundary between fresh and salty water isn't fixed — it's been shifting inland as the aquifer is overexploited. What is a safe injection zone today could stop being one if overextraction continues unchecked and that boundary keeps advancing toward the coast.</p>
-
-        <p>That's why continuous monitoring of that boundary's position isn't optional — it's the most important indicator of whether a system like this continues to operate responsibly. And it's why the real risk to our water isn't a well-sited coastal desalination plant — it's the uncontrolled extraction of the aquifer inland.</p>
-
-        <h2>Wastewater treatment</h2>
-
-        <p>The other half of the system we saw deserves its own attention.</p>
-
-        <p>The process works in multiple biological phases: anaerobic bacteria break down organic matter without oxygen; then, in tanks with aerators running 24 hours a day, aerobic bacteria convert the remaining compounds into carbon dioxide and water. The result passes through clarification tanks and finally to storage. The treated water meets Mexican standard NOM-003 for green-area irrigation, and the volume reused for irrigation is equivalent to roughly 360 water truck loads per year — water that would otherwise have to come from the aquifer.</p>
-
-        <p>According to what we were told during the visit, the municipal treatment plant in Todos Santos does treat wastewater, but that treated water is largely not reused. Across the area, virtually nobody recycles treated water — everyone irrigates with drinking water, even for gardens. If that's true, it's a waste that we as a community should be discussing.</p>
-
-        <h2>How much does it cost?</h2>
-
-        <p>From what we were able to learn, a system at a similar scale requires an initial investment of approximately 3 million pesos for the well and 6 to 8 million pesos for the desalination plant. Monthly operation — electricity for both plants — runs between 70,000 and 80,000 pesos. That energy currently comes from CFE; solar panel installation is already being evaluated.</p>
-
-        <p>We wanted to understand the real cost per cubic meter of water produced and compare it to what we pay today. Using the data from the visit, we did the math:</p>
-
-        <p>The system we visited currently produces roughly 16,800 cubic meters of drinking water per year. Considering only electricity, that works out to about <strong>54 pesos per cubic meter</strong>. Including full amortization of the entire initial investment over 15 years plus maintenance costs, the price rises to about <strong>99 pesos per cubic meter</strong> at current production — and drops to roughly <strong>73 pesos per cubic meter</strong> if the system operates at its full authorized capacity.</p>
-
-        <p>For context: water from a truck in Todos Santos costs around <strong>140 pesos per cubic meter</strong>. In other words, even counting the cost of building the entire plant, desalinated water comes out 30 to 50 percent cheaper than buying it by truck. And in a region with sunshine virtually year-round, the question of how to reduce that energy cost has an obvious answer we'll explore later in this series.</p>
-
-        <h2>What this means for our community</h2>
-
-        <p>We're not proposing that desalination is the single solution. The aquifer needs active protection: reducing overextraction, improving distribution infrastructure, and promoting responsible use.</p>
-
-        <p>Nor are we endorsing any particular project. We went to learn, we asked questions, we took notes, and afterward we independently researched what we were told. We're sharing all of that here.</p>
-
-        <p>After seeing the system, researching the science, and verifying the data, here's what we concluded:</p>
-
-        <p><strong>Desalination, done this way, works.</strong> When the wells are on the seaward side of the freshwater boundary, when the brine goes into the subsoil rather than the ocean, when extraction and injection operate together in the saline zone, and when everything is regulated by CONAGUA with verifiable monitoring — the environmental risks that legitimately worried people are controlled.</p>
-
-        <p><strong>That doesn't mean any desalination is safe.</strong> A poorly sited plant, without monitoring, with direct ocean discharge or near the freshwater aquifer, can cause real harm. The studies documenting negative impacts are about those kinds of operations. Understanding the difference matters.</p>
-
-        <p><strong>The biggest risk to our water isn't coastal desalination — it's aquifer overextraction.</strong> That's what pushes the saltwater boundary inland, contaminates wells, and threatens our freshwater supply. A well-sited coastal desalination plant doesn't move that boundary. The 6.6 million cubic meters we pull from the aquifer every year does. The question we should be asking isn't just whether new developments can avoid harming the aquifer — it's whether they can help restore it.</p>
-
-        <p><strong>As a community, we now have a framework to demand accountability.</strong> Any desalination plant in our area should meet, at minimum:</p>
-
-        <ul>
-          <li>A formal CONAGUA concession with verifiable monitoring</li>
-          <li>Injection wells located on the seaward side of the freshwater-saltwater interface, confirmed by an independent hydrogeological study</li>
-          <li>Ongoing monitoring of that interface's position over time</li>
-          <li>A two-well system in the saline zone (simultaneous extraction and injection)</li>
-          <li>Treatment and reuse of wastewater</li>
-        </ul>
-
-        <p>Our community's skepticism about water promises is well-founded. That's why we did this exercise: to understand the technology well enough to tell the difference between a project that delivers and one that only promises.</p>
-
-        <blockquote>
-          <p>Water is our most valuable resource and our most urgent problem. Understanding what's possible lets us demand what's necessary.</p>
-        </blockquote>
-
-        <p><em>This article is the first in a series on sustainable solutions for our community. In the next installment, we'll explore what measures can be taken to improve the situation facing our aquifers.</em></p>
-
-        <div class="pdf-download">
-          <a href="/assets/documents/ParaTodos_Desal_EN.pdf" download>Download full report (EN)</a>
-          <a href="/assets/documents/ParaTodos_Desal_ES.pdf" download>Descargar versión completa (ES)</a>
-        </div>
-
-        <div class="related-box">
-          <p class="related-label">Coming up in this series</p>
-          <p>In the next article, we'll explore what measures can be taken to improve the situation facing our aquifers — from extraction policy to distribution infrastructure.</p>
-        </div>
-      </div><!-- /en -->
+      <p><strong>Como comunidad, ahora tenemos un marco para exigir.</strong> Cualquier planta desalinizadora en nuestra zona debería cumplir, como mínimo:</p>
+
+      <ul>
+        <li>Concesión formal de CONAGUA con monitoreo verificable</li>
+        <li>Pozos de inyección ubicados del lado del mar de la interfaz agua dulce-agua salada, confirmado por estudio hidrogeológico independiente</li>
+        <li>Monitoreo continuo de la posición de esa interfaz a lo largo del tiempo</li>
+        <li>Sistema de dos pozos en la zona salina (extracción e inyección simultánea)</li>
+        <li>Tratamiento y reutilización de aguas residuales</li>
+      </ul>
+
+      <p>El escepticismo de nuestra comunidad sobre promesas de agua está bien fundado. Por eso hicimos este ejercicio: para entender la tecnología lo suficiente como para distinguir entre un proyecto que cumple y uno que solo promete.</p>
+
+      <blockquote>
+        <p>El agua es nuestro recurso más valioso y nuestro problema más urgente. Entender lo que es posible nos permite exigir lo que es necesario.</p>
+      </blockquote>
+
+      <p><em>Este artículo es el primero de una serie sobre soluciones sustentables para nuestra comunidad. En el próximo, exploraremos qué medidas se pueden tomar para mejorar la situación de nuestros acuíferos.</em></p>
 
     </div>
-  </div>
-</div>
 
-<footer id="contacto">
+    <div class="post-download">
+      <a href="/assets/documents/ParaTodos_Desal_ES.pdf" download class="btn btn-primary">📄 Descargar este artículo (PDF)</a>
+      <a href="/assets/documents/ParaTodos_Desal_EN.pdf" download class="btn btn-outline">📄 Download in English (PDF)</a>
+    </div>
+
+    <div class="related-reading">
+      <p><strong>Próximamente en esta serie:</strong> En el próximo artículo exploraremos qué medidas pueden tomarse para mejorar la situación de nuestros acuíferos — desde políticas de extracción hasta infraestructura de distribución.</p>
+    </div>
+
+    <div class="share-row">
+      <span class="share-label">Compartir:</span>
+      <a class="share-btn" href="https://wa.me/?text=Del%20Agua%20de%20Mar%20al%20Agua%20Dulce%20%E2%80%94%20https%3A%2F%2Fparatodosbcs.mx%2Fblog%2Fdesalinizacion%2F" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparatodosbcs.mx%2Fblog%2Fdesalinizacion%2F" target="_blank" rel="noopener">Facebook</a>
+      <button class="share-btn" onclick="copyLink(this)">Copiar enlace</button>
+    </div>
+
+    <nav class="post-nav">
+      <a class="nav-card" href="/blog/">
+        <div class="nav-dir">Más</div>
+        <div class="nav-title">Todos los artículos →</div>
+      </a>
+    </nav>
+
+  </div>
+</article>
+
+<footer>
   <div class="container-wide">
     <div>
       <a href="/" class="brand-mark">
-        <img src="/assets/brand/logo-seal-256.png" alt="" style="width:48px;height:48px" />
+        <img src="/assets/brand/logo-seal-256.png" alt="" style="width:56px;height:56px" />
         <span class="text"><span class="name">Para Todos</span><span class="sub">Pacífico Sur · BCS</span></span>
       </a>
-      <p style="margin-top:1.25rem;max-width:22rem;font-size:.88rem">
-        <span class="es">Vecinos y comunidades del Pacífico Sur uniéndose para construir un mejor futuro.</span>
-        <span class="en">Neighbors and communities of the Pacific South coming together to build a better future for our region.</span>
-      </p>
+      <p style="margin-top:1.5rem;max-width:22rem">Vecinos y comunidades del Pacífico Sur uniéndose para construir un mejor futuro para nuestra región.</p>
     </div>
+    <div><h4>Contacto</h4><p><a href="mailto:hola@paratodosbcs.mx">hola@paratodosbcs.mx</a><br/>Pacífico Sur, BCS, México</p></div>
     <div>
-      <h4><span class="es">Contacto</span><span class="en">Contact</span></h4>
-      <p><a href="mailto:hola@paratodosbcs.mx">hola@paratodosbcs.mx</a></p>
+      <h4>Sitio</h4>
+      <p><a href="/">Inicio</a><br/><a href="/blog/">Blog</a><br/><a href="mailto:hola@paratodosbcs.mx">Contáctanos</a></p>
     </div>
-    <div>
-      <h4><span class="es">Sitio</span><span class="en">Site</span></h4>
-      <p>
-        <a href="/"><span class="es">Inicio</span><span class="en">Home</span></a><br />
-        <a href="/blog"><span class="es">Novedades</span><span class="en">Updates</span></a>
-      </p>
-    </div>
-    <div class="legal">
-      <span class="es">© 2026 Para Todos · Pacífico Sur, BCS</span>
-      <span class="en">© 2026 Para Todos · Pacific South, BCS</span>
-    </div>
+    <div class="legal">© 2026 Para Todos · Pacífico Sur, BCS</div>
   </div>
 </footer>
 
 <script>
-  var SISTER_ES = '/blog/desalinizacion';
-  var SISTER_EN = '/en/blog/desalination';
-  var CURRENT   = '/blog/desalinizacion';
-  function updateToggles(lang) {
-    document.getElementById('btn-es').classList.toggle('active', lang === 'es');
-    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-  }
   function setLang(lang) {
-    var target = lang === 'es' ? SISTER_ES : SISTER_EN;
-    if (target !== CURRENT) {
-      try { localStorage.setItem('lang', lang); } catch(e) {}
-      window.location.href = target; return;
-    }
-    document.body.className = 'lang-' + lang;
-    document.documentElement.setAttribute('lang', lang);
-    updateToggles(lang);
-    try { localStorage.setItem('lang', lang); } catch(e) {}
+    var esUrl=document.body.getAttribute('data-es-url'),enUrl=document.body.getAttribute('data-en-url');
+    if(esUrl&&enUrl){try{localStorage.setItem('lang',lang)}catch(e){} window.location.href=lang==='en'?enUrl:esUrl;}
   }
-  (function() {
-    try { var s = localStorage.getItem('lang'); if (s === 'en' || s === 'es') { setLang(s); return; } } catch(e) {}
-    fetch('https://api.country.is/').then(function(r){return r.json();}).then(function(d){if(d.country==='US')setLang('en');}).catch(function(){});
+  function copyLink(btn) {
+    var orig=btn.textContent;
+    navigator.clipboard.writeText(window.location.href).then(function(){btn.textContent='✓ Copiado!';setTimeout(function(){btn.textContent=orig},2000);});
+  }
+  (function(){
+    try{
+      var saved=localStorage.getItem('lang'),isEn=document.documentElement.lang==='en';
+      if(saved&&((saved==='en')!==isEn)){
+        var esUrl=document.body.getAttribute('data-es-url'),enUrl=document.body.getAttribute('data-en-url');
+        if(saved==='en'&&enUrl){window.location.replace(enUrl);return}
+        if(saved==='es'&&esUrl){window.location.replace(esUrl);return}
+      }
+    }catch(e){}
   })();
 </script>
 </body>
