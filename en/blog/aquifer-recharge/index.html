@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Can the Sea Heal Our Aquifer? — PARA TODOS</title>
+  <meta name="description" content="Our aquifer is losing nearly 3 million cubic meters of water a year. We looked into managed aquifer recharge — what it is, who's already doing it, and what it would take to start here." />
+  <link rel="canonical" href="https://paratodosbcs.mx/en/blog/aquifer-recharge/" />
+  <link rel="alternate" hreflang="es" href="https://paratodosbcs.mx/blog/recarga-del-acuifero/" />
+  <link rel="alternate" hreflang="en" href="https://paratodosbcs.mx/en/blog/aquifer-recharge/" />
+  <link rel="icon" type="image/png" href="/assets/brand/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon-180.png" />
+  <meta property="og:title" content="Can the Sea Heal Our Aquifer?" />
+  <meta property="og:description" content="Our aquifer is losing nearly 3 million cubic meters a year. We looked into managed recharge — and what it could do here." />
+  <meta property="og:image" content="https://paratodosbcs.mx/assets/images/blog/recarga-hero.png" />
+  <meta property="og:url" content="https://paratodosbcs.mx/en/blog/aquifer-recharge/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..600&family=Inter:wght@400;500;600;700&family=Caveat:wght@400;600&display=swap" />
+  <style>
+    :root {
+      --sand:#f4ecd9;--sand-light:#faf4e3;--sand-dark:#e0d4b3;
+      --terracotta:#b85042;--terracotta-dark:#9b3f33;--sunset:#d97a4a;
+      --cactus:#6d8a6e;--cactus-pale:#a8baa7;--sky:#7ba6b8;--sky-dark:#4f7a8f;
+      --espresso:#3a2e26;--off-white:#fbf6e9;--ink:#1f1813;
+    }
+    *,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}
+    body{margin:0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.6;color:var(--espresso);background-color:var(--sand-light);background-image:radial-gradient(ellipse 90% 60% at 50% -10%,rgba(255,255,255,.45) 0%,rgba(255,255,255,0) 60%),radial-gradient(ellipse 80% 50% at 100% 100%,rgba(184,80,66,.04) 0%,rgba(184,80,66,0) 70%);background-attachment:fixed;-webkit-font-smoothing:antialiased;letter-spacing:.01em}
+    a{color:var(--terracotta);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}a:hover{color:var(--terracotta-dark)}
+    .container{max-width:64rem;margin:0 auto;padding:0 1.5rem}.container-wide{max-width:80rem;margin:0 auto;padding:0 1.5rem}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;font-family:'Inter',sans-serif;font-weight:600;font-size:.9rem;letter-spacing:.03em;border-radius:999px;padding:.65rem 1.5rem;text-decoration:none;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+    .btn-primary{background:var(--terracotta);color:#fff;border:2px solid var(--terracotta)}.btn-primary:hover{background:var(--terracotta-dark);border-color:var(--terracotta-dark);color:#fff}
+    .btn-outline{background:transparent;color:var(--terracotta);border:2px solid var(--terracotta)}.btn-outline:hover{background:var(--terracotta);color:#fff}
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(244,236,217,.92);backdrop-filter:saturate(140%) blur(8px);-webkit-backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--sand-dark)}
+    .site-header .inner{display:flex;align-items:center;justify-content:space-between;max-width:80rem;margin:0 auto;padding:.85rem 1.5rem}
+    .brand-mark{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+    .brand-mark img{width:44px;height:44px}
+    .brand-mark .text{display:flex;flex-direction:column;line-height:1.05}
+    .brand-mark .name{font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;color:var(--espresso);letter-spacing:.005em}
+    .brand-mark .sub{font-size:.7rem;color:var(--sky-dark);letter-spacing:.16em;text-transform:uppercase;margin-top:2px}
+    .lang-toggle{display:flex;align-items:center;gap:0;background:transparent;border:1px solid var(--espresso);border-radius:999px;padding:3px}
+    .lang-toggle button{background:transparent;border:0;padding:.25rem .85rem;font-family:inherit;font-size:.78rem;font-weight:600;color:var(--espresso);letter-spacing:.08em;border-radius:999px;cursor:pointer}
+    .lang-toggle button.active{background:var(--espresso);color:var(--sand)}
+    footer{background:var(--espresso);color:var(--off-white);padding:4rem 0 2rem;margin-top:0}
+    footer .container-wide{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem}
+    @media(max-width:768px){footer .container-wide{grid-template-columns:1fr;gap:2rem}}
+    footer h4{font-family:'Fraunces',serif;font-weight:600;font-size:1rem;color:var(--off-white);margin:0 0 .75rem}
+    footer p{font-size:.9rem;color:var(--sand);line-height:1.6;margin:0}
+    footer a{color:var(--sunset);text-decoration:underline;text-underline-offset:3px}footer a:hover{color:var(--off-white)}
+    footer .brand-mark .name{color:var(--off-white)}footer .brand-mark .sub{color:var(--cactus-pale)}
+    footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.1);padding-top:1.5rem;margin-top:1rem;font-size:.78rem;color:var(--sand);opacity:.55}
+    .post-hero{width:100%;max-height:480px;overflow:hidden;background:#fff}
+    .post-hero-img{width:100%;height:480px;object-fit:cover;display:block}
+    @media(max-width:768px){.post-hero-img{height:260px}}
+    .post-article{padding:4rem 0 5rem}.post-container{max-width:42rem}
+    .post-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-bottom:1.5rem}
+    .post-meta .cat{font-family:'Inter',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--sky-dark);text-decoration:none}
+    .post-meta .dot{color:var(--sand-dark)}
+    .post-meta time{font-family:'Inter',sans-serif;font-size:.72rem;color:var(--espresso);opacity:.5}
+    .post-title{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.75rem,4vw,2.75rem);line-height:1.1;color:var(--espresso);margin:0 0 1.25rem;letter-spacing:-.01em}
+    .post-subtitle{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.1rem,2vw,1.35rem);color:var(--sky-dark);line-height:1.5;margin:0 0 2.5rem;border-left:3px solid var(--sky-dark);padding-left:1.25rem}
+    .post-body{font-size:17px;line-height:1.7;color:var(--espresso)}
+    .post-body p{margin:0 0 1.25rem}
+    .post-body h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;color:var(--espresso);margin:2.5rem 0 .75rem}
+    .post-body h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:var(--terracotta);margin:1.75rem 0 .5rem}
+    .post-body ul{margin:0 0 1.25rem;padding-left:1.5rem}
+    .post-body ul li{margin-bottom:.5rem}
+    .post-body blockquote{margin:2rem 0;padding:1.25rem 1.5rem;border-left:3px solid var(--terracotta);background:var(--sand);border-radius:0 4px 4px 0;font-family:'Fraunces',serif;font-style:italic;font-size:1.05rem;color:var(--espresso)}
+    .post-body blockquote p{margin:0}
+    .post-body hr{border:none;border-top:1px solid var(--sand-dark);margin:2.5rem 0}
+    .post-download{margin:3rem 0 1.5rem;display:flex;flex-wrap:wrap;gap:1rem}
+    .related-reading{background:var(--sand);border:1px solid var(--sand-dark);border-radius:6px;padding:1.5rem 2rem;margin:2.5rem 0}
+    .related-reading p{margin:0;font-size:.95rem}
+    .share-row{display:flex;align-items:center;flex-wrap:wrap;gap:.75rem;margin:1.5rem 0 2.5rem}
+    .share-label{font-family:'Inter',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--espresso);opacity:.45}
+    .share-btn{display:inline-flex;align-items:center;gap:.35rem;font-family:'Inter',sans-serif;font-size:.82rem;font-weight:600;color:var(--espresso);background:transparent;border:1px solid var(--sand-dark);border-radius:999px;padding:.3rem .9rem;text-decoration:none;cursor:pointer;transition:border-color .15s,background .15s}
+    .share-btn:hover{border-color:var(--terracotta);color:var(--terracotta);background:transparent}
+    .post-nav{display:grid;grid-template-columns:1fr 1fr;gap:1rem;border-top:1px solid var(--sand-dark);padding-top:2rem;margin-top:1rem}
+    @media(max-width:580px){.post-nav{grid-template-columns:1fr}}
+    .nav-card{display:block;background:var(--off-white);border:1px solid var(--sand-dark);border-radius:6px;padding:1.25rem 1.5rem;text-decoration:none;color:inherit;transition:border-color .15s}
+    .nav-card:hover{border-color:var(--terracotta);color:inherit}
+    .nav-card .nav-dir{font-family:'Inter',sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--espresso);opacity:.4;margin-bottom:.35rem}
+    .nav-card .nav-title{font-family:'Fraunces',serif;font-weight:600;font-size:.95rem;color:var(--espresso);line-height:1.3}
+  </style>
+</head>
+<body class="lang-en" data-es-url="/blog/recarga-del-acuifero/" data-en-url="/en/blog/aquifer-recharge/">
+
+<header class="site-header">
+  <div class="inner">
+    <a href="/en/" class="brand-mark">
+      <img src="/assets/brand/logo-seal-256.png" alt="Para Todos" />
+      <span class="text"><span class="name">Para Todos</span><span class="sub">Pacífico Sur · BCS</span></span>
+    </a>
+    <div class="lang-toggle">
+      <button id="btn-es" onclick="setLang('es')">ES</button>
+      <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<div class="post-hero">
+  <img src="/assets/images/blog/recarga-hero.png" alt="Illustration of aquifer recharge: people standing at an injection well with a cross-section view of the underground aquifer and the sea in the background" class="post-hero-img" />
+</div>
+
+<article class="post-article">
+  <div class="container post-container">
+
+    <div class="post-meta">
+      <span class="cat">Water · Environment</span>
+      <span class="dot">·</span>
+      <time datetime="2026-07-23">July 23, 2026</time>
+    </div>
+
+    <h1 class="post-title">Can the Sea Heal Our Aquifer?</h1>
+    <p class="post-subtitle">Our aquifer is losing nearly 3 million cubic meters of water a year. We explored managed aquifer recharge — what it is, who's already doing it, and what it would take to start here.</p>
+
+    <div class="post-body">
+
+      <p>In our first article, we visited a local desalination plant and came away convinced that the technology works — when it's done right. But that article addressed only half the problem. Desalination can provide an alternative source of water so new developments don't keep draining the aquifer. That's important. But it doesn't fix what's already broken.</p>
+
+      <p>Our aquifer is losing nearly 3 million cubic meters of water per year. The saltwater boundary has moved 1.6 kilometers inland. Wells that gave clean water a decade ago are going salty. The question we couldn't stop asking after that first visit was: is there a way to actually put water back?</p>
+
+      <p>The answer is yes. It's been done for decades. And the results, in some places, are extraordinary.</p>
+
+      <h2>What is managed aquifer recharge?</h2>
+
+      <p>The concept is simpler than the name suggests. Managed Aquifer Recharge — MAR — means intentionally putting water into an aquifer to replenish it. Instead of just slowing down how fast the aquifer empties, you actively refill it.</p>
+
+      <p>There are several ways to do this: spread water over large infiltration basins and let it soak through the ground naturally; inject it directly through wells; capture rainwater that would otherwise run off or evaporate and redirect it underground. The method depends on the geography, the water source, and the aquifer's characteristics.</p>
+
+      <p>What they all have in common: they increase the pressure of fresh water in the aquifer. And as we explained in our first article, that pressure is what holds the saltwater back. MAR doesn't just stop the bleeding — it can reverse the damage.</p>
+
+      <h2>Who is already doing this?</h2>
+
+      <p>This isn't experimental. It's not a pilot program in a university lab. These are full-scale, operational systems that serve millions of people.</p>
+
+      <h3>Orange County, California</h3>
+
+      <p>The most striking example in the world sits just across our border. Orange County's Groundwater Replenishment System takes treated wastewater that used to be dumped into the Pacific Ocean, purifies it, and puts it back into the aquifer. It's the largest system of its kind on the planet — producing 130 million gallons of purified water per day, enough to serve one million people. Before the system, the aquifer's natural yield was about 100,000 acre-feet per year. With managed recharge, the sustainable yield has more than tripled to 320,000 acre-feet. The aquifer now supplies 85 percent of the region's water needs.</p>
+
+      <h3>Israel</h3>
+
+      <p>Israel faced a crisis similar to ours — a coastal aquifer being depleted by overextraction and threatened by saltwater intrusion. They built five massive desalination plants along the Mediterranean coast. But they didn't stop there. When the plants produce more water than the country needs at a given moment, the surplus is recharged into the coastal aquifer through infiltration ponds. The aquifer functions as a natural underground reservoir — used for storage when there's surplus and drawn from during peak demand.</p>
+
+      <h3>Los Angeles, California</h3>
+
+      <p>Los Angeles has operated freshwater injection wells as a saltwater intrusion barrier since the early 1950s — over 70 years. Freshwater is injected into a line of coastal wells, creating a pressure wall that prevents ocean saltwater from advancing into the region's drinking water aquifer. It's one of the oldest MAR systems in the world, and it's still running.</p>
+
+      <h2>What we already have here</h2>
+
+      <p>Here's something that surprised us during our research, and it came from a conversation with a local farmer who knows our water system intimately.</p>
+
+      <p>There is a presa — a dam — in our area that captures rainwater, particularly during the rainy season and hurricane-driven storms. But that captured water sits in an open reservoir in the BCS sun. It doesn't soak into the ground. It evaporates.</p>
+
+      <p>We have fresh water — already captured, already sitting right there — being lost to the atmosphere instead of recharging the aquifer it sits above. Redirecting that captured rainwater underground — through infiltration basins or injection wells — wouldn't require any desalination at all. The water is already fresh. It's already captured. It just needs to go down instead of up.</p>
+
+      <p>The estimated cost for a basic infiltration system near an existing presa would be in the range of 500,000 to 2 million pesos — mostly earthwork, channels, and basic monitoring. That's a fraction of the cost of any desalination-based approach. And it could be operational within months, not years.</p>
+
+      <h2>The more ambitious path: Abstraction-Desalination-Recharge</h2>
+
+      <p>For the coastline specifically — where the saltwater boundary is advancing — there's a more targeted technique. It's called ADR: Abstraction-Desalination-Recharge.</p>
+
+      <p>Step 1: Extract brackish water near the coast — exactly what the desalination plant we visited in our first article already does. Step 2: Desalinate it through reverse osmosis. Step 3: Part of the freshwater serves the property or community's needs. Step 4: The surplus freshwater gets injected on the inland side of the freshwater-saltwater boundary — where it adds pressure to the freshwater aquifer and pushes the saltwater back toward the sea.</p>
+
+      <p>The beauty of this approach is that steps 1 and 4 work together. Extracting brackish water near the coast removes volume from the saline zone, while injecting freshwater inland adds volume to the freshwater zone. The saltwater boundary gets squeezed from both sides.</p>
+
+      <h2>Three paths forward</h2>
+
+      <p>We explored three concrete options for our area, each at a different scale, cost, and level of impact:</p>
+
+      <h3>Path 1 — The presa: start with what we already have</h3>
+      <p>Redirect water that's already being captured and lost to evaporation into infiltration basins that recharge the aquifer. Estimated cost: 500,000 to 2 million pesos. Timeline: months, not years. A local university could design and monitor a pilot that produces measurable data within a single rainy season.</p>
+
+      <h3>Path 2 — A coastal ADR pilot: test the bigger idea</h3>
+      <p>A small-scale test using existing desalination infrastructure near the coast to extract brackish water, desalinate it, and inject surplus freshwater inland. A two-year pilot would require roughly 8 to 14 million pesos. The pilot's value isn't the water it injects — it's the data. Publishable, peer-reviewed proof that aquifer recharge works at this specific location, with this geology.</p>
+
+      <h3>Path 3 — The community-scale system: what actually moves the needle</h3>
+      <p>To close at least 30 percent of the annual deficit — roughly 870,000 cubic meters of freshwater injection per year — would require a dedicated community-scale desalination and recharge plant whose primary purpose isn't serving a hotel or resort, but producing freshwater to heal the aquifer. Estimated cost: 140 to 240 million pesos. Combined with conservation measures on the extraction side, the deficit could shrink to a level where the aquifer stabilizes for the first time in decades.</p>
+
+      <h2>The cost of doing nothing</h2>
+
+      <p>At current extraction rates, the aquifer continues to lose nearly 3 million cubic meters per year. The saltwater boundary continues to advance. More wells go salty. The cost of water keeps climbing. And by the time the damage is undeniable to everyone, the cost of reversing it will be many times what it would cost to start today.</p>
+
+      <blockquote>
+        <p>Every year we wait, the problem gets more expensive to fix. The technology exists. The science is proven. The examples are running. The only thing missing is the decision to begin.</p>
+      </blockquote>
+
+      <p><em>This is the second in our series on sustainable solutions. Coming next: how solar energy connects to the economics of water — and why it changes the math on everything we've discussed.</em></p>
+
+    </div>
+
+    <div class="post-download">
+      <a href="/assets/documents/ParaTodos_Recarga_EN.pdf" download class="btn btn-primary">📄 Download this article (PDF)</a>
+      <a href="/assets/documents/ParaTodos_Recarga_ES.pdf" download class="btn btn-outline">📄 Descargar en español (PDF)</a>
+    </div>
+
+    <div class="related-reading">
+      <p><strong>Also in this series:</strong> <a href="/en/blog/desalination/">Seawater to Fresh Water</a> — what we learned visiting Hotel San Cristóbal's desalination plant.</p>
+    </div>
+
+    <div class="share-row">
+      <span class="share-label">Share:</span>
+      <a class="share-btn" href="https://wa.me/?text=Can%20the%20Sea%20Heal%20Our%20Aquifer%3F%20%E2%80%94%20https%3A%2F%2Fparatodosbcs.mx%2Fen%2Fblog%2Faquifer-recharge%2F" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparatodosbcs.mx%2Fen%2Fblog%2Faquifer-recharge%2F" target="_blank" rel="noopener">Facebook</a>
+      <button class="share-btn" onclick="copyLink(this)">Copy link</button>
+    </div>
+
+    <nav class="post-nav">
+      <a class="nav-card" href="/en/blog/desalination/">
+        <div class="nav-dir">Previous article</div>
+        <div class="nav-title">Seawater to Fresh Water</div>
+      </a>
+      <a class="nav-card" href="/en/blog/">
+        <div class="nav-dir">More</div>
+        <div class="nav-title">All articles →</div>
+      </a>
+    </nav>
+
+  </div>
+</article>
+
+<footer>
+  <div class="container-wide">
+    <div>
+      <a href="/en/" class="brand-mark">
+        <img src="/assets/brand/logo-seal-256.png" alt="" style="width:56px;height:56px" />
+        <span class="text"><span class="name">Para Todos</span><span class="sub">Pacífico Sur · BCS</span></span>
+      </a>
+      <p style="margin-top:1.5rem;max-width:22rem">Neighbors and communities of the Pacific South coming together to build a better future for our region.</p>
+    </div>
+    <div><h4>Contact</h4><p><a href="mailto:hola@paratodosbcs.mx">hola@paratodosbcs.mx</a><br/>Pacífico Sur, BCS, México</p></div>
+    <div>
+      <h4>Site</h4>
+      <p><a href="/en/">Home</a><br/><a href="/en/blog/">Blog</a><br/><a href="mailto:hola@paratodosbcs.mx">Contact us</a></p>
+    </div>
+    <div class="legal">© 2026 Para Todos · Pacífico Sur, BCS</div>
+  </div>
+</footer>
+
+<script>
+  function setLang(lang) {
+    var esUrl=document.body.getAttribute('data-es-url'),enUrl=document.body.getAttribute('data-en-url');
+    if(esUrl&&enUrl){try{localStorage.setItem('lang',lang)}catch(e){} window.location.href=lang==='en'?enUrl:esUrl;}
+  }
+  function copyLink(btn) {
+    var orig=btn.textContent;
+    navigator.clipboard.writeText(window.location.href).then(function(){btn.textContent='✓ Copied!';setTimeout(function(){btn.textContent=orig},2000);});
+  }
+  (function(){
+    try{
+      var saved=localStorage.getItem('lang'),isEn=document.documentElement.lang==='en';
+      if(saved&&((saved==='en')!==isEn)){
+        var esUrl=document.body.getAttribute('data-es-url'),enUrl=document.body.getAttribute('data-en-url');
+        if(saved==='en'&&enUrl){window.location.replace(enUrl);return}
+        if(saved==='es'&&esUrl){window.location.replace(esUrl);return}
+      }
+    }catch(e){}
+  })();
+</script>
+</body>
+</html>
