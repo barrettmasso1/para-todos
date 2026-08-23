@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Connecting the Pieces — PARA TODOS</title>
+  <meta name="description" content="Three articles. Three solutions. A plan for our water, energy, and future: with costs, phases, and the question of who has the authority to make it real." />
+  <link rel="canonical" href="https://paratodosbcs.mx/en/blog/connecting-the-pieces/" />
+  <link rel="alternate" hreflang="es" href="https://paratodosbcs.mx/blog/conectando-las-piezas/" />
+  <link rel="alternate" hreflang="en" href="https://paratodosbcs.mx/en/blog/connecting-the-pieces/" />
+  <link rel="icon" type="image/png" href="/assets/brand/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon-180.png" />
+  <meta property="og:title" content="Connecting the Pieces" />
+  <meta property="og:description" content="A plan for our water, our energy, and our future." />
+  <meta property="og:image" content="https://paratodosbcs.mx/assets/images/blog/conectando-hero.jpg" />
+  <meta property="og:url" content="https://paratodosbcs.mx/en/blog/connecting-the-pieces/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..600&family=Inter:wght@400;500;600;700&family=Caveat:wght@400;600&display=swap" />
+  <style>
+    :root {
+      --sand:#f4ecd9;--sand-light:#faf4e3;--sand-dark:#e0d4b3;
+      --terracotta:#b85042;--terracotta-dark:#9b3f33;--sunset:#d97a4a;
+      --cactus:#6d8a6e;--cactus-pale:#a8baa7;--sky:#7ba6b8;--sky-dark:#4f7a8f;
+      --espresso:#3a2e26;--off-white:#fbf6e9;--ink:#1f1813;
+    }
+    *,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}
+    body{margin:0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.6;color:var(--espresso);background-color:var(--sand-light);background-image:radial-gradient(ellipse 90% 60% at 50% -10%,rgba(255,255,255,.45) 0%,rgba(255,255,255,0) 60%),radial-gradient(ellipse 80% 50% at 100% 100%,rgba(184,80,66,.04) 0%,rgba(184,80,66,0) 70%);background-attachment:fixed;-webkit-font-smoothing:antialiased;letter-spacing:.01em}
+    a{color:var(--terracotta);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}a:hover{color:var(--terracotta-dark)}
+    .container{max-width:64rem;margin:0 auto;padding:0 1.5rem}.container-wide{max-width:80rem;margin:0 auto;padding:0 1.5rem}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;font-family:'Inter',sans-serif;font-weight:600;font-size:.9rem;letter-spacing:.03em;border-radius:999px;padding:.65rem 1.5rem;text-decoration:none;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+    .btn-primary{background:var(--terracotta);color:#fff;border:2px solid var(--terracotta)}.btn-primary:hover{background:var(--terracotta-dark);border-color:var(--terracotta-dark);color:#fff}
+    .btn-outline{background:transparent;color:var(--terracotta);border:2px solid var(--terracotta)}.btn-outline:hover{background:var(--terracotta);color:#fff}
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(244,236,217,.92);backdrop-filter:saturate(140%) blur(8px);-webkit-backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--sand-dark)}
+    .site-header .inner{display:flex;align-items:center;justify-content:space-between;max-width:80rem;margin:0 auto;padding:.85rem 1.5rem}
+    .brand-mark{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+    .brand-mark img{width:44px;height:44px}
+    .brand-mark .text{display:flex;flex-direction:column;line-height:1.05}
+    .brand-mark .name{font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;color:var(--espresso);letter-spacing:.005em}
+    .brand-mark .sub{font-size:.7rem;color:var(--sky-dark);letter-spacing:.16em;text-transform:uppercase;margin-top:2px}
+    .lang-toggle{display:flex;align-items:center;gap:0;background:transparent;border:1px solid var(--espresso);border-radius:999px;padding:3px}
+    .lang-toggle button{background:transparent;border:0;padding:.25rem .85rem;font-family:inherit;font-size:.78rem;font-weight:600;color:var(--espresso);letter-spacing:.08em;border-radius:999px;cursor:pointer}
+    .lang-toggle button.active{background:var(--espresso);color:var(--sand)}
+    footer{background:var(--espresso);color:var(--off-white);padding:4rem 0 2rem;margin-top:0}
+    footer .container-wide{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem}
+    @media(max-width:768px){footer .container-wide{grid-template-columns:1fr;gap:2rem}}
+    footer h4{font-family:'Fraunces',serif;font-weight:600;font-size:1rem;color:var(--off-white);margin:0 0 .75rem}
+    footer p{font-size:.9rem;color:var(--sand);line-height:1.6;margin:0}
+    footer a{color:var(--sunset);text-decoration:underline;text-underline-offset:3px}footer a:hover{color:var(--off-white)}
+    footer .brand-mark .name{color:var(--off-white)}footer .brand-mark .sub{color:var(--cactus-pale)}
+    footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.1);padding-top:1.5rem;margin-top:1rem;font-size:.78rem;color:var(--sand);opacity:.55}
+    .post-hero{width:100%;max-height:480px;overflow:hidden;background:#fff}
+    .post-hero-img{width:100%;height:480px;object-fit:cover;display:block}
+    @media(max-width:768px){.post-hero-img{height:260px}}
+    .post-article{padding:4rem 0 5rem}.post-container{max-width:42rem}
+    .post-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-bottom:1.5rem}
+    .post-meta .cat{font-family:'Inter',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--sky-dark);text-decoration:none}
+    .post-meta .dot{color:var(--sand-dark)}
+    .post-meta time{font-family:'Inter',sans-serif;font-size:.72rem;color:var(--espresso);opacity:.5}
+    .post-title{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.75rem,4vw,2.75rem);line-height:1.1;color:var(--espresso);margin:0 0 1.25rem;letter-spacing:-.01em}
+    .post-subtitle{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.1rem,2vw,1.35rem);color:var(--sky-dark);line-height:1.5;margin:0 0 2.5rem;border-left:3px solid var(--sky-dark);padding-left:1.25rem}
+    .post-body{font-size:17px;line-height:1.7;color:var(--espresso)}
+    .post-body p{margin:0 0 1.25rem}
+    .post-body h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;color:var(--espresso);margin:2.5rem 0 .75rem}
+    .post-body h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:var(--terracotta);margin:1.75rem 0 .5rem}
+    .post-body ul{margin:0 0 1.25rem;padding-left:1.5rem}
+    .post-body ul li{margin-bottom:.5rem}
+    .post-body strong{font-weight:600}
+    .post-body blockquote{margin:2rem 0;padding:1.25rem 1.5rem;border-left:3px solid var(--terracotta);background:var(--sand);border-radius:0 4px 4px 0;font-family:'Fraunces',serif;font-style:italic;font-size:1.05rem;color:var(--espresso)}
+    .post-body blockquote p{margin:0}
+    .post-body hr{border:none;border-top:1px solid var(--sand-dark);margin:2.5rem 0}
+    .post-download{margin:3rem 0 1.5rem;display:flex;flex-wrap:wrap;gap:1rem}
+    .related-reading{background:var(--sand);border:1px solid var(--sand-dark);border-radius:6px;padding:1.5rem 2rem;margin:2.5rem 0}
+    .related-reading p{margin:0 0 .75rem;font-size:.95rem}.related-reading p:last-child{margin:0}
+    .share-row{display:flex;align-items:center;flex-wrap:wrap;gap:.75rem;margin:1.5rem 0 2.5rem}
+    .share-label{font-family:'Inter',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--espresso);opacity:.45}
+    .share-btn{display:inline-flex;align-items:center;gap:.35rem;font-family:'Inter',sans-serif;font-size:.82rem;font-weight:600;color:var(--espresso);background:transparent;border:1px solid var(--sand-dark);border-radius:999px;padding:.3rem .9rem;text-decoration:none;cursor:pointer;transition:border-color .15s,background .15s}
+    .share-btn:hover{border-color:var(--terracotta);color:var(--terracotta);background:transparent}
+    .post-nav{display:grid;grid-template-columns:1fr 1fr;gap:1rem;border-top:1px solid var(--sand-dark);padding-top:2rem;margin-top:1rem}
+    @media(max-width:580px){.post-nav{grid-template-columns:1fr}}
+    .nav-card{display:block;background:var(--off-white);border:1px solid var(--sand-dark);border-radius:6px;padding:1.25rem 1.5rem;text-decoration:none;color:inherit;transition:border-color .15s}
+    .nav-card:hover{border-color:var(--terracotta);color:inherit}
+    .nav-card .nav-dir{font-family:'Inter',sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--espresso);opacity:.4;margin-bottom:.35rem}
+    .nav-card .nav-title{font-family:'Fraunces',serif;font-weight:600;font-size:.95rem;color:var(--espresso);line-height:1.3}
+  </style>
+</head>
+<body class="lang-en" data-es-url="/blog/conectando-las-piezas/" data-en-url="/en/blog/connecting-the-pieces/">
+
+<header class="site-header">
+  <div class="inner">
+    <a href="/en/" class="brand-mark">
+      <img src="/assets/brand/logo-seal-256.png" alt="Para Todos" />
+      <span class="text"><span class="name">Para Todos</span><span class="sub">Pacífico Sur · BCS</span></span>
+    </a>
+    <div class="lang-toggle">
+      <button id="btn-es" onclick="setLang('es')">ES</button>
+      <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<div class="post-hero">
+  <img src="/assets/images/blog/conectando-hero.jpg" alt="Aerial view of Todos Santos at sunset, with solar panels visible on rooftops and the aquifer shown as a cross-section beneath the landscape" class="post-hero-img" />
+</div>
+
+<article class="post-article">
+  <div class="container post-container">
+
+    <div class="post-meta">
+      <span class="cat">Water · Energy · Governance</span>
+      <span class="dot">·</span>
+      <time datetime="2026-08-23">August 23, 2026</time>
+    </div>
+
+    <h1 class="post-title">Connecting the Pieces</h1>
+    <p class="post-subtitle">A plan for our water, our energy, and our future.</p>
+
+    <div class="post-body">
+
+      <p>Three articles. Three solutions. One question that keeps coming back.</p>
+
+      <p>We started this series by visiting a desalination plant and learning that the technology works, that it's already cheaper than truck water, and that responsible brine management is possible when it's done right. We continued by exploring managed aquifer recharge — a proven approach to returning water underground, with systems operating in Orange County, Israel, and Los Angeles for decades. And most recently, we showed that solar energy in BCS isn't just an environmental decision. It's the economic key that makes all of this affordable.</p>
+
+      <p>Each piece works on its own. But they were always designed to work together.</p>
+
+      <p>This final article is where we connect them. Not as ideas, but as a plan. With costs, phases, timelines, and an honest look at the question that determines whether any of this actually happens: who has the authority and resources to make it real?</p>
+
+      <hr />
+
+      <h2>The complete picture</h2>
+
+      <p>Here's what a sustainable water and energy system for our region looks like when you put the three articles together:</p>
+
+      <p><strong>The ocean gives us water.</strong> Coastal wells draw brackish water from the saline zone. Reverse osmosis produces drinking water at about 35 pesos per cubic meter with solar energy. That's 75% cheaper than a water truck.</p>
+
+      <p><strong>The sun gives us energy.</strong> Solar panels power the desalination, pumping, injection, and monitoring. At BCS electricity rates, a solar installation pays for itself in 3 to 5 years. After that, the energy is essentially free for 20+ years.</p>
+
+      <p><strong>Managed recharge heals the aquifer.</strong> Surplus freshwater from desalination is injected inland, pushing the saltwater boundary back toward the coast. Dam water is directed underground instead of evaporating. The aquifer starts recovering instead of continuing to decline.</p>
+
+      <p><strong>Wastewater stops being wasted.</strong> Properties and communities treat their water and reuse it for irrigation, construction, and landscaping instead of using drinking-quality water for everything.</p>
+
+      <p>None of these technologies are experimental. Every component is operating somewhere in the world right now. What doesn't exist yet is the decision to connect them here.</p>
+
+      <hr />
+
+      <h2>A community idea: turning waste into value</h2>
+
+      <p>During this series, Arq Mattera — a community member specializing in sustainable architecture and circular economy — raised a question that stayed with us. Instead of disposing of desalination brine, why not turn it into a product?</p>
+
+      <p>The concept is called brine valorization, and it's a real and growing field. Desalination brine contains dissolved minerals including sodium chloride, magnesium, potassium, and even traces of lithium — one of the most valuable minerals in the world right now due to battery demand. The global brine minerals market is projected at $2.3 billion by 2033.</p>
+
+      <p><strong>Simple salt production is proven and practical for BCS.</strong> Guerrero Negro, right here in our state, operates the largest solar salt works in the world. The process is straightforward: spread the brine in shallow ponds, let BCS's sun evaporate the water, harvest the salt. Our climate is literally ideal for this. At hotel scale, this would produce roughly 1,500 to 1,750 metric tons of industrial salt per year.</p>
+
+      <p><strong>Higher-value mineral extraction is emerging but not yet proven at scale.</strong> Technologies to extract lithium, magnesium, and other minerals from brine exist and are developing fast. California launched a commercial lithium recovery plant from geothermal brines in 2025. But we should be honest: the world's most ambitious project — a $1.5 billion installation planned for NEOM in Saudi Arabia — was cancelled in 2024 because the economics didn't work at that scale.</p>
+
+      <p><strong>What this means for us:</strong> At our scale, simple solar evaporation for salt production is the realistic first step. The real value isn't the salt revenue — maybe $75,000 to $175,000 per year at hotel scale. It's eliminating the brine disposal question entirely. No brine underground, none into the ocean. Just a useful product made with free sunshine.</p>
+
+      <p>This is the kind of thinking we need more of. Solutions that turn problems into opportunities. And it came from someone in this community — not a consultant or outside expert.</p>
+
+      <hr />
+
+      <h2>The monitoring problem we can't ignore</h2>
+
+      <p>Throughout this series, people have rightly pointed out that none of these solutions matter if uncontrolled extraction keeps draining the aquifer faster than we can refill it.</p>
+
+      <p>Water trucks operating daily with limited oversight. Agricultural operations extracting significant volumes. The question of who's drawing how much, whether they're within their concession limits, and whether there's illegal extraction happening — that monitoring is insufficient. CONAGUA has regulatory authority, but on-the-ground enforcement hasn't been proportional to the scale of the problem.</p>
+
+      <p>A community member ran the numbers in our WhatsApp group. The 12,000 residents of Todos Santos, even at three times the normal consumption rate, use maybe 5% of the aquifer's available water. Where is the other 95%? Who holds those concessions? Who's watching for compliance?</p>
+
+      <p>We can build the world's most sophisticated recharge system, but if we're pouring water into a bucket with a hole in the bottom, the math will never work out. We've committed to exploring this in a future post.</p>
+
+      <hr />
+
+      <h2>The plan, in phases</h2>
+
+      <p>Here's what a realistic path forward looks like. Not all at once. Step by step, with each phase building on the one before.</p>
+
+      <h3>Phase 1: Quick wins (Year 1)</h3>
+
+      <p><strong>Dam infiltration.</strong> Redirect captured rainwater that currently evaporates into infiltration basins that recharge the aquifer. This is the simplest, cheapest, and highest-immediate-impact action available.</p>
+
+      <p>Cost: 500,000 to 2 million pesos · Timeline: operating within months · Academic partner: CSU Todos Santos or UABCS/CITA</p>
+
+      <p><strong>Solar evaporation pilot for brine.</strong> If a local desalination operation is willing to participate, establish a small solar evaporation pond to demonstrate brine-to-salt conversion.</p>
+
+      <p>Cost: 200,000 to 500,000 pesos · Timeline: operating within one dry season</p>
+
+      <h3>Phase 2: Proof of concept (Years 1–3)</h3>
+
+      <p><strong>MAR pilot using existing infrastructure.</strong> Partner with a facility that already operates a desalination plant to test freshwater injection into the aquifer. The desalination plant we visited in our first article has unused capacity and a working system.</p>
+
+      <p>Cost: 8 to 14 million pesos over two years · Includes: injection well, piping, monitoring wells, academic partnership, CONAGUA permits under NOM-014</p>
+
+      <p>This is the critical step. Without pilot data, any larger investment is built on theory. With it, you have peer-reviewed proof that the concept works here.</p>
+
+      <h3>Phase 3: Community-scale system (Years 3–10)</h3>
+
+      <p><strong>Dedicated solar-powered desalination and recharge plant.</strong> A facility whose primary purpose is producing freshwater to heal the aquifer and serve the community.</p>
+
+      <p>Scale: ~6,000 m³ per day, producing 870,000 m³ per year for injection · Capital cost: 140 to 240 million pesos (including solar) · Annual operating cost: 7 to 10 million pesos · Impact: closes ~30% of the aquifer deficit</p>
+
+      <p>Combined with conservation, treated water reuse, dam infiltration, and developer contributions, this puts the aquifer within reach of balance.</p>
+
+      <h3>Phase 4: Developer standards (Ongoing)</h3>
+
+      <p><strong>Aquifer-positive development requirements.</strong> Every new development in the region must be independent of the municipal aquifer (mandatory desalination) and contribute a percentage of its freshwater production to recharge. Tax incentives and reduced permit costs make compliance economically attractive.</p>
+
+      <p>This doesn't require building anything new. It requires having the authority to set and enforce the standard. The principle is the same whether you're on the coast or inland: every new project should leave the aquifer better than it found it.</p>
+
+      <hr />
+
+      <h2>The cost question, one more time</h2>
+
+      <p>The community-scale system costs 140 to 240 million pesos in total. That's not a single payment. It's 20 to 30 million pesos per year over seven years of construction.</p>
+
+      <p>For context: Los Cabos budgeted 7.37 billion pesos in revenue for 2026. La Paz recorded 3.1 billion in 2025.</p>
+
+      <p>A Pacífico Sur municipality, conservatively generating 200 to 400 million pesos per year from property tax, hotel occupancy tax, development fees, and federal participations, could direct 10 to 15% toward water infrastructure. That's 20 to 60 million pesos per year. More than enough.</p>
+
+      <p>Federal programs (PROAGUA, FAIS, PRODDER) can co-finance 30 to 50% of capital costs. Mexico's National Water Plan committed 122.6 billion pesos to water infrastructure from 2025 to 2030. A new municipality could apply for that directly.</p>
+
+      <p>Today, all of that revenue — the property tax, the hotel tax, the development fees — leaves our region and goes to La Paz. The money is already being generated here. It's just not being spent here.</p>
+
+      <hr />
+
+      <h2>The one thing that makes all of this possible</h2>
+
+      <p>Every phase of this plan — from the dam to the pilot, from the community plant to the developer standards — requires something our region currently doesn't have: local government with the authority and resources to act.</p>
+
+      <p>The dam needs someone to authorize the earthworks and fund the monitoring. The pilot needs an entity to coordinate the hotel, the university, and the permits. The community plant needs an institution that can budget 20 to 30 million pesos per year for seven years. The developer standards need a government with the power to set requirements and enforce them.</p>
+
+      <p>Right now, that authority sits in La Paz. More than 80 kilometers away. Administering a territory too large to give our water crisis the attention it demands.</p>
+
+      <p>This series has been about technology and solutions. But the real bottleneck was never the technology. The technology exists. The science is proven. The sun is here. The ocean is in front of us.</p>
+
+      <blockquote><p>The bottleneck is governance. And that's something this community has the power to change.</p></blockquote>
+
+      <hr />
+
+      <h2>What we're asking for</h2>
+
+      <p>This series was about education. This section is about action. We've laid out the plan. Now we need the people who can move it forward.</p>
+
+      <p><strong>To Hotel San Cristóbal and any resort with desalination infrastructure:</strong> You have the plant, the CONAGUA concessions, and the unused capacity. A recharge pilot would give your property something no marketing campaign can buy — a demonstrated, measurable contribution to the community's most urgent problem. We're asking for a conversation about what your participation could look like.</p>
+
+      <p><strong>To CSU Todos Santos and UABCS/CITA:</strong> You've already studied our aquifer. You have the models, the baseline data, and the scientific expertise. A recharge pilot needs an academic partner to design the monitoring, collect the data, and publish the results. We're asking whether your institutions would be interested in that partnership.</p>
+
+      <p><strong>To developers planning projects in our region:</strong> The standards we've described aren't designed to block development. They're designed to ensure that growth doesn't come at the cost of the water supply everyone depends on. Aquifer-positive development is good for the community and good for the long-term viability of your project.</p>
+
+      <p><strong>To our community:</strong> The water solutions, the energy infrastructure, the monitoring, the developer standards — all of it requires local government with the authority to act. That's what the municipalization process provides. We've identified a team to conduct the initial studies the law requires before anything can move forward. We're asking for your support to get that process started.</p>
+
+      <p><strong>To everyone reading this:</strong> Share it. Talk about it. Challenge the parts you disagree with. Ask the questions we haven't answered yet. This plan doesn't belong to Para Todos. It belongs to the community. And it only works if the community owns it.</p>
+
+      <hr />
+
+      <h2>Where we go from here</h2>
+
+      <p>This series started with a visit to a desalination plant and a question: can this technology work for our community? Four articles later, the answer is clear. Not just desalination, but a complete system — solar-powered, capable of healing our aquifer, turning waste into resources, and securing our water for generations.</p>
+
+      <p>The pieces exist. They fit together. The costs are real but manageable. The international precedents are working and proven. And the first steps — the dam, the pilot, the community conversations — can start now.</p>
+
+      <p>What we've learned through this process is that the knowledge and the ideas are already here. An architect proposing circular economy solutions for brine. A farmer who understands the water flowing beneath our feet. Neighbors asking the hard questions about who controls the water and who should pay. A community that reads, responds, debates, and demands better answers.</p>
+
+      <p>That's not a community waiting for someone else to solve its problems. That's a community ready to solve them itself.</p>
+
+      <p>The technology is ready. The question is whether we are.</p>
+
+      <p><em>Final article in our series on sustainable solutions for the Pacífico Sur.</em></p>
+
+    </div>
+
+    <div class="post-download">
+      <a href="/assets/documents/ParaTodos_Conectando_EN.pdf" download class="btn btn-primary">📄 Download this article (PDF)</a>
+      <a href="/assets/documents/ParaTodos_Conectando_ES.pdf" download class="btn btn-outline">📄 Descargar en español (PDF)</a>
+    </div>
+
+    <div class="related-reading">
+      <p><strong>Complete series: Water solutions for the Pacífico Sur</strong></p>
+      <p>Article 1 — <a href="/en/blog/desalination/">Seawater to Fresh Water</a></p>
+      <p>Article 2 — <a href="/en/blog/aquifer-recharge/">Can the Sea Heal Our Aquifer?</a></p>
+      <p>Article 3 — <a href="/en/blog/the-sun-changes-everything/">The Sun Changes Everything</a></p>
+    </div>
+
+    <div class="share-row">
+      <span class="share-label">Share:</span>
+      <a class="share-btn" href="https://wa.me/?text=Connecting%20the%20Pieces%20%E2%80%94%20https%3A%2F%2Fparatodosbcs.mx%2Fen%2Fblog%2Fconnecting-the-pieces%2F" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparatodosbcs.mx%2Fen%2Fblog%2Fconnecting-the-pieces%2F" target="_blank" rel="noopener">Facebook</a>
+      <button class="share-btn" onclick="copyLink(this)">Copy link</button>
+    </div>
+
+    <nav class="post-nav">
+      <a class="nav-card" href="/en/blog/the-sun-changes-everything/">
+        <div class="nav-dir">← Previous</div>
+        <div class="nav-title">The Sun Changes Everything</div>
+      </a>
+      <a class="nav-card" href="/en/blog/">
+        <div class="nav-dir">More</div>
+        <div class="nav-title">All articles →</div>
+      </a>
+    </nav>
+
+  </div>
+</article>
+
+<footer>
+  <div class="container-wide">
+    <div>
+      <a href="/en/" class="brand-mark" style="margin-bottom:1rem;display:inline-flex">
+        <img src="/assets/brand/logo-seal-256.png" alt="" style="width:56px;height:56px" />
+        <span class="text"><span class="name">Para Todos</span><span class="sub">Pacífico Sur · BCS</span></span>
+      </a>
+      <p style="margin-top:1.5rem;max-width:22rem">Neighbors and communities of the Pacífico Sur coming together to build a better future for our region.</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p><a href="mailto:hola@paratodosbcs.mx">hola@paratodosbcs.mx</a><br/>Pacífico Sur, BCS, México</p>
+    </div>
+    <div>
+      <h4>Site</h4>
+      <p><a href="/en/">Home</a><br/><a href="/en/blog/">Blog</a><br/><a href="mailto:hola@paratodosbcs.mx">Contact us</a></p>
+    </div>
+    <div class="legal">© 2026 TODOS PARA TODOS A.C. · paratodosbcs.mx</div>
+  </div>
+</footer>
+
+<script>
+  function setLang(lang) {
+    var esUrl=document.body.getAttribute('data-es-url'),enUrl=document.body.getAttribute('data-en-url');
+    if(esUrl&&enUrl){try{localStorage.setItem('lang',lang)}catch(e){} window.location.href=lang==='en'?enUrl:esUrl;}
+  }
+  function copyLink(btn) {
+    var orig=btn.textContent;
+    navigator.clipboard.writeText(window.location.href).then(function(){btn.textContent='✓ Copied!';setTimeout(function(){btn.textContent=orig},2000);});
+  }
+  (function(){
+    try{
+      var saved=localStorage.getItem('lang'),isEn=document.documentElement.lang==='en';
+      if(saved&&((saved==='en')!==isEn)){
+        var esUrl=document.body.getAttribute('data-es-url'),enUrl=document.body.getAttribute('data-en-url');
+        if(saved==='en'&&enUrl){window.location.replace(enUrl);return}
+        if(saved==='es'&&esUrl){window.location.replace(esUrl);return}
+      }
+    }catch(e){}
+  })();
+</script>
+</body>
+</html>
