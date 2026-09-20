@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>La Basura: Depende de Dónde Vivas — PARA TODOS</title>
+  <meta name="description" content="La ley exige dos veces por semana en todas las comunidades. El servicio se acaba conforme te alejas del centro." />
+  <link rel="icon" type="image/png" href="/assets/brand/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon-180.png" />
+  <meta property="og:title" content="La Basura: Depende de Dónde Vivas" />
+  <meta property="og:description" content="La ley exige dos veces por semana en todas las comunidades. El servicio se acaba conforme te alejas del centro." />
+  <meta property="og:image" content="https://paratodosbcs.mx/assets/images/blog/basura-cover.jpg" />
+  <meta property="og:url" content="https://paratodosbcs.mx/blog/la-basura-pagamos-no-recogen/" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..600&family=Inter:wght@400;500;600;700&family=Caveat:wght@400;600&display=swap" />
+  <style>
+    :root{--sand:#f4ecd9;--sand-light:#faf4e3;--sand-dark:#e0d4b3;--terracotta:#b85042;--terracotta-dark:#9b3f33;--sunset:#d97a4a;--cactus:#6d8a6e;--cactus-pale:#a8baa7;--sky:#7ba6b8;--sky-dark:#4f7a8f;--espresso:#3a2e26;--off-white:#fbf6e9;--ink:#1f1813}
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.6;color:var(--espresso);background-color:var(--sand-light);background-image:radial-gradient(ellipse 90% 60% at 50% -10%,rgba(255,255,255,0.45) 0%,rgba(255,255,255,0) 60%),radial-gradient(ellipse 80% 50% at 100% 100%,rgba(184,80,66,0.04) 0%,rgba(184,80,66,0) 70%);background-attachment:fixed;-webkit-font-smoothing:antialiased;letter-spacing:0.01em}
+    a{color:var(--terracotta);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+    a:hover{color:var(--terracotta-dark)}
+    .container{max-width:64rem;margin:0 auto;padding:0 1.5rem}
+    .container-wide{max-width:80rem;margin:0 auto;padding:0 1.5rem}
+    .btn{display:inline-flex;align-items:center;gap:0.5rem;font-family:'Inter',sans-serif;font-weight:600;font-size:0.9rem;letter-spacing:0.03em;border-radius:999px;padding:0.65rem 1.5rem;text-decoration:none;cursor:pointer;transition:background 0.15s,color 0.15s,border-color 0.15s}
+    .btn-primary{background:var(--terracotta);color:#fff;border:2px solid var(--terracotta)}
+    .btn-primary:hover{background:var(--terracotta-dark);border-color:var(--terracotta-dark);color:#fff}
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(244,236,217,0.92);backdrop-filter:saturate(140%) blur(8px);-webkit-backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--sand-dark)}
+    .site-header .inner{display:flex;align-items:center;justify-content:space-between;max-width:80rem;margin:0 auto;padding:0.85rem 1.5rem}
+    .brand-mark{display:flex;align-items:center;gap:0.75rem;text-decoration:none}
+    .brand-mark img{width:44px;height:44px}
+    .brand-mark .text{display:flex;flex-direction:column;line-height:1.05}
+    .brand-mark .name{font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;color:var(--espresso);letter-spacing:0.005em}
+    .brand-mark .sub{font-size:0.7rem;color:var(--sky-dark);letter-spacing:0.16em;text-transform:uppercase;margin-top:2px}
+    .lang-toggle{display:flex;align-items:center;gap:0;background:transparent;border:1px solid var(--espresso);border-radius:999px;padding:3px}
+    .lang-toggle button{background:transparent;border:0;padding:0.25rem 0.85rem;font-family:inherit;font-size:0.78rem;font-weight:600;color:var(--espresso);letter-spacing:0.08em;border-radius:999px;cursor:pointer}
+    .lang-toggle button.active{background:var(--espresso);color:var(--sand)}
+    footer{background:var(--espresso);color:var(--off-white);padding:4rem 0 2rem;margin-top:0}
+    footer .container-wide{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem}
+    @media(max-width:768px){footer .container-wide{grid-template-columns:1fr;gap:2rem}}
+    footer h4{font-family:'Fraunces',serif;font-weight:600;font-size:1rem;color:var(--off-white);margin:0 0 0.75rem}
+    footer p{font-size:0.9rem;color:var(--sand);line-height:1.6;margin:0}
+    footer a{color:var(--sunset);text-decoration:underline;text-underline-offset:3px}
+    footer a:hover{color:var(--off-white)}
+    footer .brand-mark .name{color:var(--off-white)}
+    footer .brand-mark .sub{color:var(--cactus-pale)}
+    footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,0.1);padding-top:1.5rem;margin-top:1rem;font-size:0.78rem;color:var(--sand);opacity:0.55}
+    .post-hero{width:100%;max-height:480px;overflow:hidden;background:var(--espresso)}
+    .post-hero-img{width:100%;height:480px;object-fit:cover;display:block}
+    @media(max-width:768px){.post-hero-img{height:260px}}
+    .post-article{padding:4rem 0 5rem}
+    .post-container{max-width:42rem}
+    .post-meta{display:flex;flex-wrap:wrap;align-items:center;gap:0.5rem;margin-bottom:1.5rem}
+    .post-meta .cat{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--sky-dark);text-decoration:none}
+    .post-meta .dot{color:var(--sand-dark)}
+    .post-meta time{font-family:'Inter',sans-serif;font-size:0.72rem;color:var(--espresso);opacity:0.5}
+    .post-title{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.75rem,4vw,2.75rem);line-height:1.1;color:var(--espresso);margin:0 0 1.25rem;letter-spacing:-0.01em}
+    .post-subtitle{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.1rem,2vw,1.35rem);color:var(--sky-dark);line-height:1.5;margin:0 0 2.5rem;border-left:3px solid var(--sky-dark);padding-left:1.25rem}
+    .post-body{font-size:17px;line-height:1.7;color:var(--espresso)}
+    .post-body p{margin:0 0 1.25rem}
+    .post-body h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;color:var(--espresso);margin:2.5rem 0 0.75rem}
+    .post-body h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:var(--terracotta);margin:1.75rem 0 0.5rem}
+    .post-body strong{font-weight:600}
+    .post-body em{font-style:italic}
+    .post-body ul{margin:0 0 1.25rem;padding-left:1.5rem}
+    .post-body ul li{margin-bottom:0.5rem;line-height:1.6}
+    .post-body figure{margin:2rem 0}
+    .post-body figure img{width:100%;border-radius:6px;display:block}
+    .post-body figure figcaption{font-size:0.82rem;color:var(--espresso);opacity:0.5;margin-top:0.5rem;font-style:italic;line-height:1.4}
+    .post-body .footnotes{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--sand-dark);font-size:0.82rem;color:var(--espresso);opacity:0.65;line-height:1.55}
+    .post-body .footnotes p{margin:0 0 0.4rem}
+    .post-body .legal-note{font-size:0.82rem;color:var(--espresso);opacity:0.6;font-style:italic;margin-top:1.5rem;line-height:1.5}
+    .post-divider{display:block;width:120px;height:14px;margin:2rem 0;opacity:0.7}
+    .post-divider path{fill:none;stroke:var(--cactus);stroke-width:1.8;stroke-linecap:round}
+    .post-download{margin:3rem 0 2.5rem}
+    .post-cta-box{background:var(--sand);border:1px solid var(--sand-dark);border-radius:6px;padding:1.75rem 2rem;margin:0 0 2rem;text-align:center}
+    .post-cta-box p{margin:0 0 0.4rem;font-size:0.95rem}
+    .post-cta-box p:last-child{margin:0}
+    .share-row{display:flex;align-items:center;flex-wrap:wrap;gap:0.75rem;margin:1.5rem 0 2.5rem}
+    .share-label{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--espresso);opacity:0.45}
+    .share-btn{display:inline-flex;align-items:center;gap:0.35rem;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:600;color:var(--espresso);background:transparent;border:1px solid var(--sand-dark);border-radius:999px;padding:0.3rem 0.9rem;text-decoration:none;cursor:pointer;transition:border-color 0.15s,background 0.15s}
+    .share-btn:hover{border-color:var(--terracotta);color:var(--terracotta);background:transparent}
+    .post-nav{display:grid;grid-template-columns:1fr 1fr;gap:1rem;border-top:1px solid var(--sand-dark);padding-top:2rem;margin-top:1rem}
+    @media(max-width:580px){.post-nav{grid-template-columns:1fr}}
+    .nav-card{display:block;background:var(--off-white);border:1px solid var(--sand-dark);border-radius:6px;padding:1.25rem 1.5rem;text-decoration:none;color:inherit;transition:border-color 0.15s}
+    .nav-card:hover{border-color:var(--terracotta);color:inherit}
+    .nav-card .nav-dir{font-family:'Inter',sans-serif;font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--espresso);opacity:0.4;margin-bottom:0.35rem}
+    .nav-card .nav-title{font-family:'Fraunces',serif;font-weight:600;font-size:0.95rem;color:var(--espresso);line-height:1.3}
+    .nav-card.nav-next{text-align:right}
+  </style>
+</head>
+<body class="lang-es" data-es-url="/blog/la-basura-pagamos-no-recogen/" data-en-url="/en/blog/trash-we-pay-they-dont-collect/">
+
+<header class="site-header">
+  <div class="inner">
+    <a href="/" class="brand-mark">
+      <img src="/assets/brand/logo-seal-256.png" alt="Para Todos" />
+      <span class="text">
+        <span class="name">Para Todos</span>
+        <span class="sub">Pacífico Sur · BCS</span>
+      </span>
+    </a>
+    <div class="lang-toggle">
+      <button id="btn-es" class="active" onclick="setLang('es')">ES</button>
+      <button id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<div class="post-hero">
+  <img src="/assets/images/blog/basura-cover.jpg" alt="Calle de Todos Santos con basura acumulada al frente y el océano al fondo al atardecer" class="post-hero-img" />
+</div>
+
+<article class="post-article">
+  <div class="container post-container">
+
+    <div class="post-meta">
+      <span class="cat">Gobernanza</span>
+      <span class="dot">·</span>
+      <time datetime="2026-09-07">7 de septiembre de 2026</time>
+      <span class="dot">·</span>
+      <time datetime="2026-09-20">Actualizado 20 de septiembre de 2026</time>
+    </div>
+
+    <h1 class="post-title">La Basura: Depende de Dónde Vivas</h1>
+
+    <p class="post-subtitle">La ley exige dos veces por semana en todas las comunidades. En la práctica, el servicio se va acabando conforme te alejas del centro.</p>
+
+    <div class="post-body">
+      <h2>La trampa legal en la que vivimos</h2>
+
+      <p>La próxima vez que manejes por el pueblo, fíjate bien. Los lotes llenos de bolsas rotas. La basura apilada contra las bardas. Los arroyos que se convirtieron en tiraderos. Es algo que ya normalizamos.</p>
+
+      <p>Pero no debería ser así. Y lo que mucha gente no sabe es que la ley lo prohíbe, en dos sentidos.</p>
+
+      <p>El <strong>Artículo 61</strong> obliga a los habitantes a evitar la acumulación de basura y desperdicios en los lotes baldíos de su propiedad o posesión, y le da al municipio un procedimiento concreto: conminar al infractor a limpiar en un plazo no mayor de tres días naturales, y si no lo hace, ejecutar la limpieza con cargo al infractor. El <strong>Artículo 13</strong> exige que los terrenos baldíos estén cercados y libres de contaminantes, maleza y basura. El <strong>Artículo 67</strong> prohíbe estrictamente tirar basura a cielo abierto, en cauces, arroyos, barrancas y vía pública, y también prohíbe la quema de cualquier tipo de residuo.</p>
+
+      <p>El municipio tiene toda la autoridad legal para multar a los vecinos que acumulen basura en sus predios. Y tiene también una obligación legal de enviar los camiones a recogerla. El <strong>Artículo 16</strong> lo dice sin rodeos:</p>
+
+      <p><em>"Fuera del primer cuadro de la ciudad de La Paz, y en las demás comunidades del Ayuntamiento, la recolección de basura y desperdicios se realizará <strong>dos veces por semana</strong>, en el horario comprendido de las 6:30 a las 14:30 horas en invierno, y de las 6:00 a las 14:00 horas en verano."</em></p>
+
+      <p>Dos veces por semana. Para toda la comunidad, no para una parte de ella.</p>
+
+      <h2>Lo que realmente pasa</h2>
+
+      <p>Aquí hay que ser precisos, porque esta historia es fácil de contar mal, y contarla mal le hace un favor a quien no quiere resolverla.</p>
+
+      <p><strong>No es cierto que el camión no llegue a Todos Santos.</strong> Llega. El problema es que llega de forma muy desigual, y nadie puede explicar con qué criterio.</p>
+
+      <ul>
+        <li><strong>Centro de Todos Santos:</strong> tres veces por semana. Por encima del mínimo legal.</li>
+        <li><strong>Colonias como San Vicente:</strong> una vez por semana. La mitad de lo que marca el reglamento.</li>
+        <li><strong>Varias colonias de las orillas:</strong> no pasa. Punto.</li>
+      </ul>
+
+      <p>Si vives en el centro, es probable que leas esto y pienses que exageramos. Y tendrías razón, para tu calle. Ese es exactamente el punto. El servicio existe, funciona bien en unas cuantas cuadras, se reduce a la mitad unos metros más allá, y desaparece por completo antes de llegar a las orillas. Todo dentro de la misma comunidad, bajo la misma regla, que dice dos veces por semana para todos.</p>
+
+      <h2>El mapa que nunca se publicó</h2>
+
+      <p>Ese mismo Artículo 16 termina con una obligación que casi nadie conoce, y que es la más importante de todo este asunto:</p>
+
+      <p><em>"Para dar cumplimiento al procedimiento de recolección que señala este artículo, el Ayuntamiento <strong>dividirá</strong> la ciudad de La Paz y las demás comunidades del municipio en zonas y rutas y <strong>publicará</strong> esta división, así como los días en que operará la recolección."</em></p>
+
+      <p>Dividirá. Publicará. No dice "podrá". Es una obligación, y lleva escrita desde 1995.</p>
+
+      <p><strong>Nadie ha podido enseñarnos ese mapa.</strong> No sabemos qué colonias están dentro de una ruta, ni qué días les corresponden, porque esa información nunca se hizo pública.</p>
+
+      <p>Y sin ese mapa, nadie puede reclamar nada. No hay contra qué comparar. Un vecino al que nunca le pasa el camión no tiene forma de demostrar que le tocaba, y la autoridad no tiene forma de demostrar que no.</p>
+
+      <p>Hay un detalle que lo vuelve todavía más absurdo. El <strong>Artículo 21</strong> obliga a los vecinos a sacar su basura "únicamente los días establecidos para tal fin". Nos obligan a cumplir un calendario que nunca nos entregaron.</p>
+
+      <h2>Esto no es culpa de la delegación</h2>
+
+      <p>Hay que decirlo, y decirlo antes que nada.</p>
+
+      <p>La delegación de Todos Santos opera con muy pocas unidades recolectoras. Se descomponen seguido. Cuando hay que mandarlas a reparar a La Paz, tardan en volver, y hay que insistir para que vuelvan. Con lo que tienen, hacen lo que pueden.</p>
+
+      <p>La pregunta correcta no es por qué no pasó el camión esta semana. La pregunta es por qué una comunidad de este tamaño, que genera lo que genera, opera con el equipo con el que opera. Y esa decisión no se toma aquí.</p>
+
+      <h2>Lo que tiene La Paz con nuestro dinero</h2>
+
+      <p>En la ciudad de La Paz operan 25 camiones recolectores en 44 rutas diarias, cubriendo más de 260,000 personas en más de 101,000 hogares, con 98% de eficiencia reportada en septiembre de 2025.<sup>1</sup> Los vecinos de La Paz ven el camión llegar a su puerta los martes y viernes.</p>
+
+      <p>Fíjate bien en ese detalle: <strong>martes y viernes son dos veces por semana.</strong> O sea que en la ciudad de La Paz sí se cumple el Artículo 16. La misma regla, el mismo municipio, el mismo reglamento. Allá se cumple. Aquí, según la colonia, se cumple, se cumple a medias, o no se cumple nada.</p>
+
+      <p>Ese servicio se financia con el presupuesto municipal, un presupuesto que se nutre con los impuestos que generamos aquí: el predial de cada casa, los derechos de construcción, la actividad comercial y turística de toda la región.</p>
+
+      <h2>Y desde enero, pagamos algo más</h2>
+
+      <p>El primero de enero de 2026 entró en vigor en todo el municipio el <strong>Derecho de Saneamiento Ambiental</strong>. Cada noche de hotel y cada noche de casa rentada por plataforma en nuestra región lo paga.<sup>5</sup></p>
+
+      <p>El destino de ese dinero está escrito en la ley, en el Artículo 148-E de la Ley de Hacienda del Municipio de La Paz. Entre otras cosas, incluye con estas palabras: "el tratamiento integral de residuos sólidos urbanos".</p>
+
+      <p>Ese dinero se concentra en un fideicomiso municipal. Y la ley no aparta un solo peso para la comunidad donde se recaudó.</p>
+
+      <h2>Lo que hacemos nosotros en su lugar</h2>
+
+      <p>Sin recolección suficiente, los vecinos resuelven como pueden. Algunos queman, aunque esté prohibido por el Artículo 67. Otros entierran. Muchos acumulan, lo cual los expone a la multa del Artículo 61. Y los que quieren hacer lo correcto manejan sus bolsas hasta un punto informal, pagan alrededor de 200 pesos a un camión privado, y regresan a casa habiendo hecho ellos mismos lo que el municipio está obligado por ley a hacer.</p>
+
+      <p>Ese camión no es del Ayuntamiento. Es un operador privado llenando un vacío. Y aún así, si tienes basura acumulada en tu predio, el mismo municipio que no completó la ruta puede mandarte una multa.</p>
+
+      <h2>No es solo un problema de imagen</h2>
+
+      <p><strong>Salud pública.</strong> Los residuos sin recolectar generan fauna nociva, aceleran el dengue y contaminan el suelo y el agua subterránea. BCS genera 649,271 toneladas de residuos al año, y más del 90% de los sitios de disposición final en el estado no cumplen la normativa ambiental.<sup>2</sup> La quema a cielo abierto libera dioxinas y metales pesados al aire que respiramos.</p>
+
+      <p><strong>Plusvalía.</strong> Todos Santos se vende como destino mágico, auténtico, sustentable. Esa promesa se rompe cada vez que un turista o un posible comprador encuentra tiraderos informales en el camino.</p>
+
+      <p><strong>Identidad.</strong> Somos Pueblo Mágico. El turismo es nuestra economía. La imagen importa, pero también la salud real del lugar donde vivimos.</p>
+
+      <h2>No somos los primeros en resolver esto</h2>
+
+      <p><strong>Tulum</strong> construyó Puntos Limpios, centros comunitarios de reciclaje por colonia. Resultado: más de 279 toneladas de material reciclable recuperadas por año en una primera fase.<sup>3</sup> Una coalición de 56 resorts ya está comprometida con cero residuos para 2027.</p>
+
+      <p><strong>Sayulita</strong> lanzó Operation Trash para modernizar su infraestructura como Pueblo Mágico. Su argumento: si somos un destino serio, tenemos que estarlo.</p>
+
+      <p>Aquí en Todos Santos, <strong>Alianza Cero Basura</strong> ya desvía el 60% de los desechos orgánicos del pueblo hacia compostaje.<sup>4</sup> La voluntad y el conocimiento ya están. Lo que falta es la estructura municipal que los sostenga.</p>
+
+      <h2>De problema a recurso</h2>
+
+      <p>BCS genera 649,271 toneladas de residuos al año. El 46% es orgánico. El 32% es reciclable. El 78% de lo que tiramos podría estar siendo aprovechado.<sup>2</sup></p>
+
+      <p><strong>Compostaje comunitario.</strong> Los residuos orgánicos se convierten en abono para agricultura local. Alianza Cero Basura ya lo hace. Con apoyo institucional se escala.</p>
+
+      <p><strong>Centros de reciclaje.</strong> Papel, plástico, vidrio y metal separados en origen. Tienen valor de mercado y pueden financiar parte del sistema.</p>
+
+      <p><strong>Biodigestores.</strong> Los orgánicos que no van a composta generan biogás para cocinas comunitarias o alumbrado público.</p>
+
+      <p><strong>Economía local.</strong> Talleres de upcycling, artesanías de materiales recuperados, composta premium para agricultura orgánica.</p>
+
+      <p><strong>Turismo consciente.</strong> Ser el primer destino turístico de cero residuos en México no es solo un logro ambiental. Es una ventaja de mercado real.</p>
+
+      <h2>Por qué todo lleva al mismo lugar</h2>
+
+      <p>La Paz tiene 25 camiones porque tiene el presupuesto. Tiene el presupuesto porque administra directamente sus propios ingresos municipales. Nosotros generamos turismo, predial y derechos de construcción, y desde enero también el Derecho de Saneamiento Ambiental. Todo eso se va para allá.</p>
+
+      <p>No se trata de que alguien en La Paz sea malo. Se trata de que el sistema está diseñado para que las decisiones sobre nuestros camiones, nuestras rutas y nuestro presupuesto se tomen a dos horas de aquí, por gente que no vive con el resultado.</p>
+
+      <p>Un municipio propio para Todos Santos y Pescadero no es una idea romántica. Es la diferencia entre depender de que alguien en La Paz decida atendernos, y tener la estructura para atendernos nosotros mismos. Con presupuesto propio, contratamos los camiones, establecemos las rutas, publicamos el mapa, creamos los centros de acopio, y diseñamos el sistema que esta comunidad merece.</p>
+
+      <h2>Qué puedes hacer hoy</h2>
+
+      <p><strong>Ayúdanos a hacer el mapa que el municipio no publicó.</strong> Contesta con dos datos: tu colonia, y cada cuándo pasa el camión y qué día. Con eso armamos el mapa real de recolección de Todos Santos y lo publicamos. Si resulta que el servicio está mejor de lo que pensábamos, también lo vamos a decir.</p>
+
+      <p>Además:</p>
+
+      <ul>
+        <li>Apoyar a Alianza Cero Basura / Cero Basura BCS con tiempo o donación.</li>
+        <li>Separar residuos en casa: orgánicos, reciclables, resto.</li>
+        <li>Usar las estaciones de recarga en lugar de botellas de plástico.</li>
+        <li>Exigir que tu negocio elimine el unicel y el plástico de un solo uso.</li>
+        <li>Apoyar el esfuerzo por crear nuestro propio municipio, para que seamos nosotros quienes decidamos el futuro de esta región y no alguien más.</li>
+      </ul>
+
+      <div class="footnotes">
+        <p><sup>1</sup> BCS Noticias, septiembre 2025. Declaraciones de la presidencia municipal.</p>
+        <p><sup>2</sup> Diagnóstico de Generación de Residuos Sólidos para Baja California Sur, Ponguinguiola / SEPUIMM, abril 2025.</p>
+        <p><sup>3</sup> FEMSA Foundation, diciembre 2020. Programa de Puntos Limpios, Tulum Sostenible Cooperativa.</p>
+        <p><sup>4</sup> Todos Santos Eco Adventures / TOSEA, Our Impact, 2024.</p>
+        <p><sup>5</sup> Decreto 3263, Boletín Oficial del Gobierno del Estado de BCS núm. 88, 24 de diciembre de 2025. Adiciona los artículos 148-A a 148-H de la Ley de Hacienda para el Municipio de La Paz. Vigente desde el 1 de enero de 2026.</p>
+      </div>
+
+      <p class="legal-note"><em>Marco legal: Reglamento de Aseo, Limpia, Desechos Peligrosos y Potencialmente Peligrosos del Municipio de La Paz, BCS. Publicado en el Boletín Oficial No. 36, 10 de octubre de 1995. Última reforma: Boletín Oficial No. 25, 10 de julio de 2017. Arts. 13, 16, 21, 61, 67.</em></p>
+
+    </div>
+
+    <div class="post-download">
+      <a href="/assets/documents/ParaTodos_Basura_ES.pdf" download class="btn btn-primary">📄 Descargar el Reporte Completo</a>
+    </div>
+
+    <div class="post-cta-box">
+      <p>¿Tienes preguntas? ¿Quieres ser parte de la conversación?</p>
+      <p>Contáctanos en <a href="https://paratodosbcs.mx">paratodosbcs.mx</a> o únete a nuestro grupo de <a href="https://chat.whatsapp.com/Ehb6yKHqFZe2Ayt30uN23S?mode=gi_t" target="_blank" rel="noopener">WhatsApp</a>.</p>
+    </div>
+
+    <div class="share-row">
+      <span class="share-label">Compartir:</span>
+      <a class="share-btn" href="https://wa.me/?text=La%20Basura%3A%20Depende%20de%20D%C3%B3nde%20Vivas%20%E2%80%94%20https%3A%2F%2Fparatodosbcs.mx%2Fblog%2Fla-basura-pagamos-no-recogen%2F" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparatodosbcs.mx%2Fblog%2Fla-basura-pagamos-no-recogen%2F" target="_blank" rel="noopener">Facebook</a>
+      <button class="share-btn" onclick="copyLink(this)">Copiar enlace</button>
+    </div>
+
+    <nav class="post-nav">
+      <a class="nav-card" href="/blog/conectando-las-piezas/">
+        <div class="nav-dir">← Artículo anterior</div>
+        <div class="nav-title">Conectando las Piezas</div>
+      </a>
+      <a class="nav-card nav-next" href="/blog/">
+        <div class="nav-dir">Más</div>
+        <div class="nav-title">Todos los artículos →</div>
+      </a>
+    </nav>
+
+  </div>
+</article>
+
+<footer>
+  <div class="container-wide">
+    <div>
+      <a href="/" class="brand-mark">
+        <img src="/assets/brand/logo-seal-256.png" alt="" style="width:56px;height:56px;" />
+        <span class="text">
+          <span class="name">Para Todos</span>
+          <span class="sub">Pacífico Sur · BCS</span>
+        </span>
+      </a>
+      <p style="margin-top:1.5rem;max-width:22rem;">Vecinos y comunidades del Pacífico Sur uniéndose para construir un mejor futuro para nuestra región.</p>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <p>Pacífico Sur, BCS, México</p>
+    </div>
+    <div>
+      <h4>Enlaces</h4>
+      <p>
+        <a href="/">Inicio</a><br/>
+        <a href="/blog/">Blog</a><br/>
+        <a href="/privacy.html">Privacidad</a>
+      </p>
+    </div>
+    <div class="legal">© 2026 Para Todos · Pacífico Sur, BCS</div>
+  </div>
+</footer>
+
+<script>
+  function setLang(lang) {
+    var esUrl = document.body.getAttribute('data-es-url');
+    var enUrl = document.body.getAttribute('data-en-url');
+    if (esUrl && enUrl) {
+      try { localStorage.setItem('lang', lang); } catch(e) {}
+      window.location.href = lang === 'en' ? enUrl : esUrl;
+      return;
+    }
+  }
+  function copyLink(btn) {
+    var orig = btn.textContent;
+    navigator.clipboard.writeText(window.location.href).then(function() {
+      btn.textContent = '✓ Copiado';
+      setTimeout(function() { btn.textContent = orig; }, 2000);
+    }).catch(function() {});
+  }
+</script>
+</body>
+</html>
