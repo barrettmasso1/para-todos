@@ -9,7 +9,7 @@
   <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon-180.png" />
   <meta property="og:title" content="Todos Santos Putt" />
   <meta property="og:description" content="Golf sin agua. Un campo de 18 hoyos construido por artistas locales y un bar en contenedores, en el corazón del pueblo mágico." />
-  <meta property="og:image" content="https://paratodosbcs.mx/assets/images/proyectos/todos-santos-putt-cover.jpg" />
+  <meta property="og:image" content="https://paratodosbcs.mx/assets/images/proyectos/todos-santos-putt-cover-es.jpg" />
   <meta property="og:url" content="https://paratodosbcs.mx/proyectos/todos-santos-putt/" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -54,10 +54,11 @@
     .tag-invest{background:rgba(217,122,74,.14);color:#9b4a22;border-color:rgba(217,122,74,.4)}
     .tag-status{background:transparent;color:var(--espresso);border-color:var(--sand-dark);opacity:.75}
 
-    .proj-hero{position:relative;width:100%;height:520px;overflow:hidden;background:var(--espresso)}
-    .proj-hero-bg{position:absolute;inset:-6%;width:112%;height:112%;object-fit:cover;filter:blur(28px) saturate(1.1);opacity:.9}
-    .proj-hero-img{position:relative;width:100%;height:100%;object-fit:contain;display:block}
-    @media(max-width:768px){.proj-hero{height:260px}}
+    .proj-hero{position:relative;width:100%;height:min(520px,56.25vw);overflow:hidden;background:#15263a}
+    .proj-hero::before,.proj-hero::after{content:"";position:absolute;top:0;bottom:0;width:50%;background:linear-gradient(to bottom,#101a26 0%,#15263a 70.5%,#41b37c 70.5%,#40b37a 100%)}
+    .proj-hero::before{left:0}
+    .proj-hero::after{right:0;background:linear-gradient(to bottom,#142434 0%,#1c353a 70.5%,#41b37c 70.5%,#40b37a 100%)}
+    .proj-hero-img{position:relative;z-index:1;width:100%;height:100%;object-fit:contain;display:block}
     .deck{margin:0 0 2.5rem}
     .deck-track{display:flex;gap:.75rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;border-radius:8px}
     .deck-track::-webkit-scrollbar{display:none}
@@ -80,6 +81,19 @@
     .proj-body h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;color:var(--espresso);margin:2.5rem 0 .75rem}
     .proj-body h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:var(--terracotta);margin:1.75rem 0 .5rem}
     .proj-body ul{margin:0 0 1.25rem;padding-left:1.5rem}.proj-body ul li{margin-bottom:.5rem}
+
+    /* expand + lightbox */
+    .expandable{position:relative}
+    .expand-btn{position:absolute;top:.6rem;right:.6rem;z-index:2;width:2.1rem;height:2.1rem;border-radius:6px;border:1px solid rgba(255,255,255,.35);background:rgba(31,24,19,.55);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;backdrop-filter:blur(4px);transition:background .15s}
+    .expand-btn:hover{background:rgba(184,80,66,.9)}
+    .expand-btn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .lightbox{position:fixed;inset:0;z-index:100;background:rgba(20,16,13,.96);display:none;align-items:center;justify-content:center;padding:1rem}
+    .lightbox.open{display:flex}
+    .lightbox img{max-width:100%;max-height:100%;object-fit:contain;border-radius:4px;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+    .lightbox-close{position:absolute;top:1rem;right:1rem;width:2.6rem;height:2.6rem;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;font-size:1.4rem;line-height:1;cursor:pointer}
+    .lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);width:2.8rem;height:2.8rem;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;font-size:1.6rem;line-height:1;cursor:pointer}
+    .lightbox-nav.prev{left:1rem}.lightbox-nav.next{right:1rem}
+    .lightbox-count{position:absolute;bottom:1rem;left:50%;transform:translateX(-50%);color:#fff;opacity:.6;font-family:'Inter',sans-serif;font-size:.78rem;letter-spacing:.1em}
     .proj-body figure{margin:2rem 0}.proj-body figure img{width:100%;height:auto;display:block;border-radius:6px;border:1px solid var(--sand-dark)}
     .proj-body figcaption{font-size:.82rem;color:var(--espresso);opacity:.6;margin-top:.5rem}
     .proj-body table{width:100%;border-collapse:collapse;font-size:.92rem;margin:0 0 1.5rem}
@@ -128,8 +142,7 @@
 </header>
 
 <div class="proj-hero">
-  <img src="/assets/images/proyectos/todos-santos-putt-cover.jpg" alt="" aria-hidden="true" class="proj-hero-bg" />
-  <img src="/assets/images/proyectos/todos-santos-putt-cover.jpg" alt="Todos Santos Putt" class="proj-hero-img" />
+  <img src="/assets/images/proyectos/todos-santos-putt-cover-es.jpg" alt="Todos Santos Putt" class="proj-hero-img" />
 </div>
 
 <article class="proj-article">
@@ -144,19 +157,20 @@
         <p class="proj-subtitle">Golf sin agua. Un campo de 18 hoyos construido por artistas locales y un bar en contenedores, en el corazón del pueblo mágico.</p>
         <div class="proj-body">
           <div class="deck">
+            <div class="expandable"><button class="expand-btn" aria-label="Ampliar" onclick="openLightbox(['/assets/images/proyectos/putt-deck-es/slide-01.jpg','/assets/images/proyectos/putt-deck-es/slide-02.jpg','/assets/images/proyectos/putt-deck-es/slide-03.jpg','/assets/images/proyectos/putt-deck-es/slide-04.jpg','/assets/images/proyectos/putt-deck-es/slide-05.jpg','/assets/images/proyectos/putt-deck-es/slide-06.jpg','/assets/images/proyectos/putt-deck-es/slide-07.jpg','/assets/images/proyectos/putt-deck-es/slide-08.jpg','/assets/images/proyectos/putt-deck-es/slide-09.jpg','/assets/images/proyectos/putt-deck-es/slide-10.jpg','/assets/images/proyectos/putt-deck-es/slide-11.jpg'], Math.round(document.getElementById('deck-track').scrollLeft/document.getElementById('deck-track').clientWidth))"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></button>
             <div class="deck-track" id="deck-track">
-            <img src="/assets/images/proyectos/putt-deck/slide-01.jpg" alt="Lámina 1" loading="eager" />
-            <img src="/assets/images/proyectos/putt-deck/slide-02.jpg" alt="Lámina 2" loading="lazy" />
-            <img src="/assets/images/proyectos/putt-deck/slide-03.jpg" alt="Lámina 3" loading="lazy" />
-            <img src="/assets/images/proyectos/putt-deck/slide-04.jpg" alt="Lámina 4" loading="lazy" />
-            <img src="/assets/images/proyectos/putt-deck/slide-05.jpg" alt="Lámina 5" loading="lazy" />
-            <img src="/assets/images/proyectos/putt-deck/slide-06.jpg" alt="Lámina 6" loading="lazy" />
-            <img src="/assets/images/proyectos/putt-deck/slide-07.jpg" alt="Lámina 7" loading="lazy" />
-            <img src="/assets/images/proyectos/putt-deck/slide-08.jpg" alt="Lámina 8" loading="lazy" />
-            <img src="/assets/images/proyectos/putt-deck/slide-09.jpg" alt="Lámina 9" loading="lazy" />
-            <img src="/assets/images/proyectos/putt-deck/slide-10.jpg" alt="Lámina 10" loading="lazy" />
-            <img src="/assets/images/proyectos/putt-deck/slide-11.jpg" alt="Lámina 11" loading="lazy" />
-            </div>
+            <img src="/assets/images/proyectos/putt-deck-es/slide-01.jpg" alt="Lámina 1" loading="eager" />
+            <img src="/assets/images/proyectos/putt-deck-es/slide-02.jpg" alt="Lámina 2" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck-es/slide-03.jpg" alt="Lámina 3" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck-es/slide-04.jpg" alt="Lámina 4" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck-es/slide-05.jpg" alt="Lámina 5" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck-es/slide-06.jpg" alt="Lámina 6" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck-es/slide-07.jpg" alt="Lámina 7" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck-es/slide-08.jpg" alt="Lámina 8" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck-es/slide-09.jpg" alt="Lámina 9" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck-es/slide-10.jpg" alt="Lámina 10" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck-es/slide-11.jpg" alt="Lámina 11" loading="lazy" />
+            </div></div>
             <div class="deck-bar">
               <span class="deck-hint">Desliza o usa las flechas. El deck completo está disponible para descarga.</span>
               <div class="deck-nav"><span class="deck-count" id="deck-count"></span><button id="deck-prev" aria-label="Anterior">‹</button><button id="deck-next" aria-label="Siguiente">›</button></div>
@@ -232,8 +246,8 @@
             <dt>Apertura</dt><dd>Diciembre 2026</dd>
             <dt>Equilibrio</dt><dd>17 rondas / día</dd>
           </dl>
-          <a class="btn btn-outline" href="/assets/documents/proyectos/Todos_Santos_Putt_Investor_Deck.pdf" download>📄 Descargar deck</a>
-          <p class="small">Deck para inversionistas, 11 láminas, en inglés.</p>
+          <a class="btn btn-outline" href="/assets/documents/proyectos/Todos_Santos_Putt_Presentacion_Inversionistas_ES.pdf" download>📄 Descargar deck</a>
+          <p class="small">Presentación para inversionistas, 11 láminas.</p>
         </div>
         <div class="side-box side-cta">
           <h4>Me interesa invertir</h4>
@@ -294,6 +308,29 @@
     document.getElementById('deck-next').onclick=function(){go(idx()+1)};
     t.addEventListener('scroll',function(){ c.textContent=(idx()+1)+' / '+n; },{passive:true});
     c.textContent='1 / '+n;
+  })();
+</script>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <button class="lightbox-close" id="lb-close" aria-label="Cerrar">×</button>
+  <button class="lightbox-nav prev" id="lb-prev" aria-label="Anterior">‹</button>
+  <img id="lb-img" src="" alt="" />
+  <button class="lightbox-nav next" id="lb-next" aria-label="Siguiente">›</button>
+  <span class="lightbox-count" id="lb-count"></span>
+</div>
+<script>
+  (function(){
+    var lb=document.getElementById('lightbox'),img=document.getElementById('lb-img'),cnt=document.getElementById('lb-count'),
+        prev=document.getElementById('lb-prev'),next=document.getElementById('lb-next'),set=[],i=0;
+    function show(){ img.src=set[i]; cnt.textContent=set.length>1?(i+1)+' / '+set.length:''; prev.style.display=next.style.display=set.length>1?'':'none'; }
+    window.openLightbox=function(srcs,start){ set=srcs; i=start||0; lb.classList.add('open'); document.body.style.overflow='hidden'; show(); };
+    function close(){ lb.classList.remove('open'); document.body.style.overflow=''; }
+    document.getElementById('lb-close').onclick=close;
+    lb.addEventListener('click',function(e){ if(e.target===lb) close(); });
+    prev.onclick=function(e){ e.stopPropagation(); i=(i-1+set.length)%set.length; show(); };
+    next.onclick=function(e){ e.stopPropagation(); i=(i+1)%set.length; show(); };
+    document.addEventListener('keydown',function(e){ if(!lb.classList.contains('open')) return; if(e.key==='Escape') close(); if(e.key==='ArrowRight') next.click(); if(e.key==='ArrowLeft') prev.click(); });
+    var tx=null; lb.addEventListener('touchstart',function(e){tx=e.touches[0].clientX},{passive:true});
+    lb.addEventListener('touchend',function(e){ if(tx===null) return; var dx=e.changedTouches[0].clientX-tx; if(Math.abs(dx)>50) (dx<0?next:prev).click(); tx=null; });
   })();
 </script>
 </body>

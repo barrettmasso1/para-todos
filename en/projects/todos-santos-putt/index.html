@@ -54,10 +54,11 @@
     .tag-invest{background:rgba(217,122,74,.14);color:#9b4a22;border-color:rgba(217,122,74,.4)}
     .tag-status{background:transparent;color:var(--espresso);border-color:var(--sand-dark);opacity:.75}
 
-    .proj-hero{position:relative;width:100%;height:520px;overflow:hidden;background:var(--espresso)}
-    .proj-hero-bg{position:absolute;inset:-6%;width:112%;height:112%;object-fit:cover;filter:blur(28px) saturate(1.1);opacity:.9}
-    .proj-hero-img{position:relative;width:100%;height:100%;object-fit:contain;display:block}
-    @media(max-width:768px){.proj-hero{height:260px}}
+    .proj-hero{position:relative;width:100%;height:min(520px,56.25vw);overflow:hidden;background:#15263a}
+    .proj-hero::before,.proj-hero::after{content:"";position:absolute;top:0;bottom:0;width:50%;background:linear-gradient(to bottom,#101a26 0%,#15263a 77%,#41b37c 77%,#40b37a 100%)}
+    .proj-hero::before{left:0}
+    .proj-hero::after{right:0;background:linear-gradient(to bottom,#142434 0%,#1c353a 77%,#41b37c 77%,#40b37a 100%)}
+    .proj-hero-img{position:relative;z-index:1;width:100%;height:100%;object-fit:contain;display:block}
     .deck{margin:0 0 2.5rem}
     .deck-track{display:flex;gap:.75rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;border-radius:8px}
     .deck-track::-webkit-scrollbar{display:none}
@@ -80,6 +81,19 @@
     .proj-body h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;color:var(--espresso);margin:2.5rem 0 .75rem}
     .proj-body h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:var(--terracotta);margin:1.75rem 0 .5rem}
     .proj-body ul{margin:0 0 1.25rem;padding-left:1.5rem}.proj-body ul li{margin-bottom:.5rem}
+
+    /* expand + lightbox */
+    .expandable{position:relative}
+    .expand-btn{position:absolute;top:.6rem;right:.6rem;z-index:2;width:2.1rem;height:2.1rem;border-radius:6px;border:1px solid rgba(255,255,255,.35);background:rgba(31,24,19,.55);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;backdrop-filter:blur(4px);transition:background .15s}
+    .expand-btn:hover{background:rgba(184,80,66,.9)}
+    .expand-btn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .lightbox{position:fixed;inset:0;z-index:100;background:rgba(20,16,13,.96);display:none;align-items:center;justify-content:center;padding:1rem}
+    .lightbox.open{display:flex}
+    .lightbox img{max-width:100%;max-height:100%;object-fit:contain;border-radius:4px;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+    .lightbox-close{position:absolute;top:1rem;right:1rem;width:2.6rem;height:2.6rem;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;font-size:1.4rem;line-height:1;cursor:pointer}
+    .lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);width:2.8rem;height:2.8rem;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;font-size:1.6rem;line-height:1;cursor:pointer}
+    .lightbox-nav.prev{left:1rem}.lightbox-nav.next{right:1rem}
+    .lightbox-count{position:absolute;bottom:1rem;left:50%;transform:translateX(-50%);color:#fff;opacity:.6;font-family:'Inter',sans-serif;font-size:.78rem;letter-spacing:.1em}
     .proj-body figure{margin:2rem 0}.proj-body figure img{width:100%;height:auto;display:block;border-radius:6px;border:1px solid var(--sand-dark)}
     .proj-body figcaption{font-size:.82rem;color:var(--espresso);opacity:.6;margin-top:.5rem}
     .proj-body table{width:100%;border-collapse:collapse;font-size:.92rem;margin:0 0 1.5rem}
@@ -128,7 +142,6 @@
 </header>
 
 <div class="proj-hero">
-  <img src="/assets/images/proyectos/todos-santos-putt-cover.jpg" alt="" aria-hidden="true" class="proj-hero-bg" />
   <img src="/assets/images/proyectos/todos-santos-putt-cover.jpg" alt="Todos Santos Putt" class="proj-hero-img" />
 </div>
 
@@ -144,6 +157,7 @@
         <p class="proj-subtitle">Golf without the water. An artist-built 18-hole course and container bar in the heart of the pueblo mágico.</p>
         <div class="proj-body">
           <div class="deck">
+            <div class="expandable"><button class="expand-btn" aria-label="Expand" onclick="openLightbox(['/assets/images/proyectos/putt-deck/slide-01.jpg','/assets/images/proyectos/putt-deck/slide-02.jpg','/assets/images/proyectos/putt-deck/slide-03.jpg','/assets/images/proyectos/putt-deck/slide-04.jpg','/assets/images/proyectos/putt-deck/slide-05.jpg','/assets/images/proyectos/putt-deck/slide-06.jpg','/assets/images/proyectos/putt-deck/slide-07.jpg','/assets/images/proyectos/putt-deck/slide-08.jpg','/assets/images/proyectos/putt-deck/slide-09.jpg','/assets/images/proyectos/putt-deck/slide-10.jpg','/assets/images/proyectos/putt-deck/slide-11.jpg'], Math.round(document.getElementById('deck-track').scrollLeft/document.getElementById('deck-track').clientWidth))"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></button>
             <div class="deck-track" id="deck-track">
             <img src="/assets/images/proyectos/putt-deck/slide-01.jpg" alt="Slide 1" loading="eager" />
             <img src="/assets/images/proyectos/putt-deck/slide-02.jpg" alt="Slide 2" loading="lazy" />
@@ -156,7 +170,7 @@
             <img src="/assets/images/proyectos/putt-deck/slide-09.jpg" alt="Slide 9" loading="lazy" />
             <img src="/assets/images/proyectos/putt-deck/slide-10.jpg" alt="Slide 10" loading="lazy" />
             <img src="/assets/images/proyectos/putt-deck/slide-11.jpg" alt="Slide 11" loading="lazy" />
-            </div>
+            </div></div>
             <div class="deck-bar">
               <span class="deck-hint">Swipe or use the arrows. The full deck is available for download.</span>
               <div class="deck-nav"><span class="deck-count" id="deck-count"></span><button id="deck-prev" aria-label="Previous">‹</button><button id="deck-next" aria-label="Next">›</button></div>
@@ -294,6 +308,29 @@
     document.getElementById('deck-next').onclick=function(){go(idx()+1)};
     t.addEventListener('scroll',function(){ c.textContent=(idx()+1)+' / '+n; },{passive:true});
     c.textContent='1 / '+n;
+  })();
+</script>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <button class="lightbox-close" id="lb-close" aria-label="Close">×</button>
+  <button class="lightbox-nav prev" id="lb-prev" aria-label="Previous">‹</button>
+  <img id="lb-img" src="" alt="" />
+  <button class="lightbox-nav next" id="lb-next" aria-label="Next">›</button>
+  <span class="lightbox-count" id="lb-count"></span>
+</div>
+<script>
+  (function(){
+    var lb=document.getElementById('lightbox'),img=document.getElementById('lb-img'),cnt=document.getElementById('lb-count'),
+        prev=document.getElementById('lb-prev'),next=document.getElementById('lb-next'),set=[],i=0;
+    function show(){ img.src=set[i]; cnt.textContent=set.length>1?(i+1)+' / '+set.length:''; prev.style.display=next.style.display=set.length>1?'':'none'; }
+    window.openLightbox=function(srcs,start){ set=srcs; i=start||0; lb.classList.add('open'); document.body.style.overflow='hidden'; show(); };
+    function close(){ lb.classList.remove('open'); document.body.style.overflow=''; }
+    document.getElementById('lb-close').onclick=close;
+    lb.addEventListener('click',function(e){ if(e.target===lb) close(); });
+    prev.onclick=function(e){ e.stopPropagation(); i=(i-1+set.length)%set.length; show(); };
+    next.onclick=function(e){ e.stopPropagation(); i=(i+1)%set.length; show(); };
+    document.addEventListener('keydown',function(e){ if(!lb.classList.contains('open')) return; if(e.key==='Escape') close(); if(e.key==='ArrowRight') next.click(); if(e.key==='ArrowLeft') prev.click(); });
+    var tx=null; lb.addEventListener('touchstart',function(e){tx=e.touches[0].clientX},{passive:true});
+    lb.addEventListener('touchend',function(e){ if(tx===null) return; var dx=e.changedTouches[0].clientX-tx; if(Math.abs(dx)>50) (dx<0?next:prev).click(); tx=null; });
   })();
 </script>
 </body>
