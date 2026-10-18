@@ -54,9 +54,10 @@
     .tag-invest{background:rgba(217,122,74,.14);color:#9b4a22;border-color:rgba(217,122,74,.4)}
     .tag-status{background:transparent;color:var(--espresso);border-color:var(--sand-dark);opacity:.75}
 
-    .proj-hero{width:100%;max-height:520px;overflow:hidden;background:var(--espresso)}
-    .proj-hero-img{width:100%;height:520px;object-fit:cover;object-position:center;display:block}
-    @media(max-width:768px){.proj-hero-img{height:260px}}
+    .proj-hero{position:relative;width:100%;height:520px;overflow:hidden;background:var(--espresso)}
+    .proj-hero-bg{position:absolute;inset:-6%;width:112%;height:112%;object-fit:cover;filter:blur(28px) saturate(1.1);opacity:.9}
+    .proj-hero-img{position:relative;width:100%;height:100%;object-fit:contain;display:block}
+    @media(max-width:768px){.proj-hero{height:260px}}
     .proj-article{padding:3.5rem 0 5rem}
     .proj-layout{display:grid;grid-template-columns:minmax(0,1fr) 18rem;gap:3rem;align-items:start}
     @media(max-width:860px){.proj-layout{grid-template-columns:1fr}}
@@ -116,6 +117,7 @@
 </header>
 
 <div class="proj-hero">
+  <img src="/assets/images/proyectos/las-tunas-calle-las-playitas.jpg" alt="" aria-hidden="true" class="proj-hero-bg" />
   <img src="/assets/images/proyectos/las-tunas-calle-las-playitas.jpg" alt="Las Tunas: Light and Landscape on Calle Las Playitas" class="proj-hero-img" />
 </div>
 
@@ -152,8 +154,8 @@
           </ul>
 
           <figure>
-            <img src="/assets/images/proyectos/las-tunas-calle-las-playitas-aerea.jpg" alt="Aerial view: current state, Phase 1 proposal and Phase 2 proposal for Calle Las Playitas in Las Tunas" loading="lazy" />
-            <figcaption>Current state, Phase 1 and Phase 2 seen from above, same location.</figcaption>
+            <a href="/assets/images/proyectos/las-tunas-board-en.jpg" target="_blank" rel="noopener"><img src="/assets/images/proyectos/las-tunas-board-en.jpg" alt="Project board: current state, Phase 1 proposal and details for Calle Las Playitas in Las Tunas" loading="lazy" /></a>
+            <figcaption>Current state, Phase 1 and details. Tap the image to view it full size.</figcaption>
           </figure>
 
           <h2>Phase 2: order and signage</h2>
@@ -198,14 +200,14 @@
             <dt>Seeking</dt><dd>Donations and materials</dd>
             <dt>Cost to municipality</dt><dd>$0</dd>
           </dl>
-          <a class="btn btn-outline" href="/assets/documents/proyectos/Propuesta_Las_Tunas_Calle_Las_Playitas.pdf" download>📄 Download proposal (PDF)</a>
-          <p class="small">Two boards: current state, phases and the plant palette (Spanish).</p>
+          <a class="btn btn-outline" href="/assets/documents/proyectos/Las_Tunas_Light_and_Landscape_Calle_Las_Playitas_EN.pdf" download>📄 Download proposal</a>
+          <p class="small">One board: current state, phases and details.</p>
         </div>
         <div class="side-box side-cta">
           <h4>I want to help</h4>
           <p>Sponsor a planted island, donate materials, or join a planting day.</p>
           <a class="btn btn-primary" href="mailto:hola@paratodosbcs.mx?subject=Support%20Las%20Tunas%20Calle%20Las%20Playitas">Write to us</a>
-          <p class="small">Tax-deductible receipt available for donations.</p>
+          <p class="small">Or email <a href="mailto:hola@paratodosbcs.mx" style="color:var(--sunset)">hola@paratodosbcs.mx</a> directly. Tax-deductible receipt available for donations.</p>
         </div>
       </aside>
     </div>

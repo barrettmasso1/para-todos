@@ -54,9 +54,21 @@
     .tag-invest{background:rgba(217,122,74,.14);color:#9b4a22;border-color:rgba(217,122,74,.4)}
     .tag-status{background:transparent;color:var(--espresso);border-color:var(--sand-dark);opacity:.75}
 
-    .proj-hero{width:100%;max-height:520px;overflow:hidden;background:var(--espresso)}
-    .proj-hero-img{width:100%;height:520px;object-fit:cover;object-position:center top;display:block}
-    @media(max-width:768px){.proj-hero-img{height:260px}}
+    .proj-hero{position:relative;width:100%;height:520px;overflow:hidden;background:var(--espresso)}
+    .proj-hero-bg{position:absolute;inset:-6%;width:112%;height:112%;object-fit:cover;filter:blur(28px) saturate(1.1);opacity:.9}
+    .proj-hero-img{position:relative;width:100%;height:100%;object-fit:contain;display:block}
+    @media(max-width:768px){.proj-hero{height:260px}}
+    .deck{margin:0 0 2.5rem}
+    .deck-track{display:flex;gap:.75rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;border-radius:8px}
+    .deck-track::-webkit-scrollbar{display:none}
+    .deck-track img{flex:0 0 100%;width:100%;aspect-ratio:16/9;object-fit:cover;scroll-snap-align:start;border-radius:8px;border:1px solid var(--sand-dark);display:block;background:#1b2330}
+    .deck-bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:.75rem}
+    .deck-nav{display:flex;align-items:center;gap:.5rem}
+    .deck-nav button{font-family:'Inter',sans-serif;font-size:1.1rem;font-weight:600;width:2.4rem;height:2.4rem;border-radius:999px;border:1px solid var(--sand-dark);background:var(--off-white);color:var(--espresso);cursor:pointer;line-height:1}
+    .deck-nav button:hover{border-color:var(--terracotta);color:var(--terracotta)}
+    .deck-count{font-family:'Inter',sans-serif;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--espresso);opacity:.55;margin-right:.5rem}
+    .deck-hint{font-size:.8rem;color:var(--espresso);opacity:.55}
+
     .proj-article{padding:3.5rem 0 5rem}
     .proj-layout{display:grid;grid-template-columns:minmax(0,1fr) 18rem;gap:3rem;align-items:start}
     @media(max-width:860px){.proj-layout{grid-template-columns:1fr}}
@@ -116,6 +128,7 @@
 </header>
 
 <div class="proj-hero">
+  <img src="/assets/images/proyectos/todos-santos-putt-cover.jpg" alt="" aria-hidden="true" class="proj-hero-bg" />
   <img src="/assets/images/proyectos/todos-santos-putt-cover.jpg" alt="Todos Santos Putt" class="proj-hero-img" />
 </div>
 
@@ -130,6 +143,25 @@
         <h1 class="proj-title">Todos Santos Putt</h1>
         <p class="proj-subtitle">Golf sin agua. Un campo de 18 hoyos construido por artistas locales y un bar en contenedores, en el corazón del pueblo mágico.</p>
         <div class="proj-body">
+          <div class="deck">
+            <div class="deck-track" id="deck-track">
+            <img src="/assets/images/proyectos/putt-deck/slide-01.jpg" alt="Lámina 1" loading="eager" />
+            <img src="/assets/images/proyectos/putt-deck/slide-02.jpg" alt="Lámina 2" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck/slide-03.jpg" alt="Lámina 3" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck/slide-04.jpg" alt="Lámina 4" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck/slide-05.jpg" alt="Lámina 5" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck/slide-06.jpg" alt="Lámina 6" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck/slide-07.jpg" alt="Lámina 7" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck/slide-08.jpg" alt="Lámina 8" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck/slide-09.jpg" alt="Lámina 9" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck/slide-10.jpg" alt="Lámina 10" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck/slide-11.jpg" alt="Lámina 11" loading="lazy" />
+            </div>
+            <div class="deck-bar">
+              <span class="deck-hint">Desliza o usa las flechas. El deck completo está disponible para descarga.</span>
+              <div class="deck-nav"><span class="deck-count" id="deck-count"></span><button id="deck-prev" aria-label="Anterior">‹</button><button id="deck-next" aria-label="Siguiente">›</button></div>
+            </div>
+          </div>
 
           <p>Cabo tiene golf de campeonato. Todos Santos no puede tener un campo de golf, y no debería: no hay agua para eso. Pero sí puede tener algo que no existe en toda Baja California Sur: un campo de mini golf de 18 hoyos diseñado y construido por artistas del pueblo, con un bar de contenedores donde la gente llega por la noche a tomar algo, jugar una ronda y quedarse.</p>
           <p>La idea viene de un modelo probado en otras ciudades: lugares como Swingers en Nueva York y Londres o PopStroke en Estados Unidos, donde el juego vende el boleto y el bar hace el negocio. La versión de Todos Santos es más pequeña, más local y más nuestra.</p>
@@ -200,14 +232,14 @@
             <dt>Apertura</dt><dd>Diciembre 2026</dd>
             <dt>Equilibrio</dt><dd>17 rondas / día</dd>
           </dl>
-          <a class="btn btn-outline" href="/assets/documents/proyectos/Todos_Santos_Putt_Investor_Deck.pdf" download>📄 Descargar el deck (PDF)</a>
+          <a class="btn btn-outline" href="/assets/documents/proyectos/Todos_Santos_Putt_Investor_Deck.pdf" download>📄 Descargar deck</a>
           <p class="small">Deck para inversionistas, 11 láminas, en inglés.</p>
         </div>
         <div class="side-box side-cta">
           <h4>Me interesa invertir</h4>
           <p>Cuéntanos quién eres y qué quieres saber. Te conectamos directamente con el equipo del proyecto.</p>
           <a class="btn btn-primary" href="mailto:hola@paratodosbcs.mx?subject=Inversi%C3%B3n%20Todos%20Santos%20Putt">Escríbenos</a>
-          <p class="small">Para Todos no recibe comisión; solo conecta.</p>
+          <p class="small">O escribe directo a <a href="mailto:hola@paratodosbcs.mx" style="color:var(--sunset)">hola@paratodosbcs.mx</a>. Para Todos no recibe comisión; solo conecta.</p>
         </div>
       </aside>
     </div>
@@ -250,6 +282,18 @@
         if(saved==='es'&&esUrl){window.location.replace(esUrl);return}
       }
     }catch(e){}
+  })();
+</script>
+<script>
+  (function(){
+    var t=document.getElementById('deck-track'); if(!t) return;
+    var n=t.children.length, c=document.getElementById('deck-count');
+    function idx(){ return Math.round(t.scrollLeft / t.clientWidth); }
+    function go(i){ i=Math.max(0,Math.min(n-1,i)); t.scrollTo({left:i*t.clientWidth,behavior:'smooth'}); }
+    document.getElementById('deck-prev').onclick=function(){go(idx()-1)};
+    document.getElementById('deck-next').onclick=function(){go(idx()+1)};
+    t.addEventListener('scroll',function(){ c.textContent=(idx()+1)+' / '+n; },{passive:true});
+    c.textContent='1 / '+n;
   })();
 </script>
 </body>

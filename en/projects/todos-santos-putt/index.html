@@ -54,9 +54,21 @@
     .tag-invest{background:rgba(217,122,74,.14);color:#9b4a22;border-color:rgba(217,122,74,.4)}
     .tag-status{background:transparent;color:var(--espresso);border-color:var(--sand-dark);opacity:.75}
 
-    .proj-hero{width:100%;max-height:520px;overflow:hidden;background:var(--espresso)}
-    .proj-hero-img{width:100%;height:520px;object-fit:cover;object-position:center top;display:block}
-    @media(max-width:768px){.proj-hero-img{height:260px}}
+    .proj-hero{position:relative;width:100%;height:520px;overflow:hidden;background:var(--espresso)}
+    .proj-hero-bg{position:absolute;inset:-6%;width:112%;height:112%;object-fit:cover;filter:blur(28px) saturate(1.1);opacity:.9}
+    .proj-hero-img{position:relative;width:100%;height:100%;object-fit:contain;display:block}
+    @media(max-width:768px){.proj-hero{height:260px}}
+    .deck{margin:0 0 2.5rem}
+    .deck-track{display:flex;gap:.75rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;border-radius:8px}
+    .deck-track::-webkit-scrollbar{display:none}
+    .deck-track img{flex:0 0 100%;width:100%;aspect-ratio:16/9;object-fit:cover;scroll-snap-align:start;border-radius:8px;border:1px solid var(--sand-dark);display:block;background:#1b2330}
+    .deck-bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:.75rem}
+    .deck-nav{display:flex;align-items:center;gap:.5rem}
+    .deck-nav button{font-family:'Inter',sans-serif;font-size:1.1rem;font-weight:600;width:2.4rem;height:2.4rem;border-radius:999px;border:1px solid var(--sand-dark);background:var(--off-white);color:var(--espresso);cursor:pointer;line-height:1}
+    .deck-nav button:hover{border-color:var(--terracotta);color:var(--terracotta)}
+    .deck-count{font-family:'Inter',sans-serif;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--espresso);opacity:.55;margin-right:.5rem}
+    .deck-hint{font-size:.8rem;color:var(--espresso);opacity:.55}
+
     .proj-article{padding:3.5rem 0 5rem}
     .proj-layout{display:grid;grid-template-columns:minmax(0,1fr) 18rem;gap:3rem;align-items:start}
     @media(max-width:860px){.proj-layout{grid-template-columns:1fr}}
@@ -116,6 +128,7 @@
 </header>
 
 <div class="proj-hero">
+  <img src="/assets/images/proyectos/todos-santos-putt-cover.jpg" alt="" aria-hidden="true" class="proj-hero-bg" />
   <img src="/assets/images/proyectos/todos-santos-putt-cover.jpg" alt="Todos Santos Putt" class="proj-hero-img" />
 </div>
 
@@ -130,6 +143,25 @@
         <h1 class="proj-title">Todos Santos Putt</h1>
         <p class="proj-subtitle">Golf without the water. An artist-built 18-hole course and container bar in the heart of the pueblo mágico.</p>
         <div class="proj-body">
+          <div class="deck">
+            <div class="deck-track" id="deck-track">
+            <img src="/assets/images/proyectos/putt-deck/slide-01.jpg" alt="Slide 1" loading="eager" />
+            <img src="/assets/images/proyectos/putt-deck/slide-02.jpg" alt="Slide 2" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck/slide-03.jpg" alt="Slide 3" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck/slide-04.jpg" alt="Slide 4" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck/slide-05.jpg" alt="Slide 5" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck/slide-06.jpg" alt="Slide 6" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck/slide-07.jpg" alt="Slide 7" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck/slide-08.jpg" alt="Slide 8" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck/slide-09.jpg" alt="Slide 9" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck/slide-10.jpg" alt="Slide 10" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck/slide-11.jpg" alt="Slide 11" loading="lazy" />
+            </div>
+            <div class="deck-bar">
+              <span class="deck-hint">Swipe or use the arrows. The full deck is available for download.</span>
+              <div class="deck-nav"><span class="deck-count" id="deck-count"></span><button id="deck-prev" aria-label="Previous">‹</button><button id="deck-next" aria-label="Next">›</button></div>
+            </div>
+          </div>
 
           <p>Cabo has championship golf. Todos Santos cannot have a golf course, and it should not: there is no water for it. But it can have something that does not exist anywhere in Baja California Sur: an 18-hole mini golf course designed and built by the town's artists, with a container bar where people come at night for a drink, a round, and to stay a while.</p>
           <p>The idea follows a proven model in other cities: places like Swingers in New York and London or PopStroke in the US, where the game sells the ticket and the bar makes the business. The Todos Santos version is smaller, more local, and more ours.</p>
@@ -200,14 +232,14 @@
             <dt>Opening</dt><dd>December 2026</dd>
             <dt>Break-even</dt><dd>17 rounds / day</dd>
           </dl>
-          <a class="btn btn-outline" href="/assets/documents/proyectos/Todos_Santos_Putt_Investor_Deck.pdf" download>📄 Download the deck (PDF)</a>
+          <a class="btn btn-outline" href="/assets/documents/proyectos/Todos_Santos_Putt_Investor_Deck.pdf" download>📄 Download deck</a>
           <p class="small">Investor deck, 11 slides.</p>
         </div>
         <div class="side-box side-cta">
           <h4>I'm interested in investing</h4>
           <p>Tell us who you are and what you want to know. We connect you directly with the project team.</p>
           <a class="btn btn-primary" href="mailto:hola@paratodosbcs.mx?subject=Investing%20in%20Todos%20Santos%20Putt">Write to us</a>
-          <p class="small">Para Todos takes no commission; we only connect.</p>
+          <p class="small">Or email <a href="mailto:hola@paratodosbcs.mx" style="color:var(--sunset)">hola@paratodosbcs.mx</a> directly. Para Todos takes no commission; we only connect.</p>
         </div>
       </aside>
     </div>
@@ -250,6 +282,18 @@
         if(saved==='es'&&esUrl){window.location.replace(esUrl);return}
       }
     }catch(e){}
+  })();
+</script>
+<script>
+  (function(){
+    var t=document.getElementById('deck-track'); if(!t) return;
+    var n=t.children.length, c=document.getElementById('deck-count');
+    function idx(){ return Math.round(t.scrollLeft / t.clientWidth); }
+    function go(i){ i=Math.max(0,Math.min(n-1,i)); t.scrollTo({left:i*t.clientWidth,behavior:'smooth'}); }
+    document.getElementById('deck-prev').onclick=function(){go(idx()-1)};
+    document.getElementById('deck-next').onclick=function(){go(idx()+1)};
+    t.addEventListener('scroll',function(){ c.textContent=(idx()+1)+' / '+n; },{passive:true});
+    c.textContent='1 / '+n;
   })();
 </script>
 </body>
