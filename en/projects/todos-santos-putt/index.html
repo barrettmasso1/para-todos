@@ -9,7 +9,7 @@
   <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon-180.png" />
   <meta property="og:title" content="Todos Santos Putt" />
   <meta property="og:description" content="Golf without the water. An artist-built 18-hole course and container bar in the heart of the pueblo mágico." />
-  <meta property="og:image" content="https://paratodosbcs.mx/assets/images/proyectos/todos-santos-putt-cover.jpg" />
+  <meta property="og:image" content="https://paratodosbcs.mx/assets/images/proyectos/todos-santos-putt-cover-en-v2.jpg" />
   <meta property="og:url" content="https://paratodosbcs.mx/en/projects/todos-santos-putt/" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -55,10 +55,10 @@
     .tag-status{background:transparent;color:var(--espresso);border-color:var(--sand-dark);opacity:.75}
 
     .proj-hero{position:relative;width:100%;height:min(520px,56.25vw);overflow:hidden;background:#15263a}
-    .proj-hero::before,.proj-hero::after{content:"";position:absolute;top:0;bottom:0;width:50%;background:linear-gradient(to bottom,#0f1925 0%,#122536 45%,#082d26 74.2%,#3db27b 74.2%,#3db27b 100%)}
-    .proj-hero::before{left:0}
-    .proj-hero::after{right:0;background:linear-gradient(to bottom,#132333 0%,#152c3c 45%,#0b3a2a 74.2%,#3db27b 74.2%,#3db27b 100%)}
-    .proj-hero-img{position:relative;z-index:1;width:100%;height:100%;object-fit:contain;display:block}
+    .proj-hero::before,.proj-hero::after{content:"";position:absolute;top:0;bottom:0;width:50%;background-repeat:no-repeat;background-size:100% 100%}
+    .proj-hero::before{left:0;background-image:url(/assets/images/proyectos/putt-hero-edge-en-left-v2.png)}
+    .proj-hero::after{right:0;background-image:url(/assets/images/proyectos/putt-hero-edge-en-right-v2.png)}
+    .proj-hero-img{position:relative;z-index:1;width:100%;height:100%;object-fit:contain;display:block;image-rendering:auto}
     .deck{margin:0 0 2.5rem}
     .deck-track{display:flex;gap:.75rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;border-radius:8px}
     .deck-track::-webkit-scrollbar{display:none}
@@ -142,7 +142,7 @@
 </header>
 
 <div class="proj-hero">
-  <img src="/assets/images/proyectos/todos-santos-putt-cover.jpg" alt="Todos Santos Putt" class="proj-hero-img" />
+  <img src="/assets/images/proyectos/todos-santos-putt-cover-en-v2.jpg" alt="Todos Santos Putt" class="proj-hero-img" />
 </div>
 
 <article class="proj-article">
@@ -157,19 +157,19 @@
         <p class="proj-subtitle">Golf without the water. An artist-built 18-hole course and container bar in the heart of the pueblo mágico.</p>
         <div class="proj-body">
           <div class="deck">
-            <div class="expandable"><button class="expand-btn" aria-label="Expand" onclick="openLightbox(['/assets/images/proyectos/putt-deck/slide-01.jpg','/assets/images/proyectos/putt-deck/slide-02.jpg','/assets/images/proyectos/putt-deck/slide-03.jpg','/assets/images/proyectos/putt-deck/slide-04.jpg','/assets/images/proyectos/putt-deck/slide-05.jpg','/assets/images/proyectos/putt-deck/slide-06.jpg','/assets/images/proyectos/putt-deck/slide-07.jpg','/assets/images/proyectos/putt-deck/slide-08.jpg','/assets/images/proyectos/putt-deck/slide-09.jpg','/assets/images/proyectos/putt-deck/slide-10.jpg','/assets/images/proyectos/putt-deck/slide-11.jpg'], Math.round(document.getElementById('deck-track').scrollLeft/document.getElementById('deck-track').clientWidth))"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></button>
+            <div class="expandable"><button class="expand-btn" aria-label="Expand" onclick="openLightbox(['/assets/images/proyectos/putt-deck-v2/slide-01.jpg','/assets/images/proyectos/putt-deck-v2/slide-02.jpg','/assets/images/proyectos/putt-deck-v2/slide-03.jpg','/assets/images/proyectos/putt-deck-v2/slide-04.jpg','/assets/images/proyectos/putt-deck-v2/slide-05.jpg','/assets/images/proyectos/putt-deck-v2/slide-06.jpg','/assets/images/proyectos/putt-deck-v2/slide-07.jpg','/assets/images/proyectos/putt-deck-v2/slide-08.jpg','/assets/images/proyectos/putt-deck-v2/slide-09.jpg','/assets/images/proyectos/putt-deck-v2/slide-10.jpg','/assets/images/proyectos/putt-deck-v2/slide-11.jpg'], Math.round(document.getElementById('deck-track').scrollLeft/document.getElementById('deck-track').clientWidth))"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></button>
             <div class="deck-track" id="deck-track">
-            <img src="/assets/images/proyectos/putt-deck/slide-01.jpg" alt="Slide 1" loading="eager" />
-            <img src="/assets/images/proyectos/putt-deck/slide-02.jpg" alt="Slide 2" loading="lazy" />
-            <img src="/assets/images/proyectos/putt-deck/slide-03.jpg" alt="Slide 3" loading="lazy" />
-            <img src="/assets/images/proyectos/putt-deck/slide-04.jpg" alt="Slide 4" loading="lazy" />
-            <img src="/assets/images/proyectos/putt-deck/slide-05.jpg" alt="Slide 5" loading="lazy" />
-            <img src="/assets/images/proyectos/putt-deck/slide-06.jpg" alt="Slide 6" loading="lazy" />
-            <img src="/assets/images/proyectos/putt-deck/slide-07.jpg" alt="Slide 7" loading="lazy" />
-            <img src="/assets/images/proyectos/putt-deck/slide-08.jpg" alt="Slide 8" loading="lazy" />
-            <img src="/assets/images/proyectos/putt-deck/slide-09.jpg" alt="Slide 9" loading="lazy" />
-            <img src="/assets/images/proyectos/putt-deck/slide-10.jpg" alt="Slide 10" loading="lazy" />
-            <img src="/assets/images/proyectos/putt-deck/slide-11.jpg" alt="Slide 11" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck-v2/slide-01.jpg" alt="Slide 1" loading="eager" />
+            <img src="/assets/images/proyectos/putt-deck-v2/slide-02.jpg" alt="Slide 2" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck-v2/slide-03.jpg" alt="Slide 3" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck-v2/slide-04.jpg" alt="Slide 4" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck-v2/slide-05.jpg" alt="Slide 5" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck-v2/slide-06.jpg" alt="Slide 6" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck-v2/slide-07.jpg" alt="Slide 7" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck-v2/slide-08.jpg" alt="Slide 8" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck-v2/slide-09.jpg" alt="Slide 9" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck-v2/slide-10.jpg" alt="Slide 10" loading="lazy" />
+            <img src="/assets/images/proyectos/putt-deck-v2/slide-11.jpg" alt="Slide 11" loading="lazy" />
             </div></div>
             <div class="deck-bar">
               <span class="deck-hint">Swipe or use the arrows. The full deck is available for download.</span>
@@ -246,7 +246,7 @@
             <dt>Opening</dt><dd>December 2026</dd>
             <dt>Break-even</dt><dd>17 rounds / day</dd>
           </dl>
-          <a class="btn btn-outline" href="/assets/documents/proyectos/Todos_Santos_Putt_Investor_Deck.pdf" download>📄 Download deck</a>
+          <a class="btn btn-outline" href="/assets/documents/proyectos/Todos_Santos_Putt_Investor_Deck_v2.pdf" download>📄 Download deck</a>
           <p class="small">Investor deck, 11 slides.</p>
         </div>
         <div class="side-box side-cta">

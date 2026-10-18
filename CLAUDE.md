@@ -40,6 +40,13 @@ This repo is the bilingual (Spanish default / English) landing site, **paratodos
 
 Site is live with a full bilingual blog: case-study posts (Los Cabos/Loreto, Playa del Carmen/Tulum/Bacalar, San Quintín, San Felipe) plus the post **"Más que Firmas / More Than Signatures"** (`blog/mas-que-firmas/`, `en/blog/more-than-signatures/`, dated June 18 2026, with downloadable PDFs). Homepage section 05 is an **event-registration** block ("El Camino a la Municipalización / The Road to Municipalization") using the existing GHL form. `.vercelignore` was hardened to stop serving internal/founder-naming files.
 
+## Projects section (added Oct 2026)
+
+- `/proyectos/` (ES) and `/en/projects/` (EN): one grid of all projects with filter buttons (community projects for donations, investment opportunities for investors). Each project is a folder with an `index.html` per language, same convention as the blog. Current projects: `las-tunas-calle-las-playitas` (community) and `todos-santos-putt` (investment).
+- Project assets live in `assets/images/proyectos/` and `assets/documents/proyectos/`. Investor decks are shown as a swipeable slide carousel (rendered from the PDF with `pdftoppm -r 110 -jpeg`), with an expand button that opens a lightbox.
+- **Asset caching rule:** `vercel.json` serves `/assets/*` with a one-year immutable cache. When you replace an image or PDF, give it a NEW filename (e.g. `-v2`, `-v3`) and update the references; overwriting the same filename leaves visitors on the old file.
+- Barrett is fine being named in investment-project PDFs he puts forward himself (the Putt deck). Rule 1 still applies to all HTML and to Para Todos' own materials.
+
 ## The canonical workflow (keep everyone in sync)
 
 The local folder `~/Documents/Claude/Projects/Para Todos` is the working copy that deploys, and it is a git clone of `origin/master`. Both Claude Code and the Claude desktop (Cowork) assistant operate against this same repo. To avoid divergence:
