@@ -62,8 +62,7 @@
     .filter-bar button{font-family:'Inter',sans-serif;font-size:.8rem;font-weight:600;letter-spacing:.06em;background:transparent;border:1px solid var(--sand-dark);color:var(--espresso);border-radius:999px;padding:.45rem 1.1rem;cursor:pointer;transition:all .15s}
     .filter-bar button:hover{border-color:var(--espresso)}
     .filter-bar button.active{background:var(--espresso);color:var(--sand);border-color:var(--espresso)}
-    .proj-group{padding:3rem 0 1rem}
-    .proj-group:last-of-type{padding-bottom:5rem}
+    .proj-group{padding:2.5rem 0 1rem}
     .group-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.75rem 1.25rem;margin-bottom:.5rem}
     .group-head h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.75rem;color:var(--espresso);margin:0;line-height:1.15}
     .group-head .lede{font-family:'Fraunces',serif;font-style:italic;font-size:1.02rem;color:var(--sky-dark);margin:.5rem 0 1.75rem;max-width:44rem;flex-basis:100%}
@@ -136,12 +135,8 @@
   </div>
 </section>
 
-<section class="proj-group" data-kind="community" id="comunitarios">
+<section class="proj-group" id="proyectos-lista">
   <div class="container">
-    <div class="group-head">
-      <h2>Community projects</h2>
-      <p class="lede">For those who want to contribute with donations, materials or time.</p>
-    </div>
     <div class="cards">
       <a class="proj-card" data-kind="community" href="/en/projects/main-street/">
         <img class="card-img" src="/assets/images/proyectos/calle-principal-1.jpg" alt="Main Street: Urban Improvement Proposal" />
@@ -156,17 +151,6 @@
           <span class="read-more">View project →</span>
         </div>
       </a>
-    </div>
-  </div>
-</section>
-
-<section class="proj-group" data-kind="invest" id="inversion">
-  <div class="container">
-    <div class="group-head">
-      <h2>Investment opportunities</h2>
-      <p class="lede">For those looking to invest in local businesses that improve our community.</p>
-    </div>
-    <div class="cards">
       <a class="proj-card" data-kind="invest" href="/en/projects/todos-santos-putt/">
         <img class="card-img" src="/assets/images/proyectos/todos-santos-putt-cover.jpg" alt="Todos Santos Putt" />
         <div class="card-body">
@@ -237,9 +221,6 @@
     document.querySelectorAll('.filter-bar button').forEach(function(b){b.classList.toggle('active', b===btn)});
     document.querySelectorAll('.proj-card').forEach(function(c){
       c.classList.toggle('is-hidden', kind!=='all' && c.getAttribute('data-kind')!==kind);
-    });
-    document.querySelectorAll('.proj-group').forEach(function(g){
-      g.style.display = (kind==='all' || g.getAttribute('data-kind')===kind) ? '' : 'none';
     });
   }
 </script>
