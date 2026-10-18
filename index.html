@@ -725,6 +725,19 @@
     .blog-card-meta { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--terracotta); font-weight: 600; margin-bottom: 0.65rem; }
     .blog-card h3 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.1rem; line-height: 1.3; color: var(--espresso); margin: 0 0 0.6rem; }
     .blog-card p { font-size: 0.9rem; color: var(--sky-dark); line-height: 1.5; margin: 0; flex: 1; }
+
+    /* PROJECTS TEASER */
+    .proj-teaser { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
+    @media (max-width: 768px) { .proj-teaser { grid-template-columns: 1fr; } }
+    .proj-teaser-card { display: flex; flex-direction: column; background: var(--off-white); border: 1px solid var(--sand-dark); border-radius: 6px; overflow: hidden; text-decoration: none; color: inherit; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+    .proj-teaser-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(58,46,38,0.1); color: inherit; }
+    .proj-teaser-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+    .proj-teaser-body { padding: 1.4rem 1.5rem 1.6rem; display: flex; flex-direction: column; flex: 1; }
+    .proj-teaser-tag { display: inline-block; align-self: flex-start; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; border-radius: 999px; padding: 0.28rem 0.75rem; margin-bottom: 0.75rem; }
+    .proj-teaser-tag.community { background: rgba(109,138,110,0.14); color: #4a6a4c; border: 1px solid rgba(109,138,110,0.35); }
+    .proj-teaser-tag.invest { background: rgba(217,122,74,0.14); color: #9b4a22; border: 1px solid rgba(217,122,74,0.4); }
+    .proj-teaser-card h3 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.15rem; line-height: 1.3; color: var(--espresso); margin: 0 0 0.5rem; }
+    .proj-teaser-card p { font-size: 0.9rem; color: var(--sky-dark); line-height: 1.5; margin: 0; flex: 1; }
     .blog-all-link { margin-top: 2rem; text-align: right; }
     .blog-all-link a { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.88rem; letter-spacing: 0.06em; color: var(--terracotta); text-decoration: none; }
     .blog-all-link a:hover { color: var(--terracotta-dark); text-decoration: underline; }
@@ -1356,6 +1369,38 @@
 </section>
 
 <!-- FOOTER -->
+<!-- SECTION 09 — PROYECTOS -->
+<section id="proyectos">
+  <div class="container">
+    <span class="section-num">09</span>
+    <p class="kicker"><span class="es">Proyectos</span><span class="en">Projects</span></p>
+    <h2><span class="es">Lo que estamos <em>construyendo</em></span><span class="en">What we're <em>building</em></span></h2>
+    <svg class="squiggle" viewBox="0 0 120 14" aria-hidden="true"><path d="M2 7 C12 2, 22 12, 32 7 S52 2, 62 7 S82 12, 92 7 S112 2, 118 7"/></svg>
+    <p class="lead"><span class="es">Ideas concretas para mejorar nuestro pueblo: proyectos comunitarios que se financian con donaciones y negocios locales abiertos a inversión. Todos con un documento que puedes descargar y compartir.</span><span class="en">Concrete ideas to make our town better: community projects funded by donations, and local businesses open to investment. Each one with a document you can download and share.</span></p>
+    <div class="proj-teaser">
+      <a class="proj-teaser-card" href="/proyectos/calle-principal/">
+        <img src="./assets/images/proyectos/calle-principal-1.jpg" alt="" />
+        <div class="proj-teaser-body">
+          <span class="proj-teaser-tag community"><span class="es">Proyecto comunitario</span><span class="en">Community project</span></span>
+          <h3><span class="es">Calle Principal: Propuesta de Mejora Urbana</span><span class="en">Main Street: Urban Improvement Proposal</span></h3>
+          <p><span class="es">Vegetación nativa, iluminación cálida y estacionamiento organizado, sin perder un solo cajón y sin costo para el municipio.</span><span class="en">Native planting, warm lighting and organized parking, without losing a single space and at no cost to the municipality.</span></p>
+        </div>
+      </a>
+      <a class="proj-teaser-card" href="/proyectos/todos-santos-putt/">
+        <img src="./assets/images/proyectos/todos-santos-putt-cover.jpg" alt="" />
+        <div class="proj-teaser-body">
+          <span class="proj-teaser-tag invest"><span class="es">Oportunidad de inversión</span><span class="en">Investment opportunity</span></span>
+          <h3>Todos Santos Putt</h3>
+          <p><span class="es">Un campo de mini golf de 18 hoyos construido por artistas locales y un bar en contenedores. Golf sin agua, en el centro del pueblo.</span><span class="en">An 18-hole mini golf course built by local artists and a container bar. Golf without the water, in the heart of town.</span></p>
+        </div>
+      </a>
+    </div>
+    <div class="blog-all-link">
+      <a href="/proyectos/"><span class="es">Ver todos los proyectos →</span><span class="en">See all projects →</span></a>
+    </div>
+  </div>
+</section>
+
 <footer id="contacto">
   <div class="container-wide">
     <div>
@@ -1386,6 +1431,7 @@
         <a href="#preguntas"><span class="es">Preguntas</span><span class="en">Questions</span></a><br/>
         <a href="#documentos"><span class="es">Documentos</span><span class="en">Documents</span></a><br/>
         <a href="/blog/"><span class="es">Blog</span><span class="en">Blog</span></a><br/>
+        <a href="/proyectos/"><span class="es">Proyectos</span><span class="en">Projects</span></a><br/>
       </p>
     </div>
     <div class="legal">

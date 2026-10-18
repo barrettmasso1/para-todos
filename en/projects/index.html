@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — PARA TODOS</title>
+  <meta name="description" content="Community projects and investment opportunities that improve quality of life in Todos Santos and the Pacific South communities." />
+  <link rel="icon" type="image/png" href="/assets/brand/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon-180.png" />
+  <meta property="og:title" content="Projects — PARA TODOS" />
+  <meta property="og:description" content="Community projects and investment opportunities that improve quality of life in Todos Santos and the Pacific South communities." />
+  <meta property="og:image" content="https://paratodosbcs.mx/assets/brand/og-image-en.png" />
+  <meta property="og:url" content="https://paratodosbcs.mx/en/projects/" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..600&family=Inter:wght@400;500;600;700&family=Caveat:wght@400;600&display=swap" />
+  <style>
+    :root {
+      --sand:#f4ecd9;--sand-light:#faf4e3;--sand-dark:#e0d4b3;
+      --terracotta:#b85042;--terracotta-dark:#9b3f33;--sunset:#d97a4a;
+      --cactus:#6d8a6e;--cactus-pale:#a8baa7;--sky:#7ba6b8;--sky-dark:#4f7a8f;
+      --espresso:#3a2e26;--off-white:#fbf6e9;--ink:#1f1813;
+    }
+    *,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}
+    body{margin:0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.6;color:var(--espresso);background-color:var(--sand-light);background-image:radial-gradient(ellipse 90% 60% at 50% -10%,rgba(255,255,255,.45) 0%,rgba(255,255,255,0) 60%),radial-gradient(ellipse 80% 50% at 100% 100%,rgba(184,80,66,.04) 0%,rgba(184,80,66,0) 70%);background-attachment:fixed;-webkit-font-smoothing:antialiased;letter-spacing:.01em}
+    a{color:var(--terracotta);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}a:hover{color:var(--terracotta-dark)}
+    .container{max-width:64rem;margin:0 auto;padding:0 1.5rem}.container-wide{max-width:80rem;margin:0 auto;padding:0 1.5rem}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;font-family:'Inter',sans-serif;font-weight:600;font-size:.9rem;letter-spacing:.03em;border-radius:999px;padding:.65rem 1.5rem;text-decoration:none;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+    .btn-primary{background:var(--terracotta);color:#fff;border:2px solid var(--terracotta)}.btn-primary:hover{background:var(--terracotta-dark);border-color:var(--terracotta-dark);color:#fff}
+    .btn-outline{background:transparent;color:var(--espresso);border:2px solid var(--espresso)}.btn-outline:hover{background:var(--espresso);color:var(--sand)}
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(244,236,217,.92);backdrop-filter:saturate(140%) blur(8px);-webkit-backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--sand-dark)}
+    .site-header .inner{display:flex;align-items:center;justify-content:space-between;max-width:80rem;margin:0 auto;padding:.85rem 1.5rem}
+    .brand-mark{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+    .brand-mark img{width:44px;height:44px}
+    .brand-mark .text{display:flex;flex-direction:column;line-height:1.05}
+    .brand-mark .name{font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;color:var(--espresso);letter-spacing:.005em}
+    .brand-mark .sub{font-size:.7rem;color:var(--sky-dark);letter-spacing:.16em;text-transform:uppercase;margin-top:2px}
+    .lang-toggle{display:flex;align-items:center;gap:0;background:transparent;border:1px solid var(--espresso);border-radius:999px;padding:3px}
+    .lang-toggle button{background:transparent;border:0;padding:.25rem .85rem;font-family:inherit;font-size:.78rem;font-weight:600;color:var(--espresso);letter-spacing:.08em;border-radius:999px;cursor:pointer}
+    .lang-toggle button.active{background:var(--espresso);color:var(--sand)}
+    footer{background:var(--espresso);color:var(--off-white);padding:4rem 0 2rem;margin-top:0}
+    footer .container-wide{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem}
+    @media(max-width:768px){footer .container-wide{grid-template-columns:1fr;gap:2rem}}
+    footer h4{font-family:'Fraunces',serif;font-weight:600;font-size:1rem;color:var(--off-white);margin:0 0 .75rem}
+    footer p{font-size:.9rem;color:var(--sand);line-height:1.6;margin:0}
+    footer a{color:var(--sunset);text-decoration:underline;text-underline-offset:3px}footer a:hover{color:var(--off-white)}
+    footer .brand-mark .name{color:var(--off-white)}footer .brand-mark .sub{color:var(--cactus-pale)}
+    footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.1);padding-top:1.5rem;margin-top:1rem;font-size:.78rem;color:var(--sand);opacity:.55}
+    .squiggle{display:block;width:120px;height:14px;margin:1.5rem auto;opacity:.7}.squiggle path{fill:none;stroke:var(--cactus);stroke-width:1.8;stroke-linecap:round}
+    /* tags */
+    .tag{display:inline-flex;align-items:center;gap:.35rem;font-family:'Inter',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border-radius:999px;padding:.28rem .75rem;border:1px solid transparent}
+    .tag-community{background:rgba(109,138,110,.14);color:#4a6a4c;border-color:rgba(109,138,110,.35)}
+    .tag-invest{background:rgba(217,122,74,.14);color:#9b4a22;border-color:rgba(217,122,74,.4)}
+    .tag-status{background:transparent;color:var(--espresso);border-color:var(--sand-dark);opacity:.75}
+
+    .proj-hero{background:var(--espresso);color:var(--off-white);padding:4rem 0 3.5rem;text-align:center}
+    .proj-hero .kicker{font-family:'Inter',sans-serif;font-weight:600;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sunset);margin:0 0 1rem}
+    .proj-hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.2rem,5vw,3.5rem);color:var(--off-white);margin:0 0 1rem;line-height:1.1}
+    .proj-hero p{font-family:'Fraunces',serif;font-style:italic;font-size:1.2rem;color:var(--sand);max-width:38rem;margin:0 auto;line-height:1.5}
+    .filter-bar{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;padding:2.25rem 0 0}
+    .filter-bar button{font-family:'Inter',sans-serif;font-size:.8rem;font-weight:600;letter-spacing:.06em;background:transparent;border:1px solid var(--sand-dark);color:var(--espresso);border-radius:999px;padding:.45rem 1.1rem;cursor:pointer;transition:all .15s}
+    .filter-bar button:hover{border-color:var(--espresso)}
+    .filter-bar button.active{background:var(--espresso);color:var(--sand);border-color:var(--espresso)}
+    .proj-group{padding:3rem 0 1rem}
+    .proj-group:last-of-type{padding-bottom:5rem}
+    .group-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.75rem 1.25rem;margin-bottom:.5rem}
+    .group-head h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.75rem;color:var(--espresso);margin:0;line-height:1.15}
+    .group-head .lede{font-family:'Fraunces',serif;font-style:italic;font-size:1.02rem;color:var(--sky-dark);margin:.5rem 0 1.75rem;max-width:44rem;flex-basis:100%}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem}
+    @media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:580px){.cards{grid-template-columns:1fr}}
+    .proj-card{background:var(--off-white);border:1px solid var(--sand-dark);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s}
+    .proj-card:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(58,46,38,.08);color:inherit}
+    .proj-card .card-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:var(--sand)}
+    .proj-card .card-body{padding:1.4rem 1.5rem 1.5rem;flex:1;display:flex;flex-direction:column}
+    .proj-card .card-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-bottom:.85rem}
+    .proj-card h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.2rem;color:var(--espresso);margin:0 0 .5rem;line-height:1.25}
+    .proj-card .subtitle{font-family:'Fraunces',serif;font-style:italic;font-size:.95rem;color:var(--sky-dark);line-height:1.45;margin:0 0 1.1rem;flex:1}
+    .proj-card .facts{display:flex;flex-wrap:wrap;gap:.35rem 1rem;font-size:.78rem;color:var(--espresso);opacity:.7;margin:0 0 1rem;padding:0;list-style:none}
+    .proj-card .facts strong{color:var(--espresso);font-weight:600}
+    .proj-card .read-more{display:inline-flex;align-items:center;gap:.4rem;font-family:'Inter',sans-serif;font-size:.85rem;font-weight:600;color:var(--terracotta);text-decoration:none;letter-spacing:.02em;margin-top:auto}
+    .proj-card .read-more:hover{color:var(--terracotta-dark)}
+    .proj-card.is-hidden{display:none}
+    .propose{background:var(--sand);border:1px solid var(--sand-dark);border-radius:6px;padding:2rem 2rem;margin:1rem 0 5rem;text-align:center}
+    .propose h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.3rem;margin:0 0 .5rem;color:var(--espresso)}
+    .propose p{margin:0 0 1.25rem;max-width:40rem;margin-left:auto;margin-right:auto;font-size:.95rem}
+    .how{padding:3.5rem 0 0}
+    .how .grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+    @media(max-width:700px){.how .grid{grid-template-columns:1fr}}
+    .how .box{background:var(--off-white);border:1px solid var(--sand-dark);border-radius:6px;padding:1.5rem 1.75rem}
+    .how .box h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;margin:0 0 .5rem;color:var(--espresso)}
+    .how .box p{margin:0;font-size:.95rem;color:var(--espresso)}
+  </style>
+</head>
+<body class="lang-en" data-es-url="/proyectos/" data-en-url="/en/projects/">
+
+<header class="site-header">
+  <div class="inner">
+    <a href="/en" class="brand-mark">
+      <img src="/assets/brand/logo-seal-256.png" alt="Para Todos" />
+      <span class="text"><span class="name">Para Todos</span><span class="sub">Pacific South · BCS</span></span>
+    </a>
+    <div class="lang-toggle">
+      <button id="btn-es" class="" onclick="setLang('es')">ES</button>
+      <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<div class="proj-hero">
+  <div class="container">
+    <p class="kicker">Para Todos</p>
+    <h1>Projects</h1>
+    <p>Concrete ideas to make our town better. Some need hands and donations. Others need investment. All of them need neighbors who step in.</p>
+  </div>
+</div>
+
+<section class="how">
+  <div class="container">
+    <div class="grid">
+      <div class="box">
+        <h3>Community projects</h3>
+        <p>Streets, lighting, cleanup, green areas, public spaces. Non-profit efforts funded through donations, materials and volunteer work. Every peso goes to the project and is reported publicly.</p>
+      </div>
+      <div class="box">
+        <h3>Investment opportunities</h3>
+        <p>Local businesses that are profitable and also add to quality of life and the value of the area: places to gather, missing services, decent jobs. Each project is its own entity with its own terms.</p>
+      </div>
+    </div>
+    <div class="filter-bar" role="tablist">
+      <button class="active" onclick="filterProjects('all',this)">All</button>
+      <button onclick="filterProjects('community',this)">Community projects</button>
+      <button onclick="filterProjects('invest',this)">Investment opportunities</button>
+    </div>
+  </div>
+</section>
+
+<section class="proj-group" data-kind="community" id="comunitarios">
+  <div class="container">
+    <div class="group-head">
+      <h2>Community projects</h2>
+      <p class="lede">For those who want to contribute with donations, materials or time.</p>
+    </div>
+    <div class="cards">
+      <a class="proj-card" data-kind="community" href="/en/projects/main-street/">
+        <img class="card-img" src="/assets/images/proyectos/calle-principal-1.jpg" alt="Main Street: Urban Improvement Proposal" />
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="tag tag-community">Community projects</span>
+            <span class="tag tag-status">Seeking support</span>
+          </div>
+          <h3>Main Street: Urban Improvement Proposal</h3>
+          <p class="subtitle">A simple, low-cost, high-impact intervention: native planting, warm lighting and organized parking, without losing a single space.</p>
+          <ul class="facts"><li><strong>Phase 1:</strong> planting + light</li><li><strong>Cost to municipality:</strong> $0</li></ul>
+          <span class="read-more">View project →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="proj-group" data-kind="invest" id="inversion">
+  <div class="container">
+    <div class="group-head">
+      <h2>Investment opportunities</h2>
+      <p class="lede">For those looking to invest in local businesses that improve our community.</p>
+    </div>
+    <div class="cards">
+      <a class="proj-card" data-kind="invest" href="/en/projects/todos-santos-putt/">
+        <img class="card-img" src="/assets/images/proyectos/todos-santos-putt-cover.jpg" alt="Todos Santos Putt" />
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="tag tag-invest">Investment opportunities</span>
+            <span class="tag tag-status">Open to investment</span>
+          </div>
+          <h3>Todos Santos Putt</h3>
+          <p class="subtitle">Golf without the water. An artist-built 18-hole course and container bar in the heart of the pueblo mágico.</p>
+          <ul class="facts"><li><strong>Phase 0:</strong> $150k USD</li><li><strong>Break-even:</strong> 17 rounds / day</li></ul>
+          <span class="read-more">View project →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="propose">
+      <h3>Have a project?</h3>
+      <p>If you have an idea to improve your neighborhood, or a business that would be good for the town, tell us. We will help you shape it and publish it here.</p>
+      <a class="btn btn-primary" href="mailto:hola@paratodosbcs.mx?subject=Project%20proposal">Propose a project</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container-wide">
+    <div>
+      <a href="/en" class="brand-mark">
+        <img src="/assets/brand/logo-seal-256.png" alt="" style="width:56px;height:56px" />
+        <span class="text"><span class="name">Para Todos</span><span class="sub">Pacific South · BCS</span></span>
+      </a>
+      <p style="margin-top:1.5rem;max-width:22rem">Neighbors and communities of the Pacific South coming together to build a better future for our region.</p>
+    </div>
+    <div><h4>Contact</h4><p><a href="mailto:hola@paratodosbcs.mx">hola@paratodosbcs.mx</a><br/>Pacífico Sur, BCS, México</p></div>
+    <div>
+      <h4>Links</h4>
+      <p><a href="/en">Home</a><br/><a href="/en/blog/">Blog</a><br/><a href="/en/projects/">Projects</a><br/><a href="mailto:hola@paratodosbcs.mx">Contact us</a></p>
+    </div>
+    <div class="legal">© 2026 Para Todos · Pacific South, BCS</div>
+  </div>
+</footer>
+
+<script>
+  function setLang(lang) {
+    var esUrl=document.body.getAttribute('data-es-url'),enUrl=document.body.getAttribute('data-en-url');
+    if(esUrl&&enUrl){try{localStorage.setItem('lang',lang)}catch(e){} window.location.href=lang==='en'?enUrl:esUrl;}
+  }
+  function copyLink(btn) {
+    var orig=btn.textContent;
+    navigator.clipboard.writeText(window.location.href).then(function(){btn.textContent=orig.indexOf('Copiar')>-1?'✓ Copiado!':'✓ Copied!';setTimeout(function(){btn.textContent=orig},2000);});
+  }
+  (function(){
+    try{
+      var saved=localStorage.getItem('lang'),isEn=document.documentElement.lang==='en';
+      if(saved&&((saved==='en')!==isEn)){
+        var esUrl=document.body.getAttribute('data-es-url'),enUrl=document.body.getAttribute('data-en-url');
+        if(saved==='en'&&enUrl){window.location.replace(enUrl);return}
+        if(saved==='es'&&esUrl){window.location.replace(esUrl);return}
+      }
+    }catch(e){}
+  })();
+</script>
+<script>
+  function filterProjects(kind, btn) {
+    document.querySelectorAll('.filter-bar button').forEach(function(b){b.classList.toggle('active', b===btn)});
+    document.querySelectorAll('.proj-card').forEach(function(c){
+      c.classList.toggle('is-hidden', kind!=='all' && c.getAttribute('data-kind')!==kind);
+    });
+    document.querySelectorAll('.proj-group').forEach(function(g){
+      g.style.display = (kind==='all' || g.getAttribute('data-kind')===kind) ? '' : 'none';
+    });
+  }
+</script>
+</body>
+</html>

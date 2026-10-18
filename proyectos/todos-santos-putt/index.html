@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Todos Santos Putt — PARA TODOS</title>
+  <meta name="description" content="Golf sin agua. Un campo de 18 hoyos construido por artistas locales y un bar en contenedores, en el corazón del pueblo mágico." />
+  <link rel="icon" type="image/png" href="/assets/brand/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon-180.png" />
+  <meta property="og:title" content="Todos Santos Putt" />
+  <meta property="og:description" content="Golf sin agua. Un campo de 18 hoyos construido por artistas locales y un bar en contenedores, en el corazón del pueblo mágico." />
+  <meta property="og:image" content="https://paratodosbcs.mx/assets/images/proyectos/todos-santos-putt-cover.jpg" />
+  <meta property="og:url" content="https://paratodosbcs.mx/proyectos/todos-santos-putt/" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..600&family=Inter:wght@400;500;600;700&family=Caveat:wght@400;600&display=swap" />
+  <style>
+    :root {
+      --sand:#f4ecd9;--sand-light:#faf4e3;--sand-dark:#e0d4b3;
+      --terracotta:#b85042;--terracotta-dark:#9b3f33;--sunset:#d97a4a;
+      --cactus:#6d8a6e;--cactus-pale:#a8baa7;--sky:#7ba6b8;--sky-dark:#4f7a8f;
+      --espresso:#3a2e26;--off-white:#fbf6e9;--ink:#1f1813;
+    }
+    *,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}
+    body{margin:0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.6;color:var(--espresso);background-color:var(--sand-light);background-image:radial-gradient(ellipse 90% 60% at 50% -10%,rgba(255,255,255,.45) 0%,rgba(255,255,255,0) 60%),radial-gradient(ellipse 80% 50% at 100% 100%,rgba(184,80,66,.04) 0%,rgba(184,80,66,0) 70%);background-attachment:fixed;-webkit-font-smoothing:antialiased;letter-spacing:.01em}
+    a{color:var(--terracotta);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}a:hover{color:var(--terracotta-dark)}
+    .container{max-width:64rem;margin:0 auto;padding:0 1.5rem}.container-wide{max-width:80rem;margin:0 auto;padding:0 1.5rem}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;font-family:'Inter',sans-serif;font-weight:600;font-size:.9rem;letter-spacing:.03em;border-radius:999px;padding:.65rem 1.5rem;text-decoration:none;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+    .btn-primary{background:var(--terracotta);color:#fff;border:2px solid var(--terracotta)}.btn-primary:hover{background:var(--terracotta-dark);border-color:var(--terracotta-dark);color:#fff}
+    .btn-outline{background:transparent;color:var(--espresso);border:2px solid var(--espresso)}.btn-outline:hover{background:var(--espresso);color:var(--sand)}
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(244,236,217,.92);backdrop-filter:saturate(140%) blur(8px);-webkit-backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--sand-dark)}
+    .site-header .inner{display:flex;align-items:center;justify-content:space-between;max-width:80rem;margin:0 auto;padding:.85rem 1.5rem}
+    .brand-mark{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+    .brand-mark img{width:44px;height:44px}
+    .brand-mark .text{display:flex;flex-direction:column;line-height:1.05}
+    .brand-mark .name{font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;color:var(--espresso);letter-spacing:.005em}
+    .brand-mark .sub{font-size:.7rem;color:var(--sky-dark);letter-spacing:.16em;text-transform:uppercase;margin-top:2px}
+    .lang-toggle{display:flex;align-items:center;gap:0;background:transparent;border:1px solid var(--espresso);border-radius:999px;padding:3px}
+    .lang-toggle button{background:transparent;border:0;padding:.25rem .85rem;font-family:inherit;font-size:.78rem;font-weight:600;color:var(--espresso);letter-spacing:.08em;border-radius:999px;cursor:pointer}
+    .lang-toggle button.active{background:var(--espresso);color:var(--sand)}
+    footer{background:var(--espresso);color:var(--off-white);padding:4rem 0 2rem;margin-top:0}
+    footer .container-wide{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem}
+    @media(max-width:768px){footer .container-wide{grid-template-columns:1fr;gap:2rem}}
+    footer h4{font-family:'Fraunces',serif;font-weight:600;font-size:1rem;color:var(--off-white);margin:0 0 .75rem}
+    footer p{font-size:.9rem;color:var(--sand);line-height:1.6;margin:0}
+    footer a{color:var(--sunset);text-decoration:underline;text-underline-offset:3px}footer a:hover{color:var(--off-white)}
+    footer .brand-mark .name{color:var(--off-white)}footer .brand-mark .sub{color:var(--cactus-pale)}
+    footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.1);padding-top:1.5rem;margin-top:1rem;font-size:.78rem;color:var(--sand);opacity:.55}
+    .squiggle{display:block;width:120px;height:14px;margin:1.5rem auto;opacity:.7}.squiggle path{fill:none;stroke:var(--cactus);stroke-width:1.8;stroke-linecap:round}
+    /* tags */
+    .tag{display:inline-flex;align-items:center;gap:.35rem;font-family:'Inter',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border-radius:999px;padding:.28rem .75rem;border:1px solid transparent}
+    .tag-community{background:rgba(109,138,110,.14);color:#4a6a4c;border-color:rgba(109,138,110,.35)}
+    .tag-invest{background:rgba(217,122,74,.14);color:#9b4a22;border-color:rgba(217,122,74,.4)}
+    .tag-status{background:transparent;color:var(--espresso);border-color:var(--sand-dark);opacity:.75}
+
+    .proj-hero{width:100%;max-height:520px;overflow:hidden;background:var(--espresso)}
+    .proj-hero-img{width:100%;height:520px;object-fit:cover;object-position:center top;display:block}
+    @media(max-width:768px){.proj-hero-img{height:260px}}
+    .proj-article{padding:3.5rem 0 5rem}
+    .proj-layout{display:grid;grid-template-columns:minmax(0,1fr) 18rem;gap:3rem;align-items:start}
+    @media(max-width:860px){.proj-layout{grid-template-columns:1fr}}
+    .proj-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-bottom:1.25rem}
+    .proj-title{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.75rem,4vw,2.75rem);line-height:1.1;color:var(--espresso);margin:0 0 1.25rem;letter-spacing:-.01em}
+    .proj-subtitle{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.1rem,2vw,1.35rem);color:var(--sky-dark);line-height:1.5;margin:0 0 2.25rem;border-left:3px solid var(--sky-dark);padding-left:1.25rem}
+    .proj-body{font-size:17px;line-height:1.7}
+    .proj-body p{margin:0 0 1.25rem}
+    .proj-body h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;color:var(--espresso);margin:2.5rem 0 .75rem}
+    .proj-body h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:var(--terracotta);margin:1.75rem 0 .5rem}
+    .proj-body ul{margin:0 0 1.25rem;padding-left:1.5rem}.proj-body ul li{margin-bottom:.5rem}
+    .proj-body figure{margin:2rem 0}.proj-body figure img{width:100%;height:auto;display:block;border-radius:6px;border:1px solid var(--sand-dark)}
+    .proj-body figcaption{font-size:.82rem;color:var(--espresso);opacity:.6;margin-top:.5rem}
+    .proj-body table{width:100%;border-collapse:collapse;font-size:.92rem;margin:0 0 1.5rem}
+    .proj-body th,.proj-body td{text-align:left;padding:.55rem .6rem;border-bottom:1px solid var(--sand-dark);vertical-align:top}
+    .proj-body th{font-family:'Inter',sans-serif;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sky-dark)}
+    .proj-body td.num,.proj-body th.num{text-align:right;white-space:nowrap}
+    .proj-body blockquote{margin:2rem 0;padding:1.25rem 1.5rem;border-left:3px solid var(--terracotta);background:var(--sand);border-radius:0 4px 4px 0;font-family:'Fraunces',serif;font-style:italic;font-size:1.05rem}
+    .proj-body blockquote p{margin:0}
+    .side{position:sticky;top:5.5rem;display:flex;flex-direction:column;gap:1.25rem}
+    .side-box{background:var(--off-white);border:1px solid var(--sand-dark);border-radius:6px;padding:1.5rem 1.5rem}
+    .side-box h4{font-family:'Inter',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--sky-dark);margin:0 0 .85rem}
+    .side-box dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:.45rem .9rem;font-size:.88rem}
+    .side-box dt{color:var(--espresso);opacity:.55;font-weight:500}
+    .side-box dd{margin:0;font-weight:600;color:var(--espresso)}
+    .side-box .btn{width:100%;justify-content:center;margin-top:1rem}
+    .side-box .small{font-size:.8rem;opacity:.65;margin:.75rem 0 0;line-height:1.45}
+    .side-cta{background:var(--espresso);color:var(--off-white);border-color:var(--espresso)}
+    .side-cta h4{color:var(--sunset)}.side-cta p{color:var(--sand);font-size:.92rem;margin:0 0 .5rem}
+    .side-cta .btn-primary{margin-top:.75rem}
+    .side-cta .small{color:var(--sand)}
+    .disclaimer{font-size:.8rem;color:var(--espresso);opacity:.6;border-top:1px solid var(--sand-dark);padding-top:1.25rem;margin-top:2.5rem;line-height:1.5}
+    .share-row{display:flex;align-items:center;flex-wrap:wrap;gap:.75rem;margin:2rem 0 2.5rem}
+    .share-label{font-family:'Inter',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--espresso);opacity:.45}
+    .share-btn{display:inline-flex;align-items:center;gap:.35rem;font-family:'Inter',sans-serif;font-size:.82rem;font-weight:600;color:var(--espresso);background:transparent;border:1px solid var(--sand-dark);border-radius:999px;padding:.3rem .9rem;text-decoration:none;cursor:pointer;transition:border-color .15s}
+    .share-btn:hover{border-color:var(--terracotta);color:var(--terracotta)}
+    .proj-nav{border-top:1px solid var(--sand-dark);padding-top:1.5rem}
+    .nav-card{display:block;background:var(--off-white);border:1px solid var(--sand-dark);border-radius:6px;padding:1.25rem 1.5rem;text-decoration:none;color:inherit;transition:border-color .15s}
+    .nav-card:hover{border-color:var(--terracotta);color:inherit}
+    .nav-card .nav-dir{font-family:'Inter',sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--espresso);opacity:.4;margin-bottom:.35rem}
+    .nav-card .nav-title{font-family:'Fraunces',serif;font-weight:600;font-size:.95rem;color:var(--espresso);line-height:1.3}
+  </style>
+</head>
+<body class="lang-es" data-es-url="/proyectos/todos-santos-putt/" data-en-url="/en/projects/todos-santos-putt/">
+
+<header class="site-header">
+  <div class="inner">
+    <a href="/" class="brand-mark">
+      <img src="/assets/brand/logo-seal-256.png" alt="Para Todos" />
+      <span class="text"><span class="name">Para Todos</span><span class="sub">Pacífico Sur · BCS</span></span>
+    </a>
+    <div class="lang-toggle">
+      <button id="btn-es" class="active" onclick="setLang('es')">ES</button>
+      <button id="btn-en" class="" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<div class="proj-hero">
+  <img src="/assets/images/proyectos/todos-santos-putt-cover.jpg" alt="Todos Santos Putt" class="proj-hero-img" />
+</div>
+
+<article class="proj-article">
+  <div class="container">
+    <div class="proj-layout">
+      <div>
+        <div class="proj-meta">
+          <span class="tag tag-invest">Oportunidades de inversión</span>
+          <span class="tag tag-status">Abierto a inversión</span>
+        </div>
+        <h1 class="proj-title">Todos Santos Putt</h1>
+        <p class="proj-subtitle">Golf sin agua. Un campo de 18 hoyos construido por artistas locales y un bar en contenedores, en el corazón del pueblo mágico.</p>
+        <div class="proj-body">
+
+          <p>Cabo tiene golf de campeonato. Todos Santos no puede tener un campo de golf, y no debería: no hay agua para eso. Pero sí puede tener algo que no existe en toda Baja California Sur: un campo de mini golf de 18 hoyos diseñado y construido por artistas del pueblo, con un bar de contenedores donde la gente llega por la noche a tomar algo, jugar una ronda y quedarse.</p>
+          <p>La idea viene de un modelo probado en otras ciudades: lugares como Swingers en Nueva York y Londres o PopStroke en Estados Unidos, donde el juego vende el boleto y el bar hace el negocio. La versión de Todos Santos es más pequeña, más local y más nuestra.</p>
+
+          <h2>Qué es</h2>
+          <ul>
+            <li><strong>18 hoyos, 9 artistas.</strong> Cada hoyo lo diseña y construye un artista de Todos Santos alrededor de una historia local: la misión, el ingenio azucarero, el surf de Cerritos, las ballenas, el desierto en flor. Césped con pendientes reales para que los golfistas regresen.</li>
+            <li><strong>Un bar al que vienes por gusto.</strong> Dos contenedores, un patio bajo velas, 10 cócteles con ingredientes locales, botanas, gelato en el hoyo 18. Se ordena desde el campo por app.</li>
+            <li><strong>Modo noche.</strong> Hoyos iluminados, jueves de DJ, ligas los martes, torneos mensuales, rentas completas para despedidas de soltero y retiros. Familias y turistas de día bajo sombra; la salida del pueblo de noche.</li>
+          </ul>
+
+          <h2>Por qué le hace bien al pueblo</h2>
+          <p>Todos Santos tiene restaurantes y galerías de primer nivel, pero muy pocos lugares para reunirse de noche que sirvan a todos a la vez: residentes extranjeros, familias locales, surfistas, huéspedes de hoteles y rentas, grupos. Un lugar así crea empleo digno (5 puestos de tiempo completo desde la Fase 0, con salarios de mercado y prestaciones), paga a nueve artistas locales por obra permanente, y le da al pueblo una razón más para que el visitante se quede una noche más.</p>
+
+          <h2>El sitio</h2>
+          <p>400 m² en el centro, con 32 metros de frente a la calle. Un terreno en forma de cuña que se abre de 9 a 18 metros, de modo que el campo iluminado y el bar son el escaparate. Nueve hoyos a nivel de piso en dos columnas; el bar de contenedores de 40 pies al fondo; y en la fase permanente, los hoyos 10 a 18 en una terraza elevada con el hoyo 18 sobre el techo del bar.</p>
+
+          <h2>Cómo se construye</h2>
+          <table>
+            <tr><th>Fase</th><th>Qué se construye</th><th class="num">Inversión</th></tr>
+            <tr><td><strong>Fase 0</strong><br/>dic 2026 – may 2027</td><td>Pop-up de artistas: 9 hoyos en plataformas modulares, 2 contenedores, sombra, luz, sonido, app de reservas. Construido en 8 semanas con artistas y constructores locales.</td><td class="num">$150,000 USD</td></tr>
+            <tr><td><strong>Fase 1</strong><br/>jun – oct 2027</td><td>Si la temporada 1 cumple su meta: bases de concreto, césped para desierto, sombra en todo el campo, terraza para hoyos 10 a 18, hoyo 18 en azotea.</td><td class="num">$250–350k USD</td></tr>
+            <tr><td><strong>Temporada 2</strong><br/>nov 2027 en adelante</td><td>El lugar completo: dos niveles, ligas, torneos, paquetes con hoteles y rentas vacacionales.</td><td class="num">—</td></tr>
+          </table>
+          <p>La meta que abre la Fase 1 es clara: 45 o más rondas al día y $14 USD o más de consumo en bar por jugador entre diciembre y marzo. Todo lo que cuesta dinero en la Fase 0 (contenedores, arte, luces, equipo de bar) se reutiliza en la construcción permanente.</p>
+
+          <h2>Los números</h2>
+          <table>
+            <tr><th>Escenario</th><th class="num">Rondas / día</th><th class="num">Utilidad / mes</th><th class="num">Utilidad / temporada</th></tr>
+            <tr><td>Temporada 1 · 9 hoyos · bajo</td><td class="num">30</td><td class="num">$10,800</td><td class="num">$56,000</td></tr>
+            <tr><td>Temporada 1 · 9 hoyos · base</td><td class="num">45</td><td class="num">$23,300</td><td class="num">$121,000</td></tr>
+            <tr><td>Temporada 1 · 9 hoyos · alto</td><td class="num">60</td><td class="num">$35,700</td><td class="num">$186,000</td></tr>
+            <tr><td>Temporada 2 · 18 hoyos · base</td><td class="num">90</td><td class="num">$69,300</td><td class="num">$480,000</td></tr>
+          </table>
+          <p>El punto de equilibrio son 17 rondas al día: con eso se cubren todos los costos fijos del pop-up (unos $14,000 USD al mes en sueldos, renta del terreno, servicios, mantenimiento y marketing; el modelo usa $17,000 como colchón). Las cifras son estimaciones de planeación en USD, no cotizaciones.</p>
+
+          <h2>Términos para inversionistas</h2>
+          <ul>
+            <li>Los inversionistas fondean el 100% de los $150,000 USD de la Fase 0.</li>
+            <li>El socio operador aporta el control del sitio (contrato de arrendamiento con opción de compra ya negociada), la construcción y la operación, sin sueldo hasta que se repague la inversión.</li>
+            <li>Distribuciones trimestrales de todo el flujo libre: 100% a inversionistas hasta recuperar capital (1.0x), después 60 / 40 hasta 2.0x, después 50 / 50.</li>
+            <li>Los inversionistas de la Fase 0 tienen derecho preferente para fondear la Fase 1 en los mismos términos, y primera opción en cada sede futura.</li>
+          </ul>
+          <p class="disclaimer">Este resumen es informativo y no constituye una oferta de valores. Las proyecciones son estimaciones de planeación y no una garantía. Cada oportunidad de inversión publicada aquí es una entidad independiente de Para Todos; Para Todos no recibe comisión ni participación por difundirla. El deck completo, con el modelo financiero y los términos, se comparte directamente a quien lo solicite.</p>
+
+        </div>
+    <div class="share-row">
+      <span class="share-label">Compartir:</span>
+      <a class="share-btn" href="https://wa.me/?text=Todos%20Santos%20Putt%20%E2%80%94%20https%3A%2F%2Fparatodosbcs.mx%2Fproyectos%2Ftodos-santos-putt%2F" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparatodosbcs.mx%2Fproyectos%2Ftodos-santos-putt%2F" target="_blank" rel="noopener">Facebook</a>
+      <button class="share-btn" onclick="copyLink(this)">Copiar enlace</button>
+    </div>
+        <nav class="proj-nav">
+          <a class="nav-card" href="/proyectos/">
+            <div class="nav-dir">Más proyectos</div>
+            <div class="nav-title">Todos los proyectos →</div>
+          </a>
+        </nav>
+      </div>
+      <aside class="side">
+        <div class="side-box">
+          <h4>Ficha del proyecto</h4>
+          <dl>
+            <dt>Tipo</dt><dd>Oportunidad de inversión</dd>
+            <dt>Lugar</dt><dd>Todos Santos, 400 m² en el centro</dd>
+            <dt>Estado</dt><dd>Abierto a inversión</dd>
+            <dt>Fase 0</dt><dd>$150,000 USD</dd>
+            <dt>Apertura</dt><dd>Diciembre 2026</dd>
+            <dt>Equilibrio</dt><dd>17 rondas / día</dd>
+          </dl>
+          <a class="btn btn-outline" href="mailto:hola@paratodosbcs.mx?subject=Deck%20Todos%20Santos%20Putt">📄 Solicitar el deck completo</a>
+          <p class="small">Se envía por correo a quien lo solicite.</p>
+        </div>
+        <div class="side-box side-cta">
+          <h4>Me interesa invertir</h4>
+          <p>Cuéntanos quién eres y qué quieres saber. Te conectamos directamente con el equipo del proyecto.</p>
+          <a class="btn btn-primary" href="mailto:hola@paratodosbcs.mx?subject=Inversi%C3%B3n%20Todos%20Santos%20Putt">Escríbenos</a>
+          <p class="small">Para Todos no recibe comisión; solo conecta.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</article>
+
+<footer>
+  <div class="container-wide">
+    <div>
+      <a href="/" class="brand-mark">
+        <img src="/assets/brand/logo-seal-256.png" alt="" style="width:56px;height:56px" />
+        <span class="text"><span class="name">Para Todos</span><span class="sub">Pacífico Sur · BCS</span></span>
+      </a>
+      <p style="margin-top:1.5rem;max-width:22rem">Vecinos y comunidades del Pacífico Sur uniéndonos para construir un mejor futuro para nuestra región.</p>
+    </div>
+    <div><h4>Contacto</h4><p><a href="mailto:hola@paratodosbcs.mx">hola@paratodosbcs.mx</a><br/>Pacífico Sur, BCS, México</p></div>
+    <div>
+      <h4>Enlaces</h4>
+      <p><a href="/">Inicio</a><br/><a href="/blog/">Blog</a><br/><a href="/proyectos/">Proyectos</a><br/><a href="mailto:hola@paratodosbcs.mx">Contáctanos</a></p>
+    </div>
+    <div class="legal">© 2026 Para Todos · Pacífico Sur, BCS</div>
+  </div>
+</footer>
+
+<script>
+  function setLang(lang) {
+    var esUrl=document.body.getAttribute('data-es-url'),enUrl=document.body.getAttribute('data-en-url');
+    if(esUrl&&enUrl){try{localStorage.setItem('lang',lang)}catch(e){} window.location.href=lang==='en'?enUrl:esUrl;}
+  }
+  function copyLink(btn) {
+    var orig=btn.textContent;
+    navigator.clipboard.writeText(window.location.href).then(function(){btn.textContent=orig.indexOf('Copiar')>-1?'✓ Copiado!':'✓ Copied!';setTimeout(function(){btn.textContent=orig},2000);});
+  }
+  (function(){
+    try{
+      var saved=localStorage.getItem('lang'),isEn=document.documentElement.lang==='en';
+      if(saved&&((saved==='en')!==isEn)){
+        var esUrl=document.body.getAttribute('data-es-url'),enUrl=document.body.getAttribute('data-en-url');
+        if(saved==='en'&&enUrl){window.location.replace(enUrl);return}
+        if(saved==='es'&&esUrl){window.location.replace(esUrl);return}
+      }
+    }catch(e){}
+  })();
+</script>
+</body>
+</html>
