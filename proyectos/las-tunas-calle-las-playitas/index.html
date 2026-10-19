@@ -101,6 +101,13 @@
     .side-box dd{margin:0;font-weight:600;color:var(--espresso)}
     .side-box .btn{width:100%;justify-content:center;margin-top:1rem}
     .side-box .small{font-size:.8rem;opacity:.65;margin:.75rem 0 0;line-height:1.45}
+
+    .mail-fallback{display:none;margin-top:.9rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:6px;padding:.9rem 1rem;font-size:.85rem;color:var(--sand)}
+    .mail-fallback.show{display:block}
+    .mail-fallback strong{display:block;color:#fff;font-size:1rem;word-break:break-all;margin:.25rem 0 .6rem}
+    .mail-fallback .row{display:flex;flex-wrap:wrap;gap:.5rem}
+    .mail-fallback button,.mail-fallback a.gm{font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;border-radius:999px;padding:.35rem .9rem;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;cursor:pointer;text-decoration:none}
+    .mail-fallback button:hover,.mail-fallback a.gm:hover{background:rgba(255,255,255,.12)}
     .side-cta{background:var(--espresso);color:var(--off-white);border-color:var(--espresso)}
     .side-cta h4{color:var(--sunset)}.side-cta p{color:var(--sand);font-size:.92rem;margin:0 0 .5rem}
     .side-cta .btn-primary{margin-top:.75rem}
@@ -221,8 +228,13 @@
         <div class="side-box side-cta">
           <h4>Quiero apoyar</h4>
           <p>Apadrina una isla ajardinada, dona materiales o súmate a una jornada de siembra.</p>
-          <a class="btn btn-primary" href="mailto:hola@paratodosbcs.mx?subject=Apoyo%20Las%20Tunas%20Calle%20Las%20Playitas">Escríbenos</a>
-          <p class="small">O escribe directo a <a href="mailto:hola@paratodosbcs.mx" style="color:var(--sunset)">hola@paratodosbcs.mx</a>. Recibo deducible de impuestos disponible para donaciones.</p>
+          <a class="btn btn-primary" id="cta-mail" href="mailto:hola@paratodosbcs.mx?subject=Apoyo%20Las%20Tunas%20Calle%20Las%20Playitas">Escríbenos</a>
+          <div class="mail-fallback" id="mail-fallback">
+            ¿No se abrió tu correo? Escríbenos a:
+            <strong>hola@paratodosbcs.mx</strong>
+            <div class="row"><button type="button" data-done="✓ Copiado" onclick="copyMail(this)">Copiar correo</button><a class="gm" href="https://mail.google.com/mail/?view=cm&to=hola@paratodosbcs.mx&su=Apoyo%20Las%20Tunas%20Calle%20Las%20Playitas" target="_blank" rel="noopener">Abrir en Gmail</a></div>
+          </div>
+          <p class="small">Recibo deducible de impuestos disponible para donaciones.</p>
         </div>
       </aside>
     </div>
@@ -288,6 +300,17 @@
     document.addEventListener('keydown',function(e){ if(!lb.classList.contains('open')) return; if(e.key==='Escape') close(); if(e.key==='ArrowRight') next.click(); if(e.key==='ArrowLeft') prev.click(); });
     var tx=null; lb.addEventListener('touchstart',function(e){tx=e.touches[0].clientX},{passive:true});
     lb.addEventListener('touchend',function(e){ if(tx===null) return; var dx=e.changedTouches[0].clientX-tx; if(Math.abs(dx)>50) (dx<0?next:prev).click(); tx=null; });
+  })();
+</script>
+<script>
+  (function(){
+    var btn=document.getElementById('cta-mail'); if(!btn) return;
+    var fb=document.getElementById('mail-fallback');
+    btn.addEventListener('click',function(){
+      var t=setTimeout(function(){ if(document.hasFocus()) fb.classList.add('show'); },1200);
+      window.addEventListener('blur',function(){ clearTimeout(t); },{once:true});
+    });
+    window.copyMail=function(b){ navigator.clipboard.writeText('hola@paratodosbcs.mx').then(function(){ var o=b.textContent; b.textContent=b.getAttribute('data-done'); setTimeout(function(){b.textContent=o},2000); }); };
   })();
 </script>
 </body>
