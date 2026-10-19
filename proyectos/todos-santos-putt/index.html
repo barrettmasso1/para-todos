@@ -76,7 +76,11 @@
     .proj-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-bottom:1.25rem}
     .proj-title{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.75rem,4vw,2.75rem);line-height:1.1;color:var(--espresso);margin:0 0 1.25rem;letter-spacing:-.01em}
     .proj-subtitle{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.1rem,2vw,1.35rem);color:var(--sky-dark);line-height:1.5;margin:0 0 2.25rem;border-left:3px solid var(--sky-dark);padding-left:1.25rem}
-    .proj-body{font-size:17px;line-height:1.7}
+    .proj-layout>div{min-width:0}
+    .proj-body{font-size:17px;line-height:1.7;min-width:0;overflow-wrap:anywhere}
+    .proj-body table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+    .proj-body td.num,.proj-body th.num{white-space:nowrap}
+    @media(max-width:600px){.proj-body table{font-size:.85rem}.proj-body th,.proj-body td{padding:.45rem .5rem}.deck-bar{flex-direction:column;align-items:flex-start}.side{position:static}}
     .proj-body p{margin:0 0 1.25rem}
     .proj-body h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;color:var(--espresso);margin:2.5rem 0 .75rem}
     .proj-body h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:var(--terracotta);margin:1.75rem 0 .5rem}
